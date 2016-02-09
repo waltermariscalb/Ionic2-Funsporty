@@ -1,0 +1,18 @@
+
+.sportman-list {
+
+  ion-card.sportman ion-card-header .item {
+    padding: 12px;
+  }
+
+  ion-card.sportman ion-card-content .list {
+    margin: 0;
+  }
+
+  ion-card.sportman ion-card-header,
+  ion-card.sportman ion-card-content,
+  ion-card.sportman ion-card-content .list ion-item-content, {
+    padding: 0;
+  }
+  
+}

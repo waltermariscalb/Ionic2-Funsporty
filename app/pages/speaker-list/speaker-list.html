@@ -1,0 +1,82 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-segment [(ngModel)]="segment" (change)="updateSportmen()">
+      <ion-segment-button value="all">
+          Todos
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+          Favoritos
+      </ion-segment-button>
+    </ion-segment>
+    <ion-buttons end>
+        <button (click)="presentFilter()">
+            <ion-icon ios="ios-funnel-outline" md="md-funnel"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-navbar>
+
+<ion-content class="outer-content sportman-list">
+  <ion-searchbar primary
+                 [(ngModel)]="queryText"
+                 (input)="updateSportmen()"
+                 placeholder="Search">
+  </ion-searchbar>
+
+  <ion-list [hidden]="counter === 0">
+
+  <ion-card *ngFor="#sportman of sportmen" class="sportman" [hidden]="sportman.hide">
+
+    <ion-card-header>
+
+        <ion-avatar  item-left>
+          <img [src]="sportman.profilePic">
+        </ion-avatar >
+        <h2>{{sportman.name}}</h2>
+        <h3>Providencia • Santiago</h3>
+        <p> Reputación <ion-badge >{{sportman.reputation}}</ion-badge> </p>
+
+
+    </ion-card-header>
+
+    <ion-card-content class="outer-content">
+      <ion-list>
+        <ion-list-header>
+          Actividades
+        </ion-list-header>
+        <button ion-item *ngFor="#session of sportman.sessions" (click)="goToSessionDetail(session)">
+          <h3>{{session.name}}</h3>
+        </button>
+      </ion-list>
+      <button ion-item (click)="goToSportmanDetail(sportman)">
+          <h3>About {{sportman.name}}</h3>
+      </button>
+    </ion-card-content>
+
+    <ion-item>
+      <button (click)="goToSportmanTwitter(sportman)" clear item-left>
+        <ion-icon name="logo-twitter"></ion-icon>
+        Tweet
+      </button>
+
+      <button  (click)="addFavorite(sportman)" *ngIf="segment === 'all'" clear >
+        <ion-icon name="bookmark"></ion-icon>
+        Favoritos
+      </button>
+
+      <button (click)="openSportmanShare(sportman)" clear item-right>
+        <ion-icon name="share"></ion-icon>
+        Share
+      </button>
+    </ion-item>
+
+  </ion-card>
+
+</ion-list>
+
+  <ion-list-header [hidden]="counter > 0">
+      No Sessions Found
+  </ion-list-header>
+
+</ion-content>

@@ -1,0 +1,94 @@
+<ion-navbar *navbar>
+
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+
+  <ion-title>Mi perfil</ion-title>
+
+    <ion-buttons end>
+      <button (click)="Save(loginForm)">Guardar</button>
+    </ion-buttons>
+
+
+</ion-navbar>
+
+<ion-content >
+
+<ion-list>
+<form #loginForm="ngForm" novalidate>
+
+  <ion-list radio-group [(ngModel)]="sportman.gender" required>
+    <ion-header>
+      
+    </ion-header>
+
+    <ion-item>
+      <ion-label>Hombre</ion-label>    
+      <ion-radio checked="true" value="Male"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Mujer</ion-label>    
+      <ion-radio checked="false" value="Female"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-item >
+    <ion-label floating primary>nombre usuario</ion-label>
+    <ion-input [(ngModel)]="sportman.name" ngControl="name" type="text" #name="ngForm" required>
+    </ion-input>
+  </ion-item>
+  <p [hidden]="name.valid || submitted == false" danger padding-left>
+    Username is required
+  </p>
+
+  <ion-item >
+    <ion-label floating primary>Correo</ion-label>
+    <ion-input [(ngModel)]="sportman.email" ngControl="email" type="mail" #email="ngForm">
+    </ion-input>
+  </ion-item>
+  <p [hidden]="email.valid || submitted == false" danger padding-left>
+    mail is required
+  </p>
+
+  <ion-item >
+    <ion-label stacked primary>fecha nacimiento</ion-label>
+    <ion-input [(ngModel)]="sportman.birthdate" ngControl="birthdate" type="date" #birthdate="ngForm">
+    </ion-input>
+  </ion-item>
+  <p [hidden]="birthdate.valid || submitted == false" danger padding-left>
+    fecha de nacimiento is required
+  </p>
+
+  <ion-item >
+    <ion-label floating primary>ciudad</ion-label>
+    <ion-input [(ngModel)]="sportman.zones[0].city" ngControl="city" type="text" #city="ngForm">
+    </ion-input>
+  </ion-item>
+  <p [hidden]="city.valid || submitted == false" danger padding-left>
+    ciudad is required
+  </p>
+
+
+
+  <ion-item>
+    <ion-label> Recibir notificaciones </ion-label>
+    <ion-toggle checked="true"  [(ngModel)]="sportman.receivenotification"> </ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>  Publicar calendario </ion-label>
+    <ion-toggle checked="false"  [(ngModel)]="sportman.publiscalendar"> </ion-toggle>
+  </ion-item>
+
+  <button ion-item>
+    <icon cart item-left></icon>
+      Mis deportes
+  </button>
+
+
+</form>
+</ion-list>
+
+</ion-content>
