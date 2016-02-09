@@ -24,12 +24,20 @@ export class ScheduleFilterPage {
     });
   }
 
-  resetFilters() {
+  selectAll() {
     // reset all of the toggles to be checked
     this.tracks.forEach(track => {
       track.isChecked = true;
     });
   }
+
+  deselectAll() {
+    // reset all of the toggles to be checked
+    this.tracks.forEach(track => {
+      track.isChecked = false;
+    });
+  }
+
 
   applyFilters() {
     // Pass back a new array of track names to exclude

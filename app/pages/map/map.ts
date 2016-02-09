@@ -1,4 +1,5 @@
 /// <reference path="../../../typings/googlemaps/google.maps.d.ts" />
+
 import {Page} from 'ionic-framework/ionic';
 import {ConferenceData} from '../../providers/conference-data';
 
@@ -6,23 +7,18 @@ import {ConferenceData} from '../../providers/conference-data';
   templateUrl: 'build/pages/map/map.html'
 })
 export class MapPage {
-  constructor(public confData: ConferenceData) {
-    
-  }
+  constructor(private confData: ConferenceData) {}
 
   onPageLoaded() {
-      
     this.confData.getMap().then(mapData => {
-         
       let mapEle = document.getElementById('map');
 
       let map = new google.maps.Map(mapEle, {
-        center: mapData.find(d => d.center),//find center map element
+        center: mapData.find(d => d.center),
         zoom: 16
       });
 
       mapData.forEach(markerData => {
-        
         let infoWindow = new google.maps.InfoWindow({
           content: `<h5>${markerData.name}</h5>`
         });

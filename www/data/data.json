@@ -12,7 +12,7 @@
               "timeStart": "8:00 am",
               "timeEnd": "9:00 am",
               "location": "Cancha 4",
-              "tracks": ["Enfrentamientos amistosos"]
+              "tracks": ["Amistosos"]
             }
           ]
         },
@@ -20,13 +20,13 @@
           "time": "9:00 am",
           "sessions": [
             {
-              "name": "tennis, club israelita",
+              "name": "raquetball, club israelita",
               "location": "Cancha 1",
               "description": "partido amistoso",
               "speakerNames": ["Brandy Carney"],
               "timeStart": "9:00 am",
               "timeEnd": "9:30 am",
-              "tracks": ["Enfrentamientos por Ranking"]
+              "tracks": ["Ranking"]
             },
             {
               "name": "soccer, club tobalaba",
@@ -35,7 +35,7 @@
               "speakerNames": ["Max Lynch"],
               "timeStart": "9:30 am",
               "timeEnd": "9:45 am",
-              "tracks": ["Enfrentamientos amistosos"]
+              "tracks": ["Amistosos"]
             },
             {
               "name": "trekking, Alto Jahuel",
@@ -68,7 +68,7 @@
               "speakerNames": ["Ben Sperry", "Adam Bradley"],
               "timeStart": "10:15 am",
               "timeEnd": "10:30 am",
-              "tracks": ["Enfrentamientos amistosos"]
+              "tracks": ["Amistosos"]
             },
             {
               "name": "Tennis, ",
@@ -77,7 +77,7 @@
               "speakerNames": ["Eric Bobbitt"],
               "timeStart": "10:30 am",
               "timeEnd": "11:00 am",
-              "tracks": ["Enfrentamientos por Ranking"]
+              "tracks": ["Ranking"]
             }
           ]
         },
@@ -91,7 +91,7 @@
               "speakerNames": ["Perry Govier", "Mike Hartington"],
               "timeStart": "11:00 am",
               "timeEnd": "11:45 am",
-              "tracks": ["Enfrentamientos amistosos"]
+              "tracks": ["Amistosos"]
             },
             {
               "name": "Tennis, Nuñoa",
@@ -100,7 +100,7 @@
               "speakerNames": ["Mike Hartington", "Katie Ginder-Vogel"],
               "timeStart": "11:30 am",
               "timeEnd": "11:50 am",
-              "tracks": ["Enfrentamientos amistosos"]
+              "tracks": ["Amistosos"]
             },
             {
               "name": "Tennis, La Dehesa",
@@ -109,7 +109,7 @@
               "speakerNames": ["Tim Lancina", "Adam Bradley"],
               "timeStart": "11:30 am",
               "timeEnd": "12:00 pm",
-              "tracks": ["Enfrentamientos amistosos"]
+              "tracks": ["Amistosos"]
             }
           ]
         },

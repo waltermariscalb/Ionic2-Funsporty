@@ -7,7 +7,7 @@ module.exports = {
     'reflect-metadata',
     'web-animations.min',
     path.normalize('zone.js/dist/zone-microtask'),
-    path.resolve('app/app')
+    path.resolve('app/app.ts')
   ],
   output: {
     path: path.resolve('www/build/js'),
@@ -20,8 +20,7 @@ module.exports = {
         test: /\.ts$/,
         loader: 'awesome-typescript',
         query: {
-          'doTypeCheck': true,
-          useWebpackText: true
+          doTypeCheck: true
         },
         include: path.resolve('app'),
         exclude: /node_modules/
@@ -45,6 +44,6 @@ module.exports = {
       'ionic': 'ionic-framework',
       'web-animations.min': path.normalize('ionic-framework/js/web-animations.min')
     },
-    extensions: ["", ".js", ".ts"]
+    extensions: ['', '.js', '.ts']
   }
 };

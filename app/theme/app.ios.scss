@@ -1,4 +1,3 @@
-
 // http://ionicframework.com/docs/v2/theming/
 
 
@@ -11,13 +10,13 @@
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-$headings-font-weight: 300 !default;
+
 
 // Ionic iOS Sass
 // --------------------------------------------------
 // Custom App variables must be declared before importing Ionic.
 // Ionic will use its default values when a custom variable isn't provided.
-@import 'ionic.ios';
+@import "ionic.ios";
 
 
 // App Shared Sass

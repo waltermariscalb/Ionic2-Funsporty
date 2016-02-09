@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'ionic-funsporty-app',
+  name: 'ionic-conference-app',
   proxies: null,
 
   paths: {

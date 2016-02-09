@@ -1,15 +1,15 @@
 
 <ion-toolbar>
   <ion-buttons start>
-    <button (click)="dismiss()">Cancel</button>
+    <button (click)="dismiss()">Cancelar</button>
   </ion-buttons>
 
   <ion-title>
-    Filter Sessions
+    Actividades
   </ion-title>
 
   <ion-buttons end>
-    <button (click)="applyFilters()">Done</button>
+    <button (click)="applyFilters()">Hecho</button>
   </ion-buttons>
 </ion-toolbar>
 
@@ -28,8 +28,13 @@
   </ion-list>
 
   <ion-list>
-    <button ion-item (click)="resetFilters()" danger detail-none class="reset-filters">
-      Reset All Filters
+    <button ion-item (click)="selectAll()" danger detail-none class="reset-filters">
+      Seleccionar Todos
+    </button>
+
+  
+    <button ion-item (click)="deselectAll()" danger detail-none class="reset-filters">
+      Deshabilitar Todos
     </button>
   </ion-list>
 
