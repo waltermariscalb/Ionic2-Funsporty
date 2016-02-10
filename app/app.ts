@@ -25,7 +25,7 @@ interface PageObj {
   config: {}
 })
 class ConferenceApp {
-  rootPage: Type = TutorialPage;
+  rootPage: Type = TabsPage; //TutorialPage;
   pages: PageObj[];
 
   constructor(private app: IonicApp, private events: Events, confData: ConferenceData, private userData: UserData) {
@@ -38,7 +38,7 @@ class ConferenceApp {
     // the left menu only works after login
     // the login page disables the left menu
     this.pages = [
-      { title: 'Calendario',name:'Schedules',component: TabsPage, icon: 'calendar', hide: false },
+      { title: 'HOME',name:'Schedules',component: TabsPage, icon: 'home', hide: false },
       { title: 'Ranking', name: 'Ranking', component: TabsPage, icon: 'podium', hide: false },
       { title: 'Establecimientos', name: 'Centers', component: TabsPage, icon: 'home', hide: false },     
       { title: 'Iniciar', name:'Login', component: LoginPage, icon: 'log-in', hide: true },

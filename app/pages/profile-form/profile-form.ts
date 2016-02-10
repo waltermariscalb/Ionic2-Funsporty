@@ -23,7 +23,7 @@ Save(form) {
 	this.submitted = true;
 	 if (form.valid) {
 		 alert(JSON.stringify(this.sportman));
-		 this.nav.push(TabsPage);
+	
      }
  } 
 

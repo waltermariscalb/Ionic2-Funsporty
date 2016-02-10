@@ -15,6 +15,44 @@
 
 
 <ion-content class="outer-content">
+  
+  <ion-list>
+    <ion-list-header>Género</ion-list-header>
+    <ion-item *ngFor="#gender of genders" [attr.track]="gender.name | lowercase">
+      <span class="dot"></span>
+      <ion-label>
+         {{gender.name}}
+       </ion-label> 
+      <ion-toggle  [(ngModel)]="gender.isChecked" [(checked)]="gender.isChecked"  secondary>
+      </ion-toggle>
+    </ion-item>
+
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Categoría</ion-list-header>
+    <ion-item *ngFor="#ageCategory of ageCategories" [attr.track]="ageCategory.name | lowercase">
+      <span class="dot"></span>
+      <ion-label>
+         {{ageCategory.name}}
+       </ion-label> 
+      <ion-toggle  [(ngModel)]="ageCategory.isChecked" [(checked)]="ageCategory.isChecked"  secondary>
+      </ion-toggle>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Nivel</ion-list-header>
+    <ion-item *ngFor="#level of levels" [attr.track]="level.name | lowercase">
+      <span class="dot"></span>
+      <ion-label>
+         {{level.name}}
+       </ion-label> 
+      <ion-toggle  [(ngModel)]="level.isChecked" [(checked)]="level.isChecked"  secondary>
+      </ion-toggle>
+    </ion-item>
+
+  </ion-list>
 
   <ion-list>
     <ion-list-header>Deportes</ion-list-header>

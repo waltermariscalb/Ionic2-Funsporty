@@ -26,7 +26,11 @@ export class SpeakerListPage {
   sportmen:Array<ISportman> =[];
   queryText: string = '';
   segment:string = 'all';
-  sports : Array<string>=[];
+  excludedSports : Array<string>=[];
+  excludedLevels: Array<string>=[];
+  excludedAgeCategories:Array<string>=[];
+  excludedGenders:Array<string>=[];
+  
   counter:number = 0;
  
 
@@ -79,20 +83,24 @@ export class SpeakerListPage {
   }
 
   updateSportmen() {
-    this.confData.getSportmen(this.queryText, this.sports, this.segment).then(data => {
+    this.confData.getSportmen(this.queryText, this.excludedGenders, this.excludedLevels,this.excludedAgeCategories, this.excludedSports, this.segment).then(data => {
       this.counter = data.filter(c=>!c.hide).length;
       this.sportmen= data;
-
     });
   }
 
   presentFilter() {
-    let modal = Modal.create(SportmenFilterPage, this.sports);
+    let FilterCriteria:Object = {excludedSports:this.excludedSports,excludedGenders:this.excludedGenders,excludedLevels:this.excludedLevels,excludedAgeCategories:this.excludedAgeCategories}
+    let modal = Modal.create(SportmenFilterPage, FilterCriteria);
     this.nav.present(modal);
 
     modal.onDismiss(data => {
       if (data) {
-        this.sports = data;
+        this.excludedSports = data.excludedSports;
+        this.excludedGenders= data.excludedGenders;
+        this.excludedLevels= data.excludedLevels;
+        this.excludedAgeCategories=data.excludedAgeCategories;
+        
         this.updateSportmen();
       }
     });

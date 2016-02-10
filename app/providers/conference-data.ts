@@ -166,13 +166,13 @@ export class ConferenceData {
     });
   }
 
-  public getSportmen(queryText:string = '', sportsList:Array<string> = [], segment:string = 'all'):Promise<Array<ISportman>> {
+  public getSportmen(queryText:string = '',excludedGenders:Array<string>=[],excludedLevels:Array<string>=[],excludedAgeCategories:Array<string>=[], excludedSports:Array<string> = [], segment:string = 'all'):Promise<Array<ISportman>> {
       queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');// replace , or . or - with spaces globally
       let queryWords:string[] = queryText.split(' ').filter(w => w.trim().length > 0); //filter only words
 
       return this.load().then(data => {
             let speakers:Array<ISportman>=data.speakers;
-            speakers.forEach(sportman => {this.filterSportman(sportman, queryWords, sportsList, segment)});
+            speakers.forEach(sportman => {this.filterSportman(sportman, queryWords,excludedGenders,excludedLevels,excludedAgeCategories, excludedSports, segment)});
                          
             return speakers.sort((a, b) => {// name a vs name b
                 let aName = a.name.split(' ').pop();//separate name and surname in a array, obtain surname
@@ -183,7 +183,7 @@ export class ConferenceData {
    
   }
 
-  public filterSportman(sportman:ISportman, queryWords:string[], sportsList:string[], segment:string) {
+  public filterSportman(sportman:ISportman, queryWords:string[],excludedGenders:string[],excludedLevels:string[], excludedAgeCategories:string[],excludedSports:string[], segment:string) {
 
     let matchesQueryText:boolean = false;
     if (queryWords.length) {
@@ -198,16 +198,31 @@ export class ConferenceData {
       matchesQueryText = true;
     }
 
-    // if any of the sportmans tracks are in the
-    // sports then this sportman passes the track test
+    // if none of the sportmen's sports are excluded passes the match
     let matchesSports:boolean = false;
     sportman.profiles.forEach(profile => {
-      if (sportsList.indexOf(profile.sport) > -1) {
+    if (excludedSports.indexOf(profile.sport) === -1) {
         matchesSports = true;
-      }
+    }
     });
+    
+     // if none of the sportmen's gender are excluded passes the match
+     let matchesGenders:boolean = false;
+     if (excludedGenders.indexOf(sportman.gender) === -1) {matchesGenders = true};
+   
+     // if none of the sportmen's age categories are excluded passes the match
+     let matchesAgeCategories:boolean = false;
+     if (excludedAgeCategories.indexOf(sportman.agecategory) === -1) {matchesAgeCategories = true};
+     
+    // if none of the sportmen's levels are excluded passes the match
+    let matchesLevels:boolean = false;
+    sportman.profiles.forEach(profile => {
+      if (excludedLevels.indexOf(profile.level) === -1) {
+        matchesLevels = true;
+      }
+    });     
 
-    // if the segement is 'favorites', but sportman is not a user favorite
+    // if the segment is 'favorites', but sportman is not a user favorite
     // then this sportman does not pass the segment test
     let matchesSegment:boolean = false;
     if (segment === 'favorites') {
@@ -219,13 +234,25 @@ export class ConferenceData {
     }
 
     // all tests must be true if it should not be hidden
-    sportman.hide = !(matchesQueryText && matchesSports && matchesSegment);
+    sportman.hide = !(matchesQueryText && matchesSports && matchesGenders && matchesLevels && matchesAgeCategories && matchesSegment);
   }
 
   public getSports() {
     return this.load().then(data => {
       return data.sports;
+      alert(JSON.stringify(data.sports))
     });
   }
+ 
+    public getLevels() {
+        return new Promise(resolve =>resolve([{name:'Beginner'},{name:'Basic'},{name:'Intermediate'},{name:'Advance'},{name:'Expert'}]))
+    }  
 
+    public getAgeCategories() {
+       return new Promise(resolve =>resolve([{name:'Child'},{name:'Adult'}]))
+    }  
+    
+    public getGenders() {
+        return new Promise(resolve =>resolve([{name:'Male'},{name:'Female'}]))
+    }  
 }

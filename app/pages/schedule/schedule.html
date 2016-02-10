@@ -4,13 +4,13 @@
     </button>
 
     <ion-segment [(ngModel)]="segment" (change)="updateSchedule()">
-      <ion-segment-button value="all">
+        <ion-segment-button value="all">
             Todos
         </ion-segment-button>
         <ion-segment-button value="favorites">
             Favoritos
         </ion-segment-button>
-      </ion-segment>
+    </ion-segment>
 
       <ion-buttons end>
           <button (click)="presentFilter()">

@@ -1,9 +1,9 @@
 $categories: (
- ionic: map-get($colors, primary),
- angular: #AC282B,
- communication: #8E8D93,
- tooling: #FE4C52,
- services: #FD8B2D,
+ eventos: map-get($colors, primary),
+ ranking: #AC282B,
+ torneos: #8E8D93,
+ amistosos: #FE4C52,
+ grupales: #FD8B2D,
  design: #FED035,
  workshop: #69BB7B,
  food: #3BC7C4,
@@ -17,9 +17,13 @@ $categories: (
 
 .schedule {
   @each $track, $value in auxiliary-categories() {
-   ion-item-sliding[track=#{$track}]  ion-label {
+   ion-item-sliding[track=#{$track}] ion-label {
      border-left: 2px solid $value;
      padding-left: 10px;
    }
   }
+}
+
+ion.segment {
+  width: 80%;
 }
