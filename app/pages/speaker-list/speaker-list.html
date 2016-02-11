@@ -25,27 +25,31 @@
   </ion-searchbar>
 
   <ion-list [hidden]="counter === 0">
-     <p> resultado {{counter}} </p>
-  <ion-card *ngFor="#sportman of sportmen" class="sportman" [hidden]="sportman.hide">
+  
+  <ion-card *ngFor="#sportman of sportmen" class="speaker" [hidden]="sportman.hide">
 
-    <ion-card-header>
+    
         <button ion-item (click)="goToSportmanDetail(sportman)">            
             <ion-avatar  item-left>
             <img [src]="sportman.profilePic">
             </ion-avatar >
             <h2>{{sportman.name}}</h2>
-            <h3>Providencia • Santiago</h3>
+            <h3>{{sportman.zones[0].city}} , {{sportman.zones[0].country}}</h3>
             <p> Reputación <ion-badge >{{sportman.reputation}}</ion-badge> </p>
         </button>        
-    </ion-card-header>
+    
+    <br>
 
     <ion-card-content class="outer-content">
       <ion-list>
-        <ion-list-header>
-          Actividades
-        </ion-list-header>
-        <button ion-item *ngFor="#session of sportman.sessions" (click)="goToSessionDetail(session)">
-          <h3>{{session.name}}</h3>
+        <button ion-item *ngFor="#profile of sportman.profiles" (click)="goToProfileDetail(profile,sportman)">
+        <div text-center>
+          <h3>
+          {{profile.sport}}
+          - {{profile.level}}
+          - Pos: {{profile.ranking}}
+          </h3>
+        </div>
         </button>
       </ion-list>
     </ion-card-content>

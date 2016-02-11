@@ -8,11 +8,12 @@
           "time": "8:00 am",
           "sessions": [
             {
-              "name": "tennis, club israelita",
+              "name": "Tennis",
               "timeStart": "8:00 am",
               "timeEnd": "9:00 am",
               "location": "Cancha 4",
-              "tracks": ["Amistosos"]
+              "tracks": ["Amistosos"],
+              "center":"Club Manquehue"
             }
           ]
         },
@@ -20,31 +21,49 @@
           "time": "9:00 am",
           "sessions": [
             {
-              "name": "raquetball, club israelita",
+              "name": "Raquetball",
               "location": "Cancha 1",
               "description": "partido amistoso",
-              "speakerNames": ["Brandy Carney"],
+              "speakerNames": ["Brandy Carney","Tim Lancina"],
               "timeStart": "9:00 am",
               "timeEnd": "9:30 am",
-              "tracks": ["Ranking"]
+              "tracks": ["Ranking"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]
             },
             {
-              "name": "soccer, club tobalaba",
+              "name": "Soccer",
               "location": "Cancha 1",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Max Lynch"],
+              "speakerNames": ["Max Lynch","Adam Bradley"],
               "timeStart": "9:30 am",
               "timeEnd": "9:45 am",
-              "tracks": ["Amistosos"]
+              "tracks": ["Amistosos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
-              "name": "trekking, Alto Jahuel",
+              "name": "Trekking",
               "location": "Alto jahuel",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Tim Lancina"],
+              "speakerNames": ["Tim Lancina","Adam Bradley"],
               "timeStart": "9:45 am",
               "timeEnd": "10:00 am",
-              "tracks": ["Grupales"]
+              "tracks": ["Grupales"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             }
           ]
         },
@@ -52,23 +71,35 @@
           "time": "10:00 am",
           "sessions": [
             {
-              "name": "Biking, San Cristobal",
+              "name": "Biking",
               "description": "We will be focused on how to install the Ionic V2 CLI, how to start a new app, and how to serve/emulate/run the application on a native device.",
               "location": "Cerro Sancritobal",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
               "speakerNames": ["Adam Bradley", "Mike Hartington"],
               "timeStart": "10:00 am",
               "timeEnd": "10:15 am",
-              "tracks": ["Grupales"]
+              "tracks": ["Grupales"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
-              "name": "Baby fútbol",
+              "name": "Babyfútbol",
               "location": "Cancha 3, Club los Pinares",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
               "speakerNames": ["Ben Sperry", "Adam Bradley"],
               "timeStart": "10:15 am",
               "timeEnd": "10:30 am",
-              "tracks": ["Amistosos"]
+              "tracks": ["Amistosos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
               "name": "Tennis, ",
@@ -77,7 +108,13 @@
               "speakerNames": ["Eric Bobbitt"],
               "timeStart": "10:30 am",
               "timeEnd": "11:00 am",
-              "tracks": ["Ranking"]
+              "tracks": ["Ranking"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             }
           ]
         },
@@ -85,31 +122,49 @@
           "time": "11:00 am",
           "sessions": [
             {
-              "name": "Raquetball, club napoleon",
+              "name": "Raquetball",
               "location": "Cancha 2",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
               "speakerNames": ["Perry Govier", "Mike Hartington"],
               "timeStart": "11:00 am",
               "timeEnd": "11:45 am",
-              "tracks": ["Amistosos"]
+              "tracks": ["Amistosos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
-              "name": "Tennis, Nuñoa",
+              "name": "Tennis",
               "location": "Cancha 4",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
               "speakerNames": ["Mike Hartington", "Katie Ginder-Vogel"],
               "timeStart": "11:30 am",
               "timeEnd": "11:50 am",
-              "tracks": ["Amistosos"]
+              "tracks": ["Amistosos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
-              "name": "Tennis, La Dehesa",
+              "name": "Tennis",
               "location": "Cancha 3",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
               "speakerNames": ["Tim Lancina", "Adam Bradley"],
               "timeStart": "11:30 am",
               "timeEnd": "12:00 pm",
-              "tracks": ["Amistosos"]
+              "tracks": ["Amistosos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             }
           ]
         },
@@ -117,12 +172,18 @@
           "time": "12:00 pm",
           "sessions": [
             {
-              "name": "Entrega de premios",
+              "name": "Evento",
               "location": "Auditorium",
-              "description": "Come grab lunch with all the Ionic fanatics and talk all things Ionic",
+              "description": "Entrega de premios torneo de maestros",
               "timeStart": "12:00 pm",
               "timeEnd": "1:00 pm",
-              "tracks": ["Eventos"]
+              "tracks": ["Eventos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             }
           ]
         },
@@ -130,13 +191,19 @@
           "time": "1:00 pm",
           "sessions": [
             {
-              "name": "Campeonato tennis, interempresas",
+              "name": "Tennis",
               "location": "Cancha 4",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Torneo de Tennis aficionados interempresas",
               "speakerNames": ["Brody Kidd","Dan Imhoff"],
               "timeStart": "1:00 pm",
               "timeEnd": "1:15 pm",
-              "tracks": ["Torneos"]
+              "tracks": ["Torneos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
               "name": "Campeonato tennis, interempresas",
@@ -145,7 +212,13 @@
               "speakerNames": ["Katie Ginder-Vogel"],
               "timeStart": "1:15 pm",
               "timeEnd": "1:30 pm",
-              "tracks": ["Torneos"]
+              "tracks": ["Torneos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
               "name": "Campeonato tennis, interempresas",
@@ -154,7 +227,13 @@
               "speakerNames": ["Dan Imhoff", "Rudy Pelrine"],
               "timeStart": "1:30 pm",
               "timeEnd": "2:00 pm",
-              "tracks": ["Torneos"]
+              "tracks": ["Torneos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             }
           ]
         },
@@ -168,7 +247,13 @@
               "speakerNames": ["Rudy Pelrine", "Eric Bobbitt"],
               "timeStart": "2:00 pm",
               "timeEnd": "2:30 pm",
-              "tracks": ["Torneos"]
+              "tracks": ["Torneos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
               "name": "Competencia de tennis",
@@ -200,7 +285,13 @@
               "speakerNames": ["Max Lynch"],
               "timeStart": "3:00 pm",
               "timeEnd": "3:30 pm",
-              "tracks": ["Eventos"]
+              "tracks": ["Eventos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             },
             {
               "name": "Exposición bicicletas",
@@ -209,7 +300,13 @@
               "speakerNames": ["Tim Lancina"],
               "timeStart": "3:30 pm",
               "timeEnd": "3:45 pm",
-              "tracks": ["Eventos"]
+              "tracks": ["Eventos"],
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]              
             }
           ]
         }
@@ -226,9 +323,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1983-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":3,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Providencia","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -248,9 +345,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1983-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":4,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Providencia","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -270,9 +367,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1988-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":5,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Las Condes","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -292,9 +389,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1985-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":2,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Huechuraba","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -317,9 +414,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1988-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":3,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Recoleta","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -339,9 +436,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1983-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":5,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Santiago","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -370,9 +467,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1978-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":5,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Rancagua","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -392,9 +489,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1983-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":4,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Valparaíso","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -414,9 +511,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1981-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":3,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Viña del Mar","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -436,13 +533,13 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1983-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":3,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "La Serena","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
-        {"sport": "Tennis", "level": "Intermidiate", "ranking": 3,
+        {"sport": "Tennis", "level": "Intermediate", "ranking": 3,
         "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
         "drawn": 0 }}
         ],
@@ -458,9 +555,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1983-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":2,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Viña del Mar","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -480,9 +577,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1984-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":5,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Providencia","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -502,9 +599,9 @@
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
       "birthdate":"1983-05-21T23:28:56.782Z",
-      "reputation":0,
+      "reputation":5,
       "receivenotification":true,
-      "publiscalendar":true,
+      "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Las Condes","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
@@ -525,27 +622,37 @@
 
   "map": [
     {
-      "name": "Monona Terrace Convention Center",
-      "lat": 43.071584,
-      "lng": -89.380120,
+      "name": "Club Palestino",
+      "lat": -33.456859,
+      "lng": -70.6114723,
       "center": true
     },
     {
-      "name": "Ionic HQ",
-      "lat": 43.074395,
-      "lng": -89.381056
+      "name": "Club Tennis Martin de Zamora",
+      "lat": -33.4462842,
+      "lng": -70.6159844
     },
     {
-      "name": "Afterparty - Brocach Irish Pub",
-      "lat": 43.07336,
-      "lng": -89.38335
+      "name": "Club Israelita",
+      "lat": -33.4345254,
+      "lng": -70.5808188
     },
     {
-      "name": "Santiago - Pocuro Providencia",
+      "name": "Club Providencia",
       "lat": -33.4307725,
       "lng": -70.594464
+    },
+    {
+      "name": "Club Tennis Tobalaba",
+      "lat": -33.4404026,
+      "lng": -70.7071977
+    },
+      {
+      "name": "Ciudad Deportiva Ivan Zamorano",
+      "lat": -33.4404026,
+      "lng": -70.7071977
     }
-  ],
+   ],
 
   "sports":[
 

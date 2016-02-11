@@ -2,7 +2,7 @@ import {NavController, Page, ActionSheet, Alert, Modal} from 'ionic-framework/io
 import {ConferenceData} from '../../providers/conference-data';
 import {UserData} from '../../providers/user-data';
 import {SpeakerDetailPage} from '../speaker-detail/speaker-detail';
-import {SessionDetailPage} from '../session-detail/session-detail';
+import {ProfileDetailPage} from '../profile-detail/profile-detail';
 import {SportmenFilterPage} from '../sportmen-filter/sportmen-filter';
 
 interface IZone {
@@ -38,8 +38,9 @@ export class SpeakerListPage {
      this.updateSportmen();
   }
 
-  goToSessionDetail(session) {
-    this.nav.push(SessionDetailPage, session);
+  goToProfileDetail(profile,sportman) {
+    let Fullprofile:any = {profile:profile,sportman:sportman}
+    this.nav.push(ProfileDetailPage, Fullprofile);
   }
 
   goToSportmanDetail(sportmanName:string) {
