@@ -1,8 +1,44 @@
 {
 
-  "schedule": [
+  "schedule": [{"date":"2016-05-16",
+  "groups": [
+        {
+          "time": "15:00 am",
+          "sessions": [
+            {
+              "name": "Running",
+              "timeStart": "14:00 am",
+              "timeEnd": "16:00 am",
+              "location": "Cerro Chena",
+              "tracks": ["Grupales"],
+              "center":""
+            }
+          ]
+        },
+        {
+          "time": "9:00 am",
+          "sessions": [
+            {
+              "name": "Mountainbike",
+              "location": "Cerro La Parva",
+              "description": "Salida grupal mazx 14 personas",
+              "speakerNames": ["Brandy Carney","Tim Lancina"],
+              "timeStart": "9:00 am",
+              "timeEnd": "14:30 am",
+              "tracks": ["Grupales"],
+              "center":"Club Mountain Chile",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "won":["Brandy Carney"],
+              "statistics":["6/2","5/6","6/3"]
+            }
+           ]
+        } 
+  ]
+ },
     {
-      "date": "2047-05-17",
+      "date": "2016-05-17",
       "groups": [
         {
           "time": "8:00 am",
@@ -33,7 +69,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]
+              "statistics":["6/2","5/6","6/3"],
+              "public":true
             },
             {
               "name": "Soccer",
@@ -48,7 +85,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true              
             },
             {
               "name": "Trekking",
@@ -63,7 +101,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true              
             }
           ]
         },
@@ -84,7 +123,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true              
             },
             {
               "name": "Babyfútbol",
@@ -114,7 +154,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true              
             }
           ]
         },
@@ -134,7 +175,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true             
             },
             {
               "name": "Tennis",
@@ -149,7 +191,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true             
             },
             {
               "name": "Tennis",
@@ -164,7 +207,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true              
             }
           ]
         },
@@ -183,7 +227,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"] ,
+              "public":true             
             }
           ]
         },
@@ -203,7 +248,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true             
             },
             {
               "name": "Campeonato tennis, interempresas",
@@ -218,7 +264,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"] ,
+              "public":true             
             },
             {
               "name": "Campeonato tennis, interempresas",
@@ -233,7 +280,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true             
             }
           ]
         },
@@ -253,7 +301,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true              
             },
             {
               "name": "Competencia de tennis",
@@ -262,7 +311,8 @@
               "speakerNames": ["Drew Rygh"],
               "timeStart": "2:30 pm",
               "timeEnd": "2:45 pm",
-              "tracks": ["Torneos"]
+              "tracks": ["Torneos"],
+              "public":true
             },
             {
               "name": "Competencia de tennis",
@@ -271,7 +321,8 @@
               "speakerNames": ["Ben Sperry", "Brandy Carney"],
               "timeStart": "2:45 pm",
               "timeEnd": "3:00 pm",
-              "tracks": ["Torneos"]
+              "tracks": ["Torneos"],
+              "public":true
             }
           ]
         },
@@ -291,7 +342,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"],
+              "public":true              
             },
             {
               "name": "Exposición bicicletas",
@@ -306,7 +358,8 @@
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
               "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "statistics":["6/2","5/6","6/3"] ,
+              "public":true             
             }
           ]
         }

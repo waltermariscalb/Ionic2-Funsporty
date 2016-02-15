@@ -11,11 +11,12 @@ import {SessionDetailPage} from '../session-detail/session-detail';
 export class SchedulePage {
 dayIndex:number = 0;
 queryText:string = '';
-segment = 'all';
-excludeTracks = [];
-shownSessions = [];
+segment:string = 'all';
+excludeTracks:Array<any> = [];
+shownSessions:number = 0;
 groups = [];
-filterTracks = [];
+
+date: string;
 
 hasSessions:boolean = false;
 
@@ -33,6 +34,7 @@ hasSessions:boolean = false;
     this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then(data => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
+      this.date= data.date;
     });
   }
 
@@ -54,7 +56,25 @@ hasSessions:boolean = false;
     // and pass in the session data
     this.nav.push(SessionDetailPage, sessionData);
   }
+  
+  back(){
+    this.date='';
+    this.groups = [];
+    this.shownSessions=0;
+    this.confData.hasSession(this.dayIndex -1).then(v => {if (v) {this.dayIndex--;this.updateSchedule();}})  
+         
+    
+  }
 
+  next(){
+    this.date='';
+    this.groups = [];
+    this.shownSessions=0;
+    this.confData.hasSession(this.dayIndex +1).then(v => {if (v) {this.dayIndex++;this.updateSchedule();}})  
+ 
+      
+   }
+  
   addFavorite(slidingItem, sessionData) {
 
     if (this.user.hasFavorite('sessions',sessionData.name)) {

@@ -89,6 +89,7 @@ export class ConferenceData {
 
   public getTimeline(dayIndex:number, queryText:string='', excludeTracks:Array<string>=[], segment:string='all') {
     return this.load().then(data => {
+     
       let day = data.schedule[dayIndex];
       day.shownSessions = 0;
 
@@ -114,6 +115,12 @@ export class ConferenceData {
       return day;
     });
   }
+  
+  public hasSession(dayIndex:number) {
+      return this.load().then(data => { 
+         return (data.schedule.length >= dayIndex && dayIndex >= 0 )
+      });
+     }
 
   public filterSession(session, queryWords:Array<string>, excludeTracks:Array<any>, segment:string) {
 
@@ -139,7 +146,7 @@ export class ConferenceData {
       }
     });
 
-    // if the segement is 'favorites', but session is not a user favorite
+    // if the segment is 'favorites', but session is not a user favorite
     // then this session does not pass the segment test
     let matchesSegment:boolean = false;
     if (segment === 'favorites') {

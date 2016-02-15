@@ -11,7 +11,7 @@
             Favoritos
         </ion-segment-button>
     </ion-segment>
-
+    
       <ion-buttons end>
           <button (click)="presentFilter()">
               <ion-icon ios="ios-funnel-outline" md="md-funnel"></ion-icon>
@@ -26,11 +26,29 @@
                  (input)="updateSchedule()"
                  placeholder="Search">
   </ion-searchbar>
-
+  
+ <ion-segment>
+    <ion-buttons start>
+        <button outline small (click)="back()"> Anterior 
+            <ion-icon ios="ios-ke" md="md-funnel"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-buttons>
+        <div> {{date}} </div>
+    </ion-buttons>    
+    <ion-buttons  end>
+        <button outline small (click)="next()"> Siguiente 
+             <ion-icon ios="ios-arrow" md="md-next"></ion-icon>
+        </button>
+    </ion-buttons>
+    
+ </ion-segment>
+ 
   <ion-list [hidden]="shownSessions === 0">
 
+   
     <ion-item-group *ngFor="#group of groups" [hidden]="group.hide">
-
+        
       <ion-item-divider sticky>
         {{group.time}}
       </ion-item-divider>
