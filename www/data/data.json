@@ -7,11 +7,20 @@
           "sessions": [
             {
               "name": "Running",
-              "timeStart": "14:00 am",
-              "timeEnd": "16:00 am",
-              "location": "Cerro Chena",
+              "location": "Cerro Chena",              
+              "description": "Salida grupal por los senderos del cerro, máximo 14 personas",
+              "speakerNames": ["Brandy Carney","Tim Lancina","Mike Hartington"],              
+              "timeStart": "08:00 am",
+              "timeEnd": "14:00 am",
               "tracks": ["Grupales"],
-              "center":""
+              "center":"",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney"],
+              "winners":[],
+              "resultname":"tiempos",
+              "results":[],
+              "public":true              
             }
           ]
         },
@@ -21,17 +30,19 @@
             {
               "name": "Mountainbike",
               "location": "Cerro La Parva",
-              "description": "Salida grupal mazx 14 personas",
-              "speakerNames": ["Brandy Carney","Tim Lancina"],
-              "timeStart": "9:00 am",
-              "timeEnd": "14:30 am",
+              "description": "Salida grupal nocturna, máximo 8 personas",
+              "speakerNames": ["Brandy Carney","Tim Lancina","Mike Hartington"],
+              "timeStart": "20:00 pm",
+              "timeEnd": "23:30 pm",
               "tracks": ["Grupales"],
               "center":"Club Mountain Chile",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]
+              "hosts" : ["Tim Lancina"],
+              "winners":["Mike Hartington","Brandy Carney","Tim Lancina"],
+              "resultname":"tiempos",
+              "results":["1:45 min","2:25 min","2:40 min"],
+              "public":true   
             }
            ]
         } 
@@ -45,11 +56,20 @@
           "sessions": [
             {
               "name": "Tennis",
+              "location": "Cancha 4",
+              "description": "Partido Amistoso",
+              "speakerNames": ["Brandy Carney","Tim Lancina"],              
               "timeStart": "8:00 am",
               "timeEnd": "9:00 am",
-              "location": "Cancha 4",
               "tracks": ["Amistosos"],
-              "center":"Club Manquehue"
+              "center":"Club Manquehue",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Brandy Carney","Tim Lancina"],
+              "winners":["Brandy Carney"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false                 
             }
           ]
         },
@@ -59,49 +79,53 @@
             {
               "name": "Raquetball",
               "location": "Cancha 1",
-              "description": "partido amistoso",
-              "speakerNames": ["Brandy Carney","Tim Lancina"],
+              "description": "Encuentro Amistoso",
+              "speakerNames": ["Brandy Carney","Mike Hartington"],
               "timeStart": "9:00 am",
-              "timeEnd": "9:30 am",
+              "timeEnd": "10:30 am",
               "tracks": ["Ranking"],
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
-              "public":true
+              "hosts" : ["Brandy Carney","Mike Hartington"],
+              "winners":["Brandy Carney"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false
             },
             {
               "name": "Soccer",
               "location": "Cancha 1",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Max Lynch","Adam Bradley"],
+              "description": "Encuentro Amistoso",
+              "speakerNames": ["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
+              "teams":[{"hosts":["Max Lynch"],"participants":[{"name":"Max Lynch","status":"confirmed"},{"name":"Adam Bradley","status":"confirmed"},{"name":"Mike Hartington","status":"confirmed"}]},{"hosts":["Ben Sperry"],"participants":[{"name":"Ben Sperry" ,"status":"confirmed"},{"name":"Eric Bobbitt","status":"confirmed"}]}],
               "timeStart": "9:30 am",
-              "timeEnd": "9:45 am",
+              "timeEnd": "11:30 am",
               "tracks": ["Amistosos"],
-              "center":"Club Israelita",
+              "center":"Ciudad Deportiva Iván Zamorano",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
-              "public":true              
+              "hosts" : ["Max Lynch","Ben Sperry"],
+              "winners":["Max Lynch"],
+              "resultname":"Goles",
+              "results":["3/1"],
+              "public":false              
             },
             {
               "name": "Trekking",
               "location": "Alto jahuel",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Tim Lancina","Adam Bradley"],
-              "timeStart": "9:45 am",
-              "timeEnd": "10:00 am",
+              "description": "Salida entre amigos visita parques y senderos",
+              "speakerNames": ["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
+              "timeStart": "08:00 am",
+              "timeEnd": "13:00 am",
               "tracks": ["Grupales"],
-              "center":"Club Israelita",
+              "center":"",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
+              "hosts" : ["Brody Kidd","Adam Bradley"],
+              "winners":["Ben Sperry","Brody Kidd","Adam Bradley"],
+              "resultname":"Tiempos",
+              "results":["50 min","58 min","1:10 min"],
               "public":true              
             }
           ]
@@ -111,51 +135,55 @@
           "sessions": [
             {
               "name": "Biking",
-              "description": "We will be focused on how to install the Ionic V2 CLI, how to start a new app, and how to serve/emulate/run the application on a native device.",
-              "location": "Cerro Sancritobal",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "location": "Cerro San Cristobal",
+              "description": "Salida grupal colegio las Encinas",
               "speakerNames": ["Adam Bradley", "Mike Hartington"],
               "timeStart": "10:00 am",
-              "timeEnd": "10:15 am",
+              "timeEnd": "14:30 am",
               "tracks": ["Grupales"],
-              "center":"Club Israelita",
+              "center":"",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
+              "hosts" : ["Adam Bradley", "Mike Hartington"],
+              "winners":[],
+              "resultname":"Tiempos",
+              "results":[],
               "public":true              
             },
             {
               "name": "Babyfútbol",
               "location": "Cancha 3, Club los Pinares",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
               "speakerNames": ["Ben Sperry", "Adam Bradley"],
+              "teams":[{"hosts":["Max Lynch"],"participants":[{"name":"Max Lynch","status":"confirmed"},{"name":"Adam Bradley","status":"confirmed"},{"name":"Mike Hartington","status":"confirmed"}]},{"hosts":["Ben Sperry"],"participants":[{"name":"Ben Sperry","status":"confirmed"},{"name":"Eric Bobbitt","status":"confirmed"}]}],              
               "timeStart": "10:15 am",
               "timeEnd": "10:30 am",
               "tracks": ["Amistosos"],
-              "center":"Club Israelita",
+              "center":"Ciudad Deportiva Iván Zamorano",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"]              
+              "hosts" : ["Ben Sperry", "Max Lynch"],
+              "winners":["Ben Sperry"],
+              "resultname":"Goles",
+              "results":["4/3"],
+              "public":false          
             },
             {
               "name": "Tennis, ",
               "location": "Cancha 4, Club providencia",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Eric Bobbitt"],
+              "description": "our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "speakerNames": ["Eric Bobbitt","Tim Lancina"],
               "timeStart": "10:30 am",
               "timeEnd": "11:00 am",
               "tracks": ["Ranking"],
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
-              "public":true              
+              "hosts" : ["Eric Bobbitt","Tim Lancina"],
+              "winners":["Eric Bobbitt"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false              
             }
           ]
         },
@@ -165,7 +193,7 @@
             {
               "name": "Raquetball",
               "location": "Cancha 2",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": " We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
               "speakerNames": ["Perry Govier", "Mike Hartington"],
               "timeStart": "11:00 am",
               "timeEnd": "11:45 am",
@@ -173,10 +201,11 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
-              "public":true             
+              "hosts" : ["Perry Govier", "Mike Hartington"],
+              "winners":["Perry Govier"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false             
             },
             {
               "name": "Tennis",
@@ -189,10 +218,11 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
-              "public":true             
+              "hosts" : ["Mike Hartington", "Katie Ginder-Vogel"],
+              "winners":["Katie Ginder-Vogel"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false             
             },
             {
               "name": "Tennis",
@@ -205,10 +235,11 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
-              "public":true              
+              "hosts" : ["Tim Lancina", "Adam Bradley"],
+              "winners":["Tim Lancina"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false              
             }
           ]
         },
@@ -219,6 +250,7 @@
               "name": "Evento",
               "location": "Auditorium",
               "description": "Entrega de premios torneo de maestros",
+              "speakerNames": ["Tim Lancina", "Adam Bradley"],              
               "timeStart": "12:00 pm",
               "timeEnd": "1:00 pm",
               "tracks": ["Eventos"],
@@ -226,8 +258,9 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"] ,
+              "winners":[],
+              "resultname":"",
+              "results":[] ,
               "public":true             
             }
           ]
@@ -246,26 +279,28 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
-              "public":true             
+              "hosts" : ["Brody Kidd","Dan Imhoff"],
+              "winners":["Brody Kidd"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false             
             },
             {
               "name": "Campeonato tennis, interempresas",
               "location": "Cancha 4",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Katie Ginder-Vogel"],
+              "speakerNames": ["Katie Ginder-Vogel","Dan Imhoff"],
               "timeStart": "1:15 pm",
               "timeEnd": "1:30 pm",
               "tracks": ["Torneos"],
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"] ,
-              "public":true             
+              "hosts" : ["Katie Ginder-Vogel","Dan Imhoff"],
+              "winners":["Katie Ginder-Vogel"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"] ,
+              "public":false             
             },
             {
               "name": "Campeonato tennis, interempresas",
@@ -278,10 +313,11 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
-              "public":true             
+              "hosts" : ["Dan Imhoff", "Rudy Pelrine"],
+              "winners":["Dan Imhoff"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false             
             }
           ]
         },
@@ -300,19 +336,27 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
+              "winners":["Brandy Carney"],
+              "resultname":"Tiempos",
+              "results":["2:15 min","2:56 min","3:10 min"],
               "public":true              
             },
             {
               "name": "Competencia de tennis",
               "location": "Cancha 1",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Drew Rygh"],
+              "speakerNames": ["Drew Rygh","Max Lynch"],
               "timeStart": "2:30 pm",
               "timeEnd": "2:45 pm",
               "tracks": ["Torneos"],
-              "public":true
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Drew Rygh","Max Lynch"],
+              "winners":["Drew Rygh"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false 
             },
             {
               "name": "Competencia de tennis",
@@ -322,7 +366,14 @@
               "timeStart": "2:45 pm",
               "timeEnd": "3:00 pm",
               "tracks": ["Torneos"],
-              "public":true
+              "center":"Club Israelita",
+              "lat": -33.4345254,
+              "lng": -70.5808188,
+              "hosts" : ["Ben Sperry", "Brandy Carney"],
+              "winners":["Ben Sperry"],
+              "resultname":"Set",
+              "results":["6/2","5/6","6/3"],
+              "public":false 
             }
           ]
         },
@@ -333,32 +384,34 @@
               "name": "Exposición de ropa deportiva",
               "location": "Mall Las condes",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Max Lynch"],
+              "speakerNames": ["Brandy Carney","Max Lynch"],
               "timeStart": "3:00 pm",
               "timeEnd": "3:30 pm",
               "tracks": ["Eventos"],
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"],
+              "hosts" : ["Brandy Carney","Max Lynch"],
+              "winners":[],
+              "resultname":"",
+              "results":[],
               "public":true              
             },
             {
               "name": "Exposición bicicletas",
               "location": "Parque bustamante",
               "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Tim Lancina"],
+              "speakerNames": ["Brandy Carney","Tim Lancina"],
               "timeStart": "3:30 pm",
               "timeEnd": "3:45 pm",
               "tracks": ["Eventos"],
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "won":["Brandy Carney"],
-              "statistics":["6/2","5/6","6/3"] ,
+              "hosts" : ["Brandy Carney"],
+              "winners":[],
+              "resultname":"",
+              "results":[] ,
               "public":true             
             }
           ]

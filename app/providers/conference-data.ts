@@ -54,6 +54,7 @@ export class ConferenceData {
       day.groups.forEach(group => {
         // loop through each session in the timeline group
         group.sessions.forEach(session => {
+          session.date = day.date; //add date for each session
           this.processSession(data, session);
         });
       });
@@ -87,12 +88,12 @@ export class ConferenceData {
     }
   }
 
-  public getTimeline(dayIndex:number, queryText:string='', excludeTracks:Array<string>=[], segment:string='all') {
+  public getTimeline(dayIndex:number, queryText:string='', excludeTracks:Array<string>=[], segment:string='all',userName:string) {
     return this.load().then(data => {
      
       let day = data.schedule[dayIndex];
       day.shownSessions = 0;
-
+   
       queryText = queryText.toLowerCase().replace(/,|\.|-/g,' ');// replace , or . or - with spaces globally
       let queryWords = queryText.split(' ').filter(w => w.trim().length>0); //filter only words
 
@@ -101,7 +102,7 @@ export class ConferenceData {
 
         group.sessions.forEach(session => {
           // check if this session should show or not
-          this.filterSession(session, queryWords, excludeTracks, segment);
+         this.filterSession(session, queryWords, excludeTracks, segment,userName);
 
           if (!session.hide) {
             // if this session is not hidden then this group should show
@@ -118,11 +119,11 @@ export class ConferenceData {
   
   public hasSession(dayIndex:number) {
       return this.load().then(data => { 
-         return (data.schedule.length >= dayIndex && dayIndex >= 0 )
+         return (data.schedule.length-1 >= dayIndex && dayIndex >= 0 )
       });
      }
 
-  public filterSession(session, queryWords:Array<string>, excludeTracks:Array<any>, segment:string) {
+  public filterSession(session, queryWords:Array<string>, excludeTracks:Array<any>, segment:string,userName:string) {
 
     let matchesQueryText:boolean = false;
     if (queryWords.length) {
@@ -156,9 +157,23 @@ export class ConferenceData {
     } else {
       matchesSegment = true;
     }
+    
+    let matchesUserName:boolean = false;
+    session.speakerNames.forEach(Name => {
+      if (Name === userName) {
+        matchesUserName = true;
+      }
+    });
+    
+    let matchesHosts:boolean = false;
+    session.hosts.forEach(Name => {
+      if (Name === userName) {
+        matchesHosts = true;
+      }
+    });
 
     // all tests must be true if it should not be hidden
-    session.hide = !(matchesQueryText && matchesTracks && matchesSegment);
+    session.hide = !(matchesQueryText && matchesTracks && matchesSegment && (matchesUserName || matchesHosts || session.public));
   }
 
   public getTracks() {

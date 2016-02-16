@@ -14,16 +14,17 @@ export class ProfileForm {
 	sportman: Object;
 	submitted: boolean = false;
 
-    constructor(private nav: NavController,private confData: ConferenceData) {
-		this.sportman = { username: undefined, user_id: -1, img: '', status: 'active', gender: 'Male', email: '', birthdate: undefined, zones: [{ city: '', country: '' }], receivenotification: true, publiscalendar:true };
-        
+    constructor(private nav: NavController,private confData: ConferenceData, private user:UserData) {
+		this.sportman = {img: '', status: 'active', gender: 'Male', email: 'test@test.cl', birthdate: new Date(1984, 12, 8), zones: [{ city: '', country: '' }], receivenotification: true, publiscalendar:false };
+        user.getUserName().then(username => {this.sportman["name"] = username});
 	}
 
 Save(form) {
 	this.submitted = true;
 	 if (form.valid) {
-		 alert(JSON.stringify(this.sportman));
-	
+         alert(JSON.stringify(this.sportman));
+         this.user.signup(this.sportman['name'],'');
+     
      }
  } 
 

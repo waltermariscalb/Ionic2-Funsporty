@@ -45,11 +45,13 @@ export class UserData {
 
   public login(username?, password?) {
     this.storage.set(this.HAS_LOGGED_IN, true);
+    this.storage.set('username', username);
     this.events.publish('user:login');
   }
 
   public signup(username?, password?) {
     this.storage.set(this.HAS_LOGGED_IN, true);
+    this.storage.set('username', username);
     this.events.publish('user:signup');
   }
 
@@ -62,6 +64,12 @@ export class UserData {
   public hasLoggedIn() {
     return this.storage.get(this.HAS_LOGGED_IN).then((value) => {
       return value;
+    });
+  }
+  
+  public getUserName() {
+      return this.storage.get('username').then((value) => {
+    return value ? value:'Brandy Carney';
     });
   }
 }

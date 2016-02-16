@@ -22,7 +22,6 @@ hasSessions:boolean = false;
 
 
   constructor(private app: IonicApp, private nav: NavController, private confData: ConferenceData, private user: UserData) {
-
     this.updateSchedule();
   }
 
@@ -31,11 +30,14 @@ hasSessions:boolean = false;
   }
 
   updateSchedule() {
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then(data => {
+    this.user.getUserName().then(username => {
+      
+    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment, username).then(data => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
       this.date= data.date;
     });
+    }); 
   }
 
   presentFilter() {
@@ -61,19 +63,17 @@ hasSessions:boolean = false;
     this.date='';
     this.groups = [];
     this.shownSessions=0;
-    this.confData.hasSession(this.dayIndex -1).then(v => {if (v) {this.dayIndex--;this.updateSchedule();}})  
-         
-    
+    if (this.dayIndex > 0) {this.dayIndex--};
+    this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})  
   }
 
   next(){
     this.date='';
     this.groups = [];
     this.shownSessions=0;
-    this.confData.hasSession(this.dayIndex +1).then(v => {if (v) {this.dayIndex++;this.updateSchedule();}})  
- 
-      
-   }
+    this.dayIndex++;
+    this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})  
+    }
   
   addFavorite(slidingItem, sessionData) {
 
