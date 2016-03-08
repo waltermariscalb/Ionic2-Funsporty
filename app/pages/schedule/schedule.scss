@@ -4,11 +4,11 @@ $categories: (
  torneos: #8E8D93,
  amistosos: #FE4C52,
  grupales: #FD8B2D,
- design: #FED035,
- workshop: #69BB7B,
- food: #3BC7C4,
- documentation: #B16BE3,
- navigation: #6600CC,
+ otro: #FED035,
+ otro2: #69BB7B,
+ otro3: #3BC7C4,
+ otro4: #B16BE3,
+ otro5: #6600CC,
 );
 
 @function auxiliary-categories() {
@@ -26,4 +26,9 @@ $categories: (
 
 ion.segment {
   width: 80%;
+}
+
+// Related to https://github.com/driftyco/ionic/issues/5055
+.ios .hide-border .toolbar-background {
+  border-bottom-color: transparent;
 }

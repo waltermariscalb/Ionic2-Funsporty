@@ -1,4 +1,4 @@
-import {App, IonicApp, Events} from 'ionic-framework/ionic';
+import {App, IonicApp, Events} from 'ionic-angular';
 import {ConferenceData} from './providers/conference-data';
 import {UserData} from './providers/user-data';
 import {TabsPage} from './pages/tabs/tabs';
@@ -16,17 +16,28 @@ interface PageObj {
   title: string;
   component: Type;
   icon: string;
-  hide: boolean;
+  index?: number;
 }
 
 @App({
   templateUrl: 'build/app.html',
   providers: [ConferenceData, UserData],
-  config: {}
+  config: {
+     platforms: {
+       android: {
+         tabbarLayout: 'icon-hide'
+       }
+     }
+   }
 })
 class ConferenceApp {
   rootPage: Type = TabsPage; //TutorialPage;
-  pages: PageObj[];
+  loggedIn = false;
+
+  appPages: PageObj[];
+  loggedInPages: PageObj[];
+  loggedOutPages: PageObj[]
+
 
   constructor(private app: IonicApp, private events: Events, confData: ConferenceData, private userData: UserData) {
     // load the conference data
@@ -37,37 +48,48 @@ class ConferenceApp {
     // create an list of pages that can be navigated to from the left menu
     // the left menu only works after login
     // the login page disables the left menu
-    this.pages = [
-      { title: 'HOME',name:'Schedules',component: TabsPage, icon: 'home', hide: false },
-      { title: 'Ranking', name: 'Ranking', component: TabsPage, icon: 'podium', hide: false },
-      { title: 'Establecimientos', name: 'Centers', component: TabsPage, icon: 'home', hide: false },     
-      { title: 'Iniciar', name:'Login', component: LoginPage, icon: 'log-in', hide: true },
-      { title: 'Registrarse', name:'Signup', component: SignupPage, icon: 'person-add', hide: true },
-      { title: 'Cerrar sesión', name: 'Logout', component: LoginPage, icon: 'log-out', hide: true },
-      { title: 'Acerca de', name:'About', component: AboutPage, icon: 'information-circle', hide: false },
+    this.appPages = [
+      { title: 'HOME',name:'Schedules',component: TabsPage, icon: 'home' },
+      { title: 'Ranking', name: 'Ranking', component: TabsPage, index:1,icon: 'podium' },
+      { title: 'Establecimientos', name: 'Centers', component: TabsPage, index:2, icon: 'home'},     
+      { title: 'Acerca de', name:'About', component: AboutPage, index:3,icon: 'information-circle' }
     ];
+
+    this.loggedInPages=[{ title: 'Cerrar sesión', name: 'Logout', component: LoginPage, icon: 'log-out' }];
+
+    this.loggedOutPages=[{ title: 'Iniciar', name:'Login', component: LoginPage, icon: 'log-in' },
+      { title: 'Registrarse', name:'Signup', component: SignupPage, icon: 'person-add'}];
 
     // decide which menu items should be hidden by current login status stored in local storage
     this.userData.hasLoggedIn().then((hasLoggedIn) => {
       console.log(hasLoggedIn);
-      this.updateSideMenuItems(hasLoggedIn)
+      this.loggedIn = (hasLoggedIn == 'true');
+      //this.updateSideMenuItems(hasLoggedIn)
     });
 
     this.listenToLoginEvents();
   }
 
   openPage(page: PageObj) {
-    if (page.name === 'Logout') {
-      this.userData.logout();
-    }
+
 
     // find the nav component and set what the root page should be
     // reset the nav to remove previous pages and only have this page
     // we wouldn't want the back button to show in this scenario
     let nav = this.app.getComponent('nav');
     
-    nav.setRoot(page.component);
 
+    if (page.index) {
+      nav.setRoot(page.component, {tabIndex: page.index});
+    } else {
+      nav.setRoot(page.component);
+    }
+
+    if (page.name === 'Logout') {
+      setTimeout(() => {
+              this.userData.logout();
+            }, 1000);
+    }
 /*
     nav.setRoot(page.component).then(() => { //verify this part
       // wait for the root page to be completely loaded
@@ -79,33 +101,16 @@ class ConferenceApp {
 
   listenToLoginEvents() {
     this.events.subscribe('user:login', () => {
-      this.updateSideMenuItems(true);
+     this.loggedIn = true;
     });
 
     this.events.subscribe('user:signup', () => {
-      this.updateSideMenuItems(true);
+     this.loggedIn = true;
     });
 
     this.events.subscribe('user:logout', () => {
-      this.updateSideMenuItems(false);
+     this.loggedIn = false;
     });
   }
 
-  updateSideMenuItems(hasLoggedIn: boolean) {
-    if (hasLoggedIn) {
-      this.findMenuItemByName('Login').hide = true;
-      this.findMenuItemByName('Signup').hide = true;
-      this.findMenuItemByName('Logout').hide = false;
-    } else {
-      this.findMenuItemByName('Login').hide = false;
-      this.findMenuItemByName('Signup').hide = false;
-      this.findMenuItemByName('Logout').hide = true;
-    }
-  }
-
-  findMenuItemByName(name: string) {
-    return this.pages.find((menuItem) => {
-      return menuItem.name === name
-    })
-  }
 }

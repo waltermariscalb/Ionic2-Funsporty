@@ -1,6 +1,5 @@
-/// <reference path="../../../typings/googlemaps/google.maps.d.ts" />
 
-import {Page} from 'ionic-framework/ionic';
+import {Page} from 'ionic-angular';
 import {ConferenceData} from '../../providers/conference-data';
 
 @Page({

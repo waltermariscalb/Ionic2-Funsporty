@@ -1,4 +1,4 @@
-import {IonicApp, Page, Modal, Alert, NavController} from 'ionic-framework/ionic';
+import {IonicApp, Page, Modal, Alert, NavController, ItemSliding} from 'ionic-angular';
 import {ConferenceData} from '../../providers/conference-data';
 import {UserData} from '../../providers/user-data';
 import {ScheduleFilterPage} from '../schedule-filter/schedule-filter';
@@ -75,7 +75,7 @@ hasSessions:boolean = false;
     this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})  
     }
   
-  addFavorite(slidingItem, sessionData) {
+  addFavorite(slidingItem:ItemSliding, sessionData) {
 
     if (this.user.hasFavorite('sessions',sessionData.name)) {
       // woops, they already favorited it! What shall we do!?

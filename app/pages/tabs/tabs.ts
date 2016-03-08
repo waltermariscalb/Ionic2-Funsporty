@@ -1,24 +1,24 @@
-import {Page} from 'ionic-framework/ionic';
+import {Page,NavParams} from 'ionic-angular';
 import {SchedulePage} from '../schedule/schedule';
 import {SpeakerListPage} from '../speaker-list/speaker-list';
 import {MapPage} from '../map/map';
-import {AboutPage} from '../about/about';
 import {ProfileForm} from '../profile-form/profile-form';
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
 
 @Page({
-  templateUrl: 'build/pages/tabs/tabs.html'
+  templateUrl: 'build/pages/tabs/tabs.html';
 })
 export class TabsPage {
 	 // set the root pages for each tab
-    tab1Root = SpeakerListPage;
-    tab2Root = SchedulePage;
-    tab3Root = MapPage;
-    tab4Root = ProfileForm;
+    tab1Root:any = SpeakerListPage;
+    tab2Root:any = SchedulePage;
+    tab3Root:any = MapPage;
+    tab4Root:any = ProfileForm;
+	mySelectedIndex: number;
 
-  constructor() {
-   
+  constructor(navParams: NavParams) {
+   	this.mySelectedIndex = navParams.data.tabIndex || 0;
   }
 }

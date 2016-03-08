@@ -1,4 +1,4 @@
-<ion-navbar *navbar>
+<ion-navbar *navbar class="hide-border">
     <button menuToggle>
         <ion-icon name="menu"></ion-icon>
     </button>
@@ -21,11 +21,13 @@
 
 
 <ion-content class="schedule">
-  <ion-searchbar primary
-                 [(ngModel)]="queryText"
-                 (input)="updateSchedule()"
-                 placeholder="Search">
-  </ion-searchbar>
+  <ion-toolbar>
+    <ion-searchbar primary
+                   [(ngModel)]="queryText"
+                   (input)="updateSchedule()"
+                   placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
   
  <ion-segment>
     <ion-buttons start>

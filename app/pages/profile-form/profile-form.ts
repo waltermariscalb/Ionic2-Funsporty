@@ -1,4 +1,4 @@
-import {NavController, Page, ActionSheet, Alert, Modal} from 'ionic-framework/ionic';
+import {NavController, Page, ActionSheet, Alert, Modal} from 'ionic-angular';
 import {ConferenceData} from '../../providers/conference-data';
 import {UserData} from '../../providers/user-data';
 import {TabsPage} from '../tabs/tabs';
