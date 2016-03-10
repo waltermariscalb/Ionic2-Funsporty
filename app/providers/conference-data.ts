@@ -60,6 +60,12 @@ export class ConferenceData {
       });
     });
 
+    data.speakers.forEach(sp => {
+      sp.profiles.forEach(p => {
+        p.sportobject = data.sports.find(s=> p.sport == s.name);
+      })
+    })
+
     return data;
   }
 
@@ -262,7 +268,7 @@ export class ConferenceData {
   public getSports() {
     return this.load().then(data => {
       return data.sports;
-      alert(JSON.stringify(data.sports))
+      
     });
   }
  

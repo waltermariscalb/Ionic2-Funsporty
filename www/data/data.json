@@ -153,7 +153,7 @@
             {
               "name": "Babyfútbol",
               "location": "Cancha 3, Club los Pinares",
-              "description": "We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Partido amistoso empresa.",
               "speakerNames": ["Ben Sperry", "Adam Bradley"],
               "teams":[{"hosts":["Max Lynch"],"participants":[{"name":"Max Lynch","status":"confirmed"},{"name":"Adam Bradley","status":"confirmed"},{"name":"Mike Hartington","status":"confirmed"}]},{"hosts":["Ben Sperry"],"participants":[{"name":"Ben Sperry","status":"confirmed"},{"name":"Eric Bobbitt","status":"confirmed"}]}],              
               "timeStart": "10:15 am",
@@ -169,9 +169,9 @@
               "public":false          
             },
             {
-              "name": "Tennis, ",
+              "name": "Tennis",
               "location": "Cancha 4, Club providencia",
-              "description": "our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Partido por puntos",
               "speakerNames": ["Eric Bobbitt","Tim Lancina"],
               "timeStart": "10:30 am",
               "timeEnd": "11:00 am",
@@ -193,7 +193,7 @@
             {
               "name": "Raquetball",
               "location": "Cancha 2",
-              "description": " We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": " Partido por puntos",
               "speakerNames": ["Perry Govier", "Mike Hartington"],
               "timeStart": "11:00 am",
               "timeEnd": "11:45 am",
@@ -210,7 +210,7 @@
             {
               "name": "Tennis",
               "location": "Cancha 4",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Partido por puntos",
               "speakerNames": ["Mike Hartington", "Katie Ginder-Vogel"],
               "timeStart": "11:30 am",
               "timeEnd": "11:50 am",
@@ -227,7 +227,7 @@
             {
               "name": "Tennis",
               "location": "Cancha 3",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Partido por puntos",
               "speakerNames": ["Tim Lancina", "Adam Bradley"],
               "timeStart": "11:30 am",
               "timeEnd": "12:00 pm",
@@ -286,9 +286,9 @@
               "public":false             
             },
             {
-              "name": "Campeonato tennis, interempresas",
+              "name": "Tennis",
               "location": "Cancha 4",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Campeonato tennis, interempresas, Partido por puntos",
               "speakerNames": ["Katie Ginder-Vogel","Dan Imhoff"],
               "timeStart": "1:15 pm",
               "timeEnd": "1:30 pm",
@@ -303,9 +303,9 @@
               "public":false             
             },
             {
-              "name": "Campeonato tennis, interempresas",
+              "name": "Tennis",
               "location": "Cancha 4",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Partido por puntos",
               "speakerNames": ["Dan Imhoff", "Rudy Pelrine"],
               "timeStart": "1:30 pm",
               "timeEnd": "2:00 pm",
@@ -325,9 +325,9 @@
           "time": "2:00 pm",
           "sessions": [
             {
-              "name": "Competencia de Mountain bike",
+              "name": "Mountainbike",
               "location": "Termas de Flaco, San Fernando",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Partido por puntos",
               "speakerNames": ["Rudy Pelrine", "Eric Bobbitt"],
               "timeStart": "2:00 pm",
               "timeEnd": "2:30 pm",
@@ -342,9 +342,9 @@
               "public":true              
             },
             {
-              "name": "Competencia de tennis",
+              "name": "Tennis",
               "location": "Cancha 1",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Competencia de tennis, Partido por puntos",
               "speakerNames": ["Drew Rygh","Max Lynch"],
               "timeStart": "2:30 pm",
               "timeEnd": "2:45 pm",
@@ -359,9 +359,9 @@
               "public":false 
             },
             {
-              "name": "Competencia de tennis",
+              "name": "Tennis",
               "location": "Cancha 1",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Partido por puntos",
               "speakerNames": ["Ben Sperry", "Brandy Carney"],
               "timeStart": "2:45 pm",
               "timeEnd": "3:00 pm",
@@ -381,9 +381,9 @@
           "time": "3:00",
           "sessions": [
             {
-              "name": "Exposición de ropa deportiva",
+              "name": "Evento",
               "location": "Mall Las condes",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Exposición de ropa deportiva",
               "speakerNames": ["Brandy Carney","Max Lynch"],
               "timeStart": "3:00 pm",
               "timeEnd": "3:30 pm",
@@ -398,9 +398,9 @@
               "public":true              
             },
             {
-              "name": "Exposición bicicletas",
+              "name": "Evento",
               "location": "Parque bustamante",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+              "description": "Exposición bicicletas",
               "speakerNames": ["Brandy Carney","Tim Lancina"],
               "timeStart": "3:30 pm",
               "timeEnd": "3:45 pm",
@@ -441,8 +441,8 @@
         ],
       "profilePic": "https://avatars3.githubusercontent.com/u/19638?v=3",
       "twitter": "ericbobbitt",
-      "about": "When he's not arguing semantics, dancing at all the wrong times, or drawing randomly on the office whiteboards, you'll find him working on the Ionic Platform, planning new features, and not-so-silently cursing at his laptop. Otherwise he's probably feeding his gaming addiction with a glass of whiskey or a good Belgian beer.",
-      "location": "Madison, WI"
+      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos gustos.",
+      "location": "Santiago, Chile"
     },
     {
       "name": "Adam Bradley",
@@ -457,14 +457,14 @@
       "zones":[{"sector": "", "loc": "", "city": "Providencia","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
-        {"sport": "Tennis", "level": "Advance", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        {"sport": "Tennis", "level": "Advance", "ranking": 7,
+        "statistics": {"points": 4, "games": 5, "won": 2, "lost": 3, 
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars2.githubusercontent.com/u/452425?v=3",
       "twitter": "adamdbradley",
-      "about": "Co-creator of Ionic Framework and Angular Material Design team member. Regularly writes and speaks about hybrid development with Ionic and Angular. Proud dad, husband, veteran, and dog's best friend. Based in beautiful Madison, WI.",
-      "location": "Madison, WI"
+      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos gustos.",
+      "location": "Santiago, Chile"
     },
     {
       "name": "Brandy Carney",
@@ -479,14 +479,14 @@
       "zones":[{"sector": "", "loc": "", "city": "Las Condes","country": "Chile", "lat": 0, "lng": 0 }],
       "calendar":{},
       "profiles":[
-        {"sport": "Tennis", "level": "Intermediate", "ranking": 3,
+        {"sport": "Tennis", "level": "Intermediate", "ranking": 9,
         "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars0.githubusercontent.com/u/6577830?v=3",
       "twitter": "brandyscarney",
-      "about": "When she isn't busy keeping her two chihuahuas from killing each other, Brandy can be found making the Ionic SDK pretty by means of Sass. She loves helping people while continuing to expand her own knowledge. After hours she can be found on her patio shopping online with a glass of wine in hand. Give her a glass and she'll write some Sass.",
-      "location": "Jacksonville, FL"
+      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos gustos.",
+      "location": "Santiago, Chile"
     },
     {
       "name": "Katie Ginder-Vogel",
@@ -511,7 +511,7 @@
       "profilePic": "https://avatars2.githubusercontent.com/u/8117985?v=3",
       "twitter": "katiegv",
       "about": "Katie handles Ionic’s marketing, communications, and editorial, writing blog posts about unique Ionic apps and dreaming up new ways to bring Ionic to developers around the world. Outside the office, she can be found on land, running or hiking, or in the water, swimming and paddleboarding.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Perry Govier",
@@ -533,7 +533,7 @@
       "profilePic": "https://avatars1.githubusercontent.com/u/571056?v=3",
       "twitter": "perrygovier",
       "about": "Be it code, places, gadgets, food, or conversation, Perry loves to explore. While AFK he's probably biking around Madison, spending time with his wife and son, \"refactoring\" his house, or avoiding his overweight cat to whom he is very allergic and wishes was a dog.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Mike Hartington",
@@ -554,17 +554,14 @@
         {"sport": "Babyfútbol", "level": "Expert", "ranking": 3,
         "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
         "drawn": 0 }},
-        {"sport": "Futbolito", "level": "Advance", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
-        "drawn": 0 }},
-        {"sport": "Fútbol", "level": "Advance", "ranking": 3,
+        {"sport": "Soccer", "level": "Advance", "ranking": 3,
         "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars0.githubusercontent.com/u/2835826?v=3",
       "twitter": "mhartington",
       "about": "Deep in the frozen North, just before the great wall, a man sits with a laptop, surrounded by serval cups of coffee and a glass of whiskey. Traveling across this great kingdom, he enlightens other devs and shares his knowledge through the written and spoken word. When the laptop is not near, he often finds solace in music with his guitar.",
-      "location": "Rhode Island"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Dan Imhoff",
@@ -586,7 +583,7 @@
       "profilePic": "https://pbs.twimg.com/profile_images/627907755743952896/TEEur1pK.jpg",
       "twitter": "dwieeb",
       "about": "Dan \"the Sunshine Man\" builds awesome stuff for the Ionic Platform. When not shredding it in Vim, he can be found tearing over snow in his fat bike, attending the Madison tech meetups, ignorantly rating restaurants, taking a bunch of photographs at random cities and National Parks, or, possibly, still playing LEGOs.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Brody Kidd",
@@ -608,7 +605,7 @@
       "profilePic": "https://avatars0.githubusercontent.com/u/5280265?v=3",
       "twitter": "brodymkidd",
       "about": "If you can’t find him on call, shuffling through email, poking around on a new CRM, in our live chat support, or white boarding new business development… Odds are he is surfing lake Michigan, fly fishing the gin clear streams of the driftless region, camping in the north woods, or milking his goats.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Tim Lancina",
@@ -630,7 +627,7 @@
       "profilePic": "https://avatars2.githubusercontent.com/u/804331?v=3",
       "twitter": "timlancina",
       "about": "A temporarily embarrassed pro soccer player, Tim is fond of traveling the world and trying to convince his coworkers to eat bugs.  When not doing either of those, he is usually breaking things related to Ionic tooling, the platform, or the framework.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Max Lynch",
@@ -652,7 +649,7 @@
       "profilePic": "https://avatars3.githubusercontent.com/u/11214?v=3",
       "twitter": "maxlynch",
       "about": "Max loves using the power of software to make technology more accessible to people around the world. When not writing code or obsessing over a crazy new idea, he can be found watching the Premier League, riding Snowmobiles in a very safe manner, and hanging out with his wife Melissa and two Cavalier King Charles Spaniels.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Rudy Pelrine",
@@ -674,7 +671,7 @@
       "profilePic": "https://avatars0.githubusercontent.com/u/1584992?v=3",
       "twitter": "Drawn_Closer",
       "about": "A musician, DJ, sound engineer, photographer, and self proclaimed fashion nerd, Rudy seems to find a new obsession daily.  At Ionic, you'll find him working on the Platform services, making sure everyone's notifications arrive safe and sound.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Drew Rygh",
@@ -696,7 +693,7 @@
       "profilePic": "https://avatars2.githubusercontent.com/u/2018508?v=3",
       "twitter": "ionicframework",
       "about": "On most days, you will find Drew devising dazzling demos, drafting documentation, and consuming copious quantities of caffeine. He is obsessed with clarity, and making Ionic easy and fun to use. When not working, you might find him walking around the UW-Madison campus, where he is studying philosophy and computer science.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     },
     {
       "name": "Ben Sperry",
@@ -721,7 +718,7 @@
       "profilePic": "https://avatars1.githubusercontent.com/u/519526?v=3",
       "twitter": "benjsperry",
       "about": "Ben is a user interface designer and front end tinkerer based in Madison, WI. He’s fascinated with making delightful human and machine interactions. He is also the co-founder of Ionic.",
-      "location": "Madison, WI"
+      "location": "Santiago, Chile"
     }
   ],
 

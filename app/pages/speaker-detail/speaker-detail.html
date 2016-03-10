@@ -13,16 +13,35 @@
     <button clear small instagram><ion-icon name="logo-instagram"></ion-icon></button>
 
 </div>
-<button secondary round> Invitar </button>
+
   <p>{{speaker.about}}</p>
 
-  <div *ngIf="speaker.sessions">
-    <h4>Actividades</h4>
-    <div *ngFor="#session of speaker.sessions">
-      <h5><a href="#" (click)="goToSessionDetail(session)">{{session.name}}</a></h5>
-      <p>{{session.description}}</p>
-    </div>
-  </div>
+      <ion-list>
+        <ion-list-header>
+           Mis Deportes preferidos
+        </ion-list-header>
+        <button ion-item *ngFor="#profile of speaker.profiles" (click)="goToProfileDetail(profile,speaker)">
+         <ion-icon [name]="profile.sportobject.images.mobileicon" item-left></ion-icon>
+        <div text-center>
+          <h3>
+          {{profile.sport}}
+          - {{profile.level}}
+          - {{profile.ranking}}
+          </h3>
+        </div>
+        </button>
+      </ion-list>
 
+ <ion-list>
+    <ion-list-header>
+       Mis Actividades
+    </ion-list-header>
+  <div *ngIf="speaker.sessions">
+    <ion-item *ngFor="#session of speaker.sessions" (click)="goToSessionDetail(session)">
+      <h5><a href="#" >{{session.name}}</a></h5>
+      <p>{{session.description}}</p>
+    </ion-item>
+  </div>
+ </ion-list>
 
 </ion-content>

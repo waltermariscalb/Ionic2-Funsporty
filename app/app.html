@@ -9,7 +9,7 @@
 
     <ion-list>
       <ion-list-header>
-        Navigate
+        Navegar
       </ion-list-header>
       <button ion-item menuClose *ngFor="#p of appPages" (click)="openPage(p)">
         <ion-icon item-left [name]="p.icon"></ion-icon>
@@ -29,7 +29,7 @@
 
     <ion-list *ngIf="!loggedIn">
       <ion-list-header>
-        Account
+        Cuenta
       </ion-list-header>
       <button ion-item menuClose *ngFor="#p of loggedOutPages" (click)="openPage(p)">
         <ion-icon item-left [name]="p.icon"></ion-icon>

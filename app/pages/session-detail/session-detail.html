@@ -4,38 +4,75 @@
 </ion-navbar>
 
 <ion-content padding>
-  <h1>{{session.name}}</h1>
-  <p *ngIf="session.public"> publico </p>
-  <h3> Descripción </h3>
-  <p>{{session.description}}</p>
+  <ion-list>
+    <ion-list-header>
+        <h2>{{session.name}} </h2>
+
+    </ion-list-header>
+
+    <ion-item>
+        <h3>Actividad</h3>
+        <p *ngIf="session.public">pública</p>
+        <p *ngIf="!session.public">privada</p>
+    </ion-item>
+    <ion-item>
+        <h3>Estado</h3>
+        <p> Abierto </p>
+    </ion-item>
+
+    <ion-item>
+      <h3>Descripción </h3>
+      <p>{{session.description}}</p>
+    </ion-item>
+ 
+      <ion-item *ngIf="session.public">
+           <button block>Participar</button>
+      </ion-item>
   
-  <h3> Cuándo </h3>
-  <p>{{session.date}} de {{session.timeStart}} a {{session.timeEnd}}</p>
-  
-  <h3> Dónde </h3>
-  <p>{{session.center}}</p>
-  <p>{{session.location}}</p>
-  
-  <h4> Anfitriones </h4>
-  <p *ngFor="#host of session.hosts">
-    {{host}}
-  </p>
-  
-  <h4> Participantes </h4>
-  <p *ngFor="#speaker of session.speakers">
-    {{speaker.name}}
-  </p>
-  
+    <ion-item>
+      <h3>Cuándo</h3>
+      <p>{{session.date}} de {{session.timeStart}} a {{session.timeEnd}}</p>
+    </ion-item>
+    <ion-item>
+      <h3>Dónde</h3>
+      <p>{{session.center}}</p>
+      <p>{{session.location}}</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+     Anfitriones 
+    </ion-list-header>
+    <ion-item *ngFor="#host of session.hosts">
+      {{host}}
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+    Participantes 
+    </ion-list-header>
+
+    <ion-item *ngFor="#speaker of session.speakers">
+      {{speaker.name}}
+    </ion-item>
+  </ion-list>
+
   <div *ngIf = "session.winners && session.winners.length > 0 ">
-    <h2> Resultado </h2>
-    <p *ngFor="#w of session.winners">
-        ganador: {{w}}
-    </p>
-    <div *ngIf="session.results && session.results.length > 0 " >
-        <p *ngFor="#r of session.results">
-            {{session.resultname}} : {{r}} 
-        </p>
-    </div>
+    <ion-list>
+      <ion-list-header>
+        Resultado 
+      </ion-list-header>
+      <ion-item *ngFor="#w of session.winners">
+          ganador: {{w}}
+      </ion-item>
+      <ion-item *ngIf="session.results && session.results.length > 0 " >
+          <p *ngFor="#r of session.results">
+              {{session.resultname}} : {{r}} 
+          </p>
+      </ion-item>
+    </ion-list>
   </div>
   
 

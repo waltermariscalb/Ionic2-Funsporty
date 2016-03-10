@@ -1,55 +1,42 @@
 
 <ion-navbar *navbar>
-  <ion-title>Detalle Perfil</ion-title>
+  <ion-title> {{name}} </ion-title>
 </ion-navbar>
 
-<ion-content padding>
+<ion-content>
     
     <ion-card>
 
     <ion-card-header>
-        {{name}} - {{profile.sport}}
-    </ion-card-header>
-
     <ion-item>
-        <ion-avatar item-left>
+        <ion-thumbnail item-left>
             <img [src]="profilePic">
-        </ion-avatar>
+        </ion-thumbnail>
+        <h2>{{name}}</h2>
+        <h2>{{profile.sport}} </h2>
         <h3>Nivel: {{profile.level}}</h3>
         <p>Puesto: {{profile.ranking}}</p>
     </ion-item>
 
+    </ion-card-header>
+
+
   <img src="">
 
   <ion-card-content>
+
+  <div text-center>
+    <button secondary round> Invitar </button>
     <p>Puntos: {{profile.statistics.points}}</p>
     <p>Juegos: {{profile.statistics.games}}</p>
     <p>Triunfos: {{profile.statistics.won}}</p>
     <p>Empates: {{profile.statistics.drawn}}</p>
     <p>Derrotas: {{profile.statistics.lost}}</p>
-    
-    <ion-list>
-        <button ion-item>
-            <ion-icon name="ball" item-left></ion-icon>
-            <p>Enfrentamientos</p>
-        </button>
-    </ion-list>
-     
+ </div>
+ 
   </ion-card-content>
 
-  <ion-item>
-    <button primary clear item-left>
-      <ion-icon name="thumbs-up"></ion-icon>
-      <div>12 Likes</div>
-    </button>
-    <button primary clear item-left>
-      <ion-icon name="text"></ion-icon>
-      <div>4 Comments</div>
-    </button>
-    <ion-note item-right>
-      11h ago
-    </ion-note>
-  </ion-item>
+
 
 </ion-card>
 </ion-content>

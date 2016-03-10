@@ -28,7 +28,7 @@
   
   <ion-card *ngFor="#sportman of sportmen" class="speaker" [hidden]="sportman.hide">
 
-    
+     <ion-list>
         <button ion-item (click)="goToSportmanDetail(sportman)">            
             <ion-avatar  item-left>
             <img [src]="sportman.profilePic">
@@ -37,17 +37,18 @@
             <h3>{{sportman.zones[0].city}} , {{sportman.zones[0].country}}</h3>
             <p> Reputación <ion-badge >{{sportman.reputation}}</ion-badge> </p>
         </button>        
-    
-    <br>
+     </ion-list>
+  
 
     <ion-card-content class="outer-content">
       <ion-list>
         <button ion-item *ngFor="#profile of sportman.profiles" (click)="goToProfileDetail(profile,sportman)">
+         <ion-icon [name]="profile.sportobject.images.mobileicon" item-left></ion-icon>
         <div text-center>
           <h3>
           {{profile.sport}}
           - {{profile.level}}
-          - Pos: {{profile.ranking}}
+          - {{profile.ranking}}
           </h3>
         </div>
         </button>
@@ -67,7 +68,7 @@
 
       <button (click)="openSportmanShare(sportman)" clear item-right>
         <ion-icon name="share"></ion-icon>
-        Share
+        Enviar
       </button>
     </ion-item>
 
