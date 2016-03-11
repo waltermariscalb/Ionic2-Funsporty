@@ -6,18 +6,20 @@
 <ion-content padding>
   <ion-list>
     <ion-list-header>
-        <h2>{{session.name}} </h2>
-
+    
+        <p>{{session.name}}</p>
+        <p>id : {{session.id}}</p>
+      
     </ion-list-header>
 
     <ion-item>
         <h3>Actividad</h3>
-        <p *ngIf="session.public">pública</p>
-        <p *ngIf="!session.public">privada</p>
+        <p *ngIf="session.public">Pública</p>
+        <p *ngIf="!session.public">Privada</p>
     </ion-item>
     <ion-item>
         <h3>Estado</h3>
-        <p> Abierto </p>
+        <p> {{session.status}} </p>
     </ion-item>
 
     <ion-item>
@@ -25,10 +27,6 @@
       <p>{{session.description}}</p>
     </ion-item>
  
-      <ion-item *ngIf="session.public">
-           <button block>Participar</button>
-      </ion-item>
-  
     <ion-item>
       <h3>Cuándo</h3>
       <p>{{session.date}} de {{session.timeStart}} a {{session.timeEnd}}</p>
@@ -39,23 +37,41 @@
       <p>{{session.location}}</p>
     </ion-item>
   </ion-list>
-
+  
+  <ion-list>
+    <div *ngIf="session.status==='Open' && session.public">
+        <button block>Participar</button>
+    </div>
+    <div *ngIf="!session.public && session.status==='Open' ">
+        Está invitado a esta actividad.
+        <button block>Aceptar</button>
+        <button block>Rechazar</button>
+    </div>  
+  </ion-list>
+  
   <ion-list>
     <ion-list-header>
      Anfitriones 
     </ion-list-header>
     <ion-item *ngFor="#host of session.hosts">
-      {{host}}
+      <ion-avatar item-left>
+        <img [src]="host.profilePic" [alt]="host.name">
+      </ion-avatar>        
+      {{host.name}}
     </ion-item>
   </ion-list>
 
   <ion-list>
     <ion-list-header>
-    Participantes 
+        Participantes
     </ion-list-header>
 
-    <ion-item *ngFor="#speaker of session.speakers">
-      {{speaker.name}}
+    <ion-item *ngFor="#speaker of session.invitedUsers">
+      <ion-avatar item-left>
+        <img [src]="speaker.user.profilePic" [alt]="speaker.user.name">
+      </ion-avatar>        
+      {{speaker.user.name}}
+      <p>{{speaker.response}}</p>
     </ion-item>
   </ion-list>
 

@@ -6,21 +6,28 @@
           "time": "15:00 am",
           "sessions": [
             {
-              "name": "Running",
-              "location": "Cerro Chena",              
+              "id":"1",
+              "sportNames":["Running"],
+              "name": "Salida grupal Running",
+              "location": "Cerro Chena, San Bernardo",              
               "description": "Salida grupal por los senderos del cerro, máximo 14 personas",
-              "speakerNames": ["Brandy Carney","Tim Lancina","Mike Hartington"],              
+              "speakerNames": ["Brandy Carney","Tim Lancina"],              
               "timeStart": "08:00 am",
               "timeEnd": "14:00 am",
               "tracks": ["Grupales"],
               "center":"",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney"],
-              "winners":[],
+              "invitedNames":["Brandy Carney","Tim Lancina","Mike Hartington","Ben Sperry","Eric Bobbitt","Brody Kidd"],
+              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"no"}],
+              "hostNames" : ["Brandy Carney"],
+              "winnerNames":[],
               "resultname":"tiempos",
               "results":[],
-              "public":true              
+              "public":true,
+              "status":"Open",
+              "min":5,
+              "max":14             
             }
           ]
         },
@@ -28,8 +35,10 @@
           "time": "9:00 am",
           "sessions": [
             {
-              "name": "Mountainbike",
-              "location": "Cerro La Parva",
+              "id":"2",
+              "sportNames":["Mountainbike"],              
+              "name": "Salida grupal Mountainbike",
+              "location": "Cerro La Parva, Las Condes",
               "description": "Salida grupal nocturna, máximo 8 personas",
               "speakerNames": ["Brandy Carney","Tim Lancina","Mike Hartington"],
               "timeStart": "20:00 pm",
@@ -38,11 +47,16 @@
               "center":"Club Mountain Chile",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Tim Lancina"],
-              "winners":["Mike Hartington","Brandy Carney","Tim Lancina"],
+              "invitedNames":["Brandy Carney","Tim Lancina","Mike Hartington","Katie Ginder-Vogel"],
+              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"yes"}],
+              "hostNames" : ["Tim Lancina"],
+              "winnerNames":["Mike Hartington","Brandy Carney","Tim Lancina"],
               "resultname":"tiempos",
               "results":["1:45 min","2:25 min","2:40 min"],
-              "public":true   
+              "public":true,
+              "status":"Open",
+              "min":5,
+              "max":20      
             }
            ]
         } 
@@ -55,9 +69,11 @@
           "time": "8:00 am",
           "sessions": [
             {
-              "name": "Tennis",
+              "id":"3",
+              "sportNames":["Tennis"],                  
+              "name": "Encuentro de Tennis dobles",
               "location": "Cancha 4",
-              "description": "Partido Amistoso",
+              "description": "Partido dobles de tenis amistoso",
               "speakerNames": ["Brandy Carney","Tim Lancina"],              
               "timeStart": "8:00 am",
               "timeEnd": "9:00 am",
@@ -65,11 +81,14 @@
               "center":"Club Manquehue",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "winners":["Brandy Carney"],
+              "invitedNames":["Brandy Carney","Tim Lancina","Mike Hartington","Eric Bobbitt"],
+              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"yes"}],              
+              "hostNames" : ["Brandy Carney","Tim Lancina"],
+              "winnerNames":["Brandy Carney"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false                 
+              "public":false,
+              "status":"Open"                 
             }
           ]
         },
@@ -77,7 +96,9 @@
           "time": "9:00 am",
           "sessions": [
             {
-              "name": "Raquetball",
+              "id":"4",
+              "sportNames":["Raquetball"],   
+              "name": "Encuentro de Raquetball",
               "location": "Cancha 1",
               "description": "Encuentro Amistoso",
               "speakerNames": ["Brandy Carney","Mike Hartington"],
@@ -87,32 +108,43 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Mike Hartington"],
-              "winners":["Brandy Carney"],
+              "invitedNames":["Tim Lancina","Mike Hartington"],
+              "rsvps":[{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"yes"}],              
+              "hostNames" : ["Tim Lancina"],
+              "winnerNames":["Mike Hartington"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false
+              "public":false,
+              "status":"Closed" 
             },
             {
-              "name": "Soccer",
+              "id":"5",
+              "sportNames":["Soccer"],                
+              "name": "Partido de futbolito",
               "location": "Cancha 1",
               "description": "Encuentro Amistoso",
               "speakerNames": ["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
-              "teams":[{"hosts":["Max Lynch"],"participants":[{"name":"Max Lynch","status":"confirmed"},{"name":"Adam Bradley","status":"confirmed"},{"name":"Mike Hartington","status":"confirmed"}]},{"hosts":["Ben Sperry"],"participants":[{"name":"Ben Sperry" ,"status":"confirmed"},{"name":"Eric Bobbitt","status":"confirmed"}]}],
               "timeStart": "9:30 am",
               "timeEnd": "11:30 am",
               "tracks": ["Amistosos"],
               "center":"Ciudad Deportiva Iván Zamorano",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Max Lynch","Ben Sperry"],
-              "winners":["Max Lynch"],
+              "invitedNames":["Tim Lancina","Mike Hartington","Max Lynch","Adam Bradley","Ben Sperry","Eric Bobbitt"],
+              "rsvps":[{"name":"Tim Lancina","response":"maybe"},{"name":"Mike Hartington","response":"yes"},{"name":"Eric Bobbitt","response":"no"}],              
+              "hostNames" : ["Max Lynch","Ben Sperry"],
+              "winnerNames":["Max Lynch"],
               "resultname":"Goles",
               "results":["3/1"],
-              "public":false              
+              "public":false,
+              "status":"Open",
+              "min":6,
+              "max": 7              
             },
             {
-              "name": "Trekking",
+              "id":"6",
+              "sportNames":["Trekking"],                 
+              "name": "Salida grupal Trekking",
               "location": "Alto jahuel",
               "description": "Salida entre amigos visita parques y senderos",
               "speakerNames": ["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
@@ -122,11 +154,16 @@
               "center":"",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brody Kidd","Adam Bradley"],
-              "winners":["Ben Sperry","Brody Kidd","Adam Bradley"],
+              "invitedNames":["Max Lynch","Brody Kidd","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
+              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Brody Kidd","response":"yes"},{"name":"Adam Bradley","response":"no"},{"name":"Mike Hartington","response":"yes"}],
+              "hostNames" : ["Brody Kidd","Adam Bradley"],
+              "winnerNames":["Ben Sperry","Brody Kidd","Adam Bradley"],
               "resultname":"Tiempos",
               "results":["50 min","58 min","1:10 min"],
-              "public":true              
+              "public":false,
+              "status":"Open",
+              "min":4,
+              "max": 12                               
             }
           ]
         },
@@ -134,7 +171,9 @@
           "time": "10:00 am",
           "sessions": [
             {
-              "name": "Biking",
+              "id":"7",
+              "sportNames":["Biking"],                
+              "name": "Salida grupal Biking",
               "location": "Cerro San Cristobal",
               "description": "Salida grupal colegio las Encinas",
               "speakerNames": ["Adam Bradley", "Mike Hartington"],
@@ -144,32 +183,45 @@
               "center":"",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Adam Bradley", "Mike Hartington"],
-              "winners":[],
+              "invitedNames":["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
+              "rsvps":[{"name":"Max Lynch","response":"no"},{"name":"Adam Bradley","response":"no"},{"name":"Mike Hartington","response":"yes"}],              
+              "hostNames" : ["Adam Bradley", "Mike Hartington"],
+              "winnerNames":[],
               "resultname":"Tiempos",
               "results":[],
-              "public":true              
+              "public":true  ,
+              "status":"Open",
+              "min":6,
+              "max": 15               
             },
             {
-              "name": "Babyfútbol",
+              "id":"8",
+              "sportNames":["Babyfútbol"],               
+              "name": "Partido de Babyfútbol",
               "location": "Cancha 3, Club los Pinares",
               "description": "Partido amistoso empresa.",
               "speakerNames": ["Ben Sperry", "Adam Bradley"],
-              "teams":[{"hosts":["Max Lynch"],"participants":[{"name":"Max Lynch","status":"confirmed"},{"name":"Adam Bradley","status":"confirmed"},{"name":"Mike Hartington","status":"confirmed"}]},{"hosts":["Ben Sperry"],"participants":[{"name":"Ben Sperry","status":"confirmed"},{"name":"Eric Bobbitt","status":"confirmed"}]}],              
               "timeStart": "10:15 am",
               "timeEnd": "10:30 am",
               "tracks": ["Amistosos"],
               "center":"Ciudad Deportiva Iván Zamorano",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Ben Sperry", "Max Lynch"],
-              "winners":["Ben Sperry"],
+              "invitedNames":["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
+              "rsvps":[{"name":"Max Lynch","response":"no"},{"name":"Adam Bradley","response":"no"},{"name":"Mike Hartington","response":"yes"}],                 
+              "hostNames" : ["Ben Sperry", "Max Lynch"],
+              "winnerNames":["Ben Sperry"],
               "resultname":"Goles",
               "results":["4/3"],
-              "public":false          
+              "public":false ,
+              "status":"Open",
+              "min":5,
+              "max": 6           
             },
             {
-              "name": "Tennis",
+              "id":"9",
+              "sportNames":["Tennis"],               
+              "name": "Encuentro de Tennis",
               "location": "Cancha 4, Club providencia",
               "description": "Partido por puntos",
               "speakerNames": ["Eric Bobbitt","Tim Lancina"],
@@ -179,11 +231,14 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Eric Bobbitt","Tim Lancina"],
-              "winners":["Eric Bobbitt"],
+              "invitedNames":["Eric Bobbitt","Tim Lancina"],
+              "rsvps":[{"name":"Eric Bobbitt","response":"yes"},{"name":"Tim Lancina","response":"yes"}],              
+              "hostNames" : ["Eric Bobbitt"],
+              "winnerNames":["Eric Bobbitt"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false              
+              "public":false,
+              "status":"Open"               
             }
           ]
         },
@@ -191,7 +246,9 @@
           "time": "11:00 am",
           "sessions": [
             {
-              "name": "Raquetball",
+              "id":"10",
+              "sportNames":["Raquetball"],               
+              "name": "Encuentro de Raquetball",
               "location": "Cancha 2",
               "description": " Partido por puntos",
               "speakerNames": ["Perry Govier", "Mike Hartington"],
@@ -201,14 +258,19 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Perry Govier", "Mike Hartington"],
-              "winners":["Perry Govier"],
+              "invitedNames":["Perry Govier","Tim Lancina"],
+              "rsvps":[{"name":"Perry Govier","response":"yes"},{"name":"Tim Lancina","response":"yes"}],              
+              "hostNames" : ["Tim Lancina"],
+              "winnerNames":["Perry Govier"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false             
+              "public":false,
+              "status":"Open"              
             },
             {
-              "name": "Tennis",
+              "id":"11",
+              "sportNames":["Tennis"],               
+              "name": "Encuentro de Tennis",
               "location": "Cancha 4",
               "description": "Partido por puntos",
               "speakerNames": ["Mike Hartington", "Katie Ginder-Vogel"],
@@ -218,14 +280,19 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Mike Hartington", "Katie Ginder-Vogel"],
-              "winners":["Katie Ginder-Vogel"],
+              "invitedNames":["Katie Ginder-Vogel","Mike Hartington"],
+              "rsvps":[{"name":"Katie Ginder-Vogel","response":"yes"},{"name":"Mike Hartington","response":"yes"}],              
+              "hostNames" : ["Katie Ginder-Vogel"],
+              "winnerNames":["Katie Ginder-Vogel"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false             
+              "public":false,
+              "status":"Open"              
             },
             {
-              "name": "Tennis",
+              "id":"12",
+              "sportNames":["Tennis"],               
+              "name": "Encuentro de Tennis",
               "location": "Cancha 3",
               "description": "Partido por puntos",
               "speakerNames": ["Tim Lancina", "Adam Bradley"],
@@ -235,11 +302,14 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Tim Lancina", "Adam Bradley"],
-              "winners":["Tim Lancina"],
+              "invitedNames":["Tim Lancina", "Adam Bradley"],
+              "rsvps":[{"name":"Tim Lancina","response":"yes"},{"name":"Adam Bradley","response":"yes"}],              
+              "hostNames" : ["Adam Bradley"],
+              "winnerNames":["Tim Lancina"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false              
+              "public":false,
+              "status":"Open"               
             }
           ]
         },
@@ -247,21 +317,26 @@
           "time": "12:00 pm",
           "sessions": [
             {
-              "name": "Evento",
+              "id":"13",
+              "sportNames":["Tennis"],               
+              "name": "Premiación torneo de maestros",
               "location": "Auditorium",
               "description": "Entrega de premios torneo de maestros",
-              "speakerNames": ["Tim Lancina", "Adam Bradley"],              
+              "speakerNames": ["Max Lynch", "Ben Sperry"],              
               "timeStart": "12:00 pm",
               "timeEnd": "1:00 pm",
               "tracks": ["Eventos"],
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "winners":[],
+              "invitedNames":["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt","Tim Lancina"],
+              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Adam Bradley","response":"no"},{"name":"Ben Sperry","response":"yes"}],                 
+              "hostNames" : ["Adam Bradley"],
+              "winnerNames":[],
               "resultname":"",
               "results":[] ,
-              "public":true             
+              "public":true,
+              "status":"Open"              
             }
           ]
         },
@@ -269,7 +344,9 @@
           "time": "1:00 pm",
           "sessions": [
             {
-              "name": "Tennis",
+              "id":"14",
+              "sportNames":["Tennis"],               
+              "name": "Torneo de Tenis dobles",
               "location": "Cancha 4",
               "description": "Torneo de Tennis aficionados interempresas",
               "speakerNames": ["Brody Kidd","Dan Imhoff"],
@@ -279,14 +356,19 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brody Kidd","Dan Imhoff"],
-              "winners":["Brody Kidd"],
+              "invitedNames":["Brandy Carney","Brody Kidd","Dan Imhoff","Eric Bobbitt"],
+              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Brody Kidd","response":"yes"},{"name":"Dan Imhoff","response":"yes"}],              
+              "hostNames" : ["Brody Kidd","Dan Imhoff"],
+              "winnerNames":["Brody Kidd"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false             
+              "public":false,
+               "status":"Open"              
             },
             {
-              "name": "Tennis",
+              "id":"15",
+              "sportNames":["Tennis"],               
+              "name": "Torneo de tenis",
               "location": "Cancha 4",
               "description": "Campeonato tennis, interempresas, Partido por puntos",
               "speakerNames": ["Katie Ginder-Vogel","Dan Imhoff"],
@@ -296,14 +378,19 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Katie Ginder-Vogel","Dan Imhoff"],
-              "winners":["Katie Ginder-Vogel"],
+              "invitedNames":["Katie Ginder-Vogel","Dan Imhoff"],
+              "rsvps":[{"name":"Katie Ginder-Vogel","response":"yes"},{"name":"Dan Imhoff","response":"yes"}],              
+              "hostNames" : ["Katie Ginder-Vogel","Dan Imhoff"],
+              "winnerNames":["Katie Ginder-Vogel"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"] ,
-              "public":false             
+              "public":false,
+               "status":"Open"              
             },
             {
-              "name": "Tennis",
+              "id":"16",
+              "sportNames":["Tennis"],               
+              "name": "Torneo de tennis",
               "location": "Cancha 4",
               "description": "Partido por puntos",
               "speakerNames": ["Dan Imhoff", "Rudy Pelrine"],
@@ -313,11 +400,14 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Dan Imhoff", "Rudy Pelrine"],
-              "winners":["Dan Imhoff"],
+              "invitedNames":["Dan Imhoff", "Rudy Pelrine"],
+              "rsvps":[{"name":"Dan Imhoff","response":"yes"},{"name":"Rudy Pelrine","response":"yes"}],              
+              "hostNames" : ["Rudy Pelrine"],
+              "winnerNames":["Dan Imhoff"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false             
+              "public":false ,
+              "status":"Closed"             
             }
           ]
         },
@@ -325,7 +415,9 @@
           "time": "2:00 pm",
           "sessions": [
             {
-              "name": "Mountainbike",
+              "id":"17",
+              "sportNames":["Mountainbike"],               
+              "name": "Torneo de Mountainbike",
               "location": "Termas de Flaco, San Fernando",
               "description": "Partido por puntos",
               "speakerNames": ["Rudy Pelrine", "Eric Bobbitt"],
@@ -335,14 +427,21 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Tim Lancina"],
-              "winners":["Brandy Carney"],
+              "invitedNames":["Rudy Pelrine","Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
+              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Rudy Pelrine","response":"no"},{"name":"Ben Sperry","response":"yes"}],                 
+              "hostNames" : ["Rudy Pelrine","Tim Lancina"],
+              "winnerNames":["Rudy Pelrine"],
               "resultname":"Tiempos",
               "results":["2:15 min","2:56 min","3:10 min"],
-              "public":true              
+              "public":true ,
+              "status":"Closed",
+              "min":4,
+              "max":20            
             },
             {
-              "name": "Tennis",
+              "id":"18",
+              "sportNames":["Tennis"],               
+              "name": "Torneo de Tennis",
               "location": "Cancha 1",
               "description": "Competencia de tennis, Partido por puntos",
               "speakerNames": ["Drew Rygh","Max Lynch"],
@@ -352,14 +451,19 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Drew Rygh","Max Lynch"],
-              "winners":["Drew Rygh"],
+              "invitedNames":["Drew Rygh","Max Lynch"],
+              "rsvps":[{"name":"Drew Rygh","response":"yes"},{"name":"Max Lynch","response":"yes"}],              
+              "hostNames" : ["Drew Rygh"],
+              "winnerNames":["Drew Rygh"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false 
+              "public":false ,
+              "status":"Open"  
             },
             {
-              "name": "Tennis",
+              "id":"19",
+              "sportNames":["Tennis"],               
+              "name": "Torneo de Tenis",
               "location": "Cancha 1",
               "description": "Partido por puntos",
               "speakerNames": ["Ben Sperry", "Brandy Carney"],
@@ -369,11 +473,14 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Ben Sperry", "Brandy Carney"],
-              "winners":["Ben Sperry"],
+              "invitedNames":["Ben Sperry", "Brandy Carney"],
+              "rsvps":[{"name":"Ben Sperry","response":"yes"},{"name":"Brandy Carney","response":"yes"}],              
+              "hostNames" : ["Brandy Carney"],
+              "winnerNames":["Ben Sperry"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
-              "public":false 
+              "public":false,
+              "status":"Closed"   
             }
           ]
         },
@@ -381,7 +488,9 @@
           "time": "3:00",
           "sessions": [
             {
-              "name": "Evento",
+              "id":"20",
+              "sportNames":["Trekking","Biking","Running"],               
+              "name": "Exposición deportiva",
               "location": "Mall Las condes",
               "description": "Exposición de ropa deportiva",
               "speakerNames": ["Brandy Carney","Max Lynch"],
@@ -391,16 +500,23 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney","Max Lynch"],
-              "winners":[],
+              "invitedNames":["Max Lynch","Brandy Carney","Rudy Pelrine","Eric Bobbitt","Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
+              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Rudy Pelrine","response":"no"},{"name":"Ben Sperry","response":"yes"}],               
+              "hostNames" : ["Brandy Carney","Max Lynch"],
+              "winnerNames":[],
               "resultname":"",
               "results":[],
-              "public":true              
+              "public":true,
+              "status":"Open",
+              "min":2,
+              "max" :10               
             },
             {
-              "name": "Evento",
+              "id":"21",
+              "sportNames":["Biking"],               
+              "name": "Evento ciclista",
               "location": "Parque bustamante",
-              "description": "Exposición bicicletas",
+              "description": "Exposición bicicletas, indumentaria y artículos deportivos varios.",
               "speakerNames": ["Brandy Carney","Tim Lancina"],
               "timeStart": "3:30 pm",
               "timeEnd": "3:45 pm",
@@ -408,11 +524,16 @@
               "center":"Club Israelita",
               "lat": -33.4345254,
               "lng": -70.5808188,
-              "hosts" : ["Brandy Carney"],
-              "winners":[],
+              "invitedNames":["Eric Bobbitt","Max Lynch","Adam Bradley","Brandy Carney","Tim Lancina","Mike Hartington"],
+              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"yes"}],
+              "hostNames" : ["Brandy Carney"],
+              "winnerNames":[],
               "resultname":"",
               "results":[] ,
-              "public":true             
+              "public":true,
+              "status":"Open",
+              "min" :4,
+              "max" :20             
             }
           ]
         }
@@ -468,7 +589,7 @@
     },
     {
       "name": "Brandy Carney",
-      "gender":"Male",
+      "gender":"Female",
       "agecategory":"Adult",
       "status":"Active",
       "email":"ericbobbitt@gmail.com",
@@ -510,7 +631,7 @@
         ],
       "profilePic": "https://avatars2.githubusercontent.com/u/8117985?v=3",
       "twitter": "katiegv",
-      "about": "Katie handles Ionic’s marketing, communications, and editorial, writing blog posts about unique Ionic apps and dreaming up new ways to bring Ionic to developers around the world. Outside the office, she can be found on land, running or hiking, or in the water, swimming and paddleboarding.",
+      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos gustos.",
       "location": "Santiago, Chile"
     },
     {

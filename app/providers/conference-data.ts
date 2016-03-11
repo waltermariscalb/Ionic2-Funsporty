@@ -83,7 +83,41 @@ export class ConferenceData {
           speaker.sessions.push(session);//add session to speaker
         }
       });
-    }
+     }
+     
+    session.hosts = [];
+    if (session.hostNames) {    
+      session.hostNames.forEach(hostName => {
+          //find one speaker for each speakername
+        let host = data.speakers.find(s => s.name === hostName);
+        if (host) {
+          session.hosts.push(host);// add host to session
+       //   host.sessions = host.sessions || []; //initialize
+      //    host.sessions.push(session);//add session to host
+        }
+      });
+    }   
+    
+    session.invitedUsers = [];
+    if (session.invitedNames) {    
+      session.invitedNames.forEach(invitedName => {
+          //find one speaker for each speakername
+        let invitedUser = data.speakers.find(s => s.name === invitedName);
+        let response:string="no response";
+        if (invitedUser && session.rsvps) {
+             let r = session.rsvps.find(r => r.name === invitedName);
+             if (r) {response = r.response;};
+        }
+         
+        let responseUser = {"user":invitedUser,"response":response};
+        
+        if (invitedUser) {
+          session.invitedUsers.push(responseUser);// add invited to session
+       //   host.sessions = host.sessions || []; //initialize
+      //    host.sessions.push(session);//add session to host
+        }
+      });
+    }      
 
     if (session.tracks) {
       session.tracks.forEach(track => {

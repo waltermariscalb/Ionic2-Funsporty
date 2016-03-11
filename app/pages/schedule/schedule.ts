@@ -13,6 +13,9 @@ dayIndex:number = 0;
 queryText:string = '';
 segment:string = 'all';
 excludeTracks:Array<any> = [];
+excludedSecurity:Array<any> = [];
+excludedStatus:Array<any> = [];
+
 shownSessions:number = 0;
 groups = [];
 
@@ -41,12 +44,15 @@ hasSessions:boolean = false;
   }
 
   presentFilter() {
-    let modal = Modal.create(ScheduleFilterPage, this.excludeTracks);
+    let FilterCriteria:Object = {excludeTracks:this.excludeTracks,excludedSecurity:this.excludedSecurity,excludedStatus:this.excludedStatus}      
+    let modal = Modal.create(ScheduleFilterPage, FilterCriteria);
     this.nav.present(modal);
 
     modal.onDismiss(data => {
       if (data) {
-        this.excludeTracks = data;
+        this.excludeTracks = data.excludeTracks;
+        this.excludedSecurity = data.excludedSecurity;
+        this.excludedStatus = data.excludedStatus;
         this.updateSchedule();
       }
     });
