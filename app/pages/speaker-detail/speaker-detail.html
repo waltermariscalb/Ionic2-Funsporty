@@ -21,10 +21,10 @@
            Mis Deportes preferidos
         </ion-list-header>
         <button ion-item *ngFor="#profile of speaker.profiles" (click)="goToProfileDetail(profile,speaker)">
-         <ion-icon [name]="profile.sportobject.images.mobileicon" item-left></ion-icon>
+         <ion-icon [name]="profile.sport.images.mobileicon" item-left></ion-icon>
         <div text-center>
           <h3>
-          {{profile.sport}}
+          {{profile.sport.name}}
           - {{profile.level}}
           - {{profile.ranking}}
           </h3>

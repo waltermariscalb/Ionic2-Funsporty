@@ -5,19 +5,6 @@ import {SpeakerDetailPage} from '../speaker-detail/speaker-detail';
 import {ProfileDetailPage} from '../profile-detail/profile-detail';
 import {SportmenFilterPage} from '../sportmen-filter/sportmen-filter';
 
-interface IZone {
-    sector: string; loc: string; city: string;country: string; lat: number; lng: number 
-}
-
-interface IProfile {
-   sport: string; level: string; ranking: number;statistics: {points: number; games: number; won: number; lost: number; drawn: number }  
-}
-
-interface ISportman    {
-      name: string;gender:string;agecategory:string;status:string;email:string;birthdate:Date;reputation:number;receivenotification:boolean;
-      publiscalendar:boolean,zones:IZone[];calendar:Object; profiles:IProfile[];profilePic: string;twitter: string;about: string;location: string
-}
-
 @Page({
   templateUrl: 'build/pages/speaker-list/speaker-list.html'
 })

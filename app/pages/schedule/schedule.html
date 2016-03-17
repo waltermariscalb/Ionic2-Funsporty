@@ -20,29 +20,39 @@
 </ion-navbar>
 
 
-<ion-content class="schedule">
-  <ion-toolbar>
-    <ion-searchbar primary
-                   [(ngModel)]="queryText"
-                   (input)="updateSchedule()"
-                   placeholder="Search">
-    </ion-searchbar>
-  </ion-toolbar>
-  
- <ion-segment>
-    <ion-buttons start>
+
+
+<ion-toolbar>
+     <ion-buttons start>
         <button outline small (click)="back()"> Anterior 
             <ion-icon ios="ios-chevron-left" md="md-chevron-left"></ion-icon>
         </button>
     </ion-buttons>
+    
+    <ion-searchbar primary
+                    [(ngModel)]="queryText"
+                    (input)="updateSchedule()"
+                    placeholder="Search">
+    </ion-searchbar>
+    
+    <ion-buttons  end>
+        <button outline small (click)="next()"> Siguiente 
+            <ion-icon ios="ios-chevron-right" md="md-chevron-right"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-toolbar>
+
+
+  
+<ion-content class="schedule">
+
+  
+ <ion-segment>
+
     <ion-buttons>
         <div> {{date}} </div>
     </ion-buttons>    
-    <ion-buttons  end>
-        <button outline small (click)="next()"> Siguiente 
-             <ion-icon ios="ios-chevron-right" md="md-chevron-right"></ion-icon>
-        </button>
-    </ion-buttons>
+
     
  </ion-segment>
  

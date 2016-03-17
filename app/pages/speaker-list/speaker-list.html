@@ -31,7 +31,7 @@
      <ion-list>
         <button ion-item (click)="goToSportmanDetail(sportman)">            
             <ion-avatar  item-left>
-            <img [src]="sportman.profilePic">
+                <img [src]="sportman.profilePic">
             </ion-avatar >
             <h2>{{sportman.name}}</h2>
             <h3>{{sportman.zones[0].city}} , {{sportman.zones[0].country}}</h3>
@@ -43,10 +43,10 @@
     <ion-card-content class="outer-content">
       <ion-list>
         <button ion-item *ngFor="#profile of sportman.profiles" (click)="goToProfileDetail(profile,sportman)">
-         <ion-icon [name]="profile.sportobject.images.mobileicon" item-left></ion-icon>
+         <ion-icon [name]="profile.sport.images.mobileicon" item-left></ion-icon>
         <div text-center>
           <h3>
-          {{profile.sport}}
+          {{profile.sport.name}}
           - {{profile.level}}
           - {{profile.ranking}}
           </h3>

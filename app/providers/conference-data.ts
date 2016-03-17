@@ -2,27 +2,13 @@ import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
 import {UserData} from './user-data';
 
-interface IZone {
-    sector: string; loc: string; city: string;country: string; lat: number; lng: number 
-}
-
-interface IProfile {
-   sport: string; level: string; ranking: number;statistics: {points: number; games: number; won: number; lost: number; drawn: number }  
-}
-
-interface ISportman    {
-      name: string;gender:string;agecategory:string;status:string;email:string;birthdate:Date;reputation:number;receivenotification:boolean;
-      publiscalendar:boolean,zones:IZone[];calendar:Object; profiles:IProfile[];
-      profilePic: string;twitter: string;about: string;location: string;hide?:boolean
-}
-
 @Injectable()
 export class ConferenceData {
   data: any;
 
   constructor(public http: Http, public user: UserData) {}
 
-  public load():Promise<any> {
+  public load(): Promise<any> {
     if (this.data) {
       // already loaded data
       return Promise.resolve(this.data);
@@ -62,7 +48,7 @@ export class ConferenceData {
 
     data.speakers.forEach(sp => {
       sp.profiles.forEach(p => {
-        p.sportobject = data.sports.find(s=> p.sport == s.name);
+        p.sport = data.sports.find(s=> p.sportName == s.name);
       })
     })
 
@@ -75,20 +61,20 @@ export class ConferenceData {
     session.speakers = [];
     if (session.speakerNames) {
       session.speakerNames.forEach(speakerName => {
-          //find one speaker for each speakername
+          // find one speaker for each speakername
         let speaker = data.speakers.find(s => s.name === speakerName);
         if (speaker) {
-          session.speakers.push(speaker);// add speaker to session
+          session.speakers.push(speaker); // add speaker to session
           speaker.sessions = speaker.sessions || []; //initialize
-          speaker.sessions.push(session);//add session to speaker
+          speaker.sessions.push(session); // add session to speaker
         }
       });
      }
-     
+
     session.hosts = [];
-    if (session.hostNames) {    
+    if (session.hostNames) {
       session.hostNames.forEach(hostName => {
-          //find one speaker for each speakername
+          // find one speaker for each speakername
         let host = data.speakers.find(s => s.name === hostName);
         if (host) {
           session.hosts.push(host);// add host to session
@@ -96,8 +82,8 @@ export class ConferenceData {
       //    host.sessions.push(session);//add session to host
         }
       });
-    }   
-    
+    }
+
     session.invitedUsers = [];
     if (session.invitedNames) {    
       session.invitedNames.forEach(invitedName => {
@@ -245,7 +231,7 @@ export class ConferenceData {
    
   }
 
-  public filterSportman(sportman:ISportman, queryWords:string[],excludedGenders:string[],excludedLevels:string[], excludedAgeCategories:string[],excludedSports:string[], segment:string) {
+  public filterSportman(sportman: ISportman, queryWords:string[],excludedGenders:string[],excludedLevels:string[], excludedAgeCategories:string[],excludedSports:string[], segment:string) {
 
     let matchesQueryText:boolean = false;
     if (queryWords.length) {

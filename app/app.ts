@@ -1,4 +1,5 @@
-import {App, IonicApp, Events} from 'ionic-angular';
+import {App, IonicApp, Events, Platform} from 'ionic-angular';
+import {StatusBar} from 'ionic-native';
 import {ConferenceData} from './providers/conference-data';
 import {UserData} from './providers/user-data';
 import {TabsPage} from './pages/tabs/tabs';
@@ -39,7 +40,7 @@ class ConferenceApp {
   loggedOutPages: PageObj[]
 
 
-  constructor(private app: IonicApp, private events: Events, confData: ConferenceData, private userData: UserData) {
+  constructor(private app: IonicApp, private events: Events, confData: ConferenceData, private userData: UserData, platform: Platform ) {
     // load the conference data
     confData.load();
 
@@ -59,6 +60,10 @@ class ConferenceApp {
 
     this.loggedOutPages=[{ title: 'Iniciar', name:'Login', component: LoginPage, icon: 'log-in' },
       { title: 'Registrarse', name:'Signup', component: SignupPage, icon: 'person-add'}];
+
+    platform.ready().then(() => {
+         StatusBar.styleDefault();
+        });
 
     // decide which menu items should be hidden by current login status stored in local storage
     this.userData.hasLoggedIn().then((hasLoggedIn) => {

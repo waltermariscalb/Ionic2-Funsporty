@@ -8,7 +8,7 @@ import {ProfileForm} from '../profile-form/profile-form';
 import {Type} from 'angular2/core';
 
 @Page({
-  templateUrl: 'build/pages/tabs/tabs.html';
+  templateUrl: 'build/pages/tabs/tabs.html'
 })
 export class TabsPage {
 	 // set the root pages for each tab
