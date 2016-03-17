@@ -10,7 +10,7 @@ import {FORM_DIRECTIVES, FormBuilder, Control, ControlGroup, Validators} from 'a
 })
 
 export class ProfileForm {
-    profileForm: ControlGroup;
+  	profileForm: ControlGroup;
 	sportman: Object;
 	submitted: boolean = false;
 
@@ -24,9 +24,9 @@ Save(form) {
 	 if (form.valid) {
          alert(JSON.stringify(this.sportman));
          this.user.signup(this.sportman['name'],'');
-     
+
      }
- } 
+ }
 
 
 

@@ -6,7 +6,7 @@
 <ion-content padding class="speaker-detail">
 
 <div text-center>
- 
+
     <img [src]="speaker.profilePic" [alt]="speaker.name"><br>
     <button clear small twitter><ion-icon name="logo-twitter"></ion-icon></button>
     <button clear small github><ion-icon name="logo-github"></ion-icon></button>
@@ -15,6 +15,31 @@
 </div>
 
   <p>{{speaker.about}}</p>
+
+  	<table>
+		  <thead>
+			  <tr>
+				<th>Mon</th>
+				<th>Tue</th>
+				<th>Wen</th>
+				<th>Thr</th>
+				<th>Fri</th>
+				<th>Sat</th>
+				<th>Sun</th>
+			  </tr>
+		  </thead>
+		  <tbody>
+			  <tr>
+				  <td>19:00 21:00</td>
+				  <td>19:00 21:00</td>
+				  <td>19:00 21:00</td>
+				  <td>19:00 21:00</td>
+				  <td>19:00 21:00</td>
+				  <td>19:00 21:00</td>
+				  <td>19:00 21:00</td>
+			  </tr>
+		  </tbody>
+	</table>
 
       <ion-list>
         <ion-list-header>

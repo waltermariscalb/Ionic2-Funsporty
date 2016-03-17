@@ -9,19 +9,19 @@ import {SessionDetailPage} from '../session-detail/session-detail';
   templateUrl: 'build/pages/schedule/schedule.html'
 })
 export class SchedulePage {
-dayIndex:number = 0;
-queryText:string = '';
-segment:string = 'all';
-excludeTracks:Array<any> = [];
-excludedSecurity:Array<any> = [];
-excludedStatus:Array<any> = [];
+dayIndex: number = 0;
+queryText: string = '';
+segment: string = 'all';
+excludeTracks: Array<any> = [];
+excludedSecurity: Array<any> = [];
+excludedStatus: Array<any> = [];
 
-shownSessions:number = 0;
+shownSessions: number = 0;
 groups = [];
 
 date: string;
 
-hasSessions:boolean = false;
+hasSessions: boolean = false;
 
 
   constructor(private app: IonicApp, private nav: NavController, private confData: ConferenceData, private user: UserData) {
@@ -34,17 +34,17 @@ hasSessions:boolean = false;
 
   updateSchedule() {
     this.user.getUserName().then(username => {
-      
+
     this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment, username).then(data => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
       this.date= data.date;
     });
-    }); 
+    });
   }
 
   presentFilter() {
-    let FilterCriteria:Object = {excludeTracks:this.excludeTracks,excludedSecurity:this.excludedSecurity,excludedStatus:this.excludedStatus}      
+    let FilterCriteria: Object = {excludeTracks: this.excludeTracks, excludedSecurity: this.excludedSecurity,excludedStatus: this.excludedStatus}
     let modal = Modal.create(ScheduleFilterPage, FilterCriteria);
     this.nav.present(modal);
 
@@ -64,24 +64,24 @@ hasSessions:boolean = false;
     // and pass in the session data
     this.nav.push(SessionDetailPage, sessionData);
   }
-  
+
   back(){
-    this.date='';
+    this.date = '';
     this.groups = [];
-    this.shownSessions=0;
+    this.shownSessions = 0;
     if (this.dayIndex > 0) {this.dayIndex--};
-    this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})  
+    this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})
   }
 
   next(){
-    this.date='';
+    this.date = '';
     this.groups = [];
-    this.shownSessions=0;
+    this.shownSessions = 0;
     this.dayIndex++;
-    this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})  
+    this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})
     }
-  
-  addFavorite(slidingItem:ItemSliding, sessionData) {
+
+  addFavorite(slidingItem: ItemSliding, sessionData) {
 
     if (this.user.hasFavorite('sessions',sessionData.name)) {
       // woops, they already favorited it! What shall we do!?

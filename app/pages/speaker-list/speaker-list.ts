@@ -13,13 +13,13 @@ export class SpeakerListPage {
   sportmen:Array<ISportman> =[];
   queryText: string = '';
   segment:string = 'all';
-  excludedSports : Array<string>=[];
+  excludedSports: Array<string>=[];
   excludedLevels: Array<string>=[];
-  excludedAgeCategories:Array<string>=[];
+  excludedAgeCategories: Array<string>=[];
   excludedGenders:Array<string>=[];
-  
+
   counter:number = 0;
- 
+
 
   constructor(private nav: NavController, private confData: ConferenceData, private user: UserData) {
      this.updateSportmen();
@@ -88,7 +88,7 @@ export class SpeakerListPage {
         this.excludedGenders= data.excludedGenders;
         this.excludedLevels= data.excludedLevels;
         this.excludedAgeCategories=data.excludedAgeCategories;
-        
+
         this.updateSportmen();
       }
     });
@@ -109,7 +109,7 @@ export class SpeakerListPage {
             handler: () => {
               // they clicked the cancel button, do not remove the session
               // close the sliding item and hide the option buttons
-            
+
             }
           },
           {
@@ -137,7 +137,7 @@ export class SpeakerListPage {
           text: 'OK',
           handler: () => {
             // close the sliding item
-     
+
           }
         }]
       });

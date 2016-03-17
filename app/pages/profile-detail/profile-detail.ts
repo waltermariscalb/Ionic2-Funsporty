@@ -6,8 +6,8 @@ import {Page, NavParams} from 'ionic-angular';
 })
 export class ProfileDetailPage {
 	profile: any;
-    name:string;
-    profilePic:any;
+    name: string;
+    profilePic: any;
 
   constructor(private navParams: NavParams) {
     this.profile = navParams.data.profile;
