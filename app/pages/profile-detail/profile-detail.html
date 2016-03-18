@@ -4,39 +4,68 @@
 </ion-navbar>
 
 <ion-content>
-    
     <ion-card>
 
-    <ion-card-header>
-    <ion-item>
-        <ion-thumbnail item-left>
-            <img [src]="profilePic">
-        </ion-thumbnail>
-        <h2>{{name}}</h2>
-        <h2>{{profile.sport.name}} </h2>
-        <h3>Nivel: {{profile.level}}</h3>
-        <p>Puesto: {{profile.ranking}}</p>
-    </ion-item>
-
-    </ion-card-header>
-
-
-  <img src="">
-
-  <ion-card-content>
-
-  <div text-center>
-    <button secondary round> Invitar </button>
-    <p>Puntos: {{profile.statistics.points}}</p>
-    <p>Juegos: {{profile.statistics.games}}</p>
-    <p>Triunfos: {{profile.statistics.won}}</p>
-    <p>Empates: {{profile.statistics.drawn}}</p>
-    <p>Derrotas: {{profile.statistics.lost}}</p>
- </div>
- 
-  </ion-card-content>
+		<ion-card-header>
+			<ion-item>
+				<ion-thumbnail item-left>
+					<img [src]="profilePic">
+				</ion-thumbnail>
+				<h2>{{name}}</h2>
+				<h2>{{profile.sport.name}} </h2>
+				<h3>Nivel: {{profile.level}}</h3>
+				<p>Puesto: {{profile.ranking}}</p>
+			</ion-item>
+			<button secondary block> Invitar </button>
+		</ion-card-header>
 
 
 
-</ion-card>
+	<ion-card-content>
+		<ion-list>
+			<ion-list-header>
+				Calendario
+			</ion-list-header>
+			<ion-item>
+				<table class="calendar">
+					<thead>
+						<tr>
+							<th>Lu</th>
+							<th>Ma</th>
+							<th>Mie</th>
+							<th>Ju</th>
+							<th>Vi</th>
+							<th>Sa</th>
+							<th>Do</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td *ngFor="#day of profile.calendar[0].weekdays" [attr.status]="day.status | lowercase" >
+								<p *ngIf="day.status==='Active'" >
+									{{day.from}}
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</ion-item>
+		</ion-list>
+
+		<ion-list>
+			<ion-list-header>
+				Estadística
+			</ion-list-header>
+			<div text-center>
+
+				<p>Puntos: {{profile.statistics.points}}</p>
+				<p>Juegos: {{profile.statistics.games}}</p>
+				<p>Triunfos: {{profile.statistics.won}}</p>
+				<p>Empates: {{profile.statistics.drawn}}</p>
+				<p>Derrotas: {{profile.statistics.lost}}</p>
+			</div>
+		</ion-list>
+	</ion-card-content>
+
+  </ion-card>
 </ion-content>

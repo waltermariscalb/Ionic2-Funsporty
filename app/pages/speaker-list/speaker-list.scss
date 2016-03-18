@@ -1,18 +1,33 @@
 
-.speaker-list {
+.sportman-list {
 
-  ion-card.speaker ion-card-header .item {
-    padding: 12px;
+  ion-card.sportmancard ion-list button {
+    padding: 2px;
   }
 
-  ion-card.speaker ion-card-content .list {
-    margin: 0;
+  ion-card.sportmancard ion-card-content ion-list button {
+    margin: 2px;
+	padding:0;
   }
 
-  ion-card.speaker ion-card-header,
-  ion-card.speaker ion-card-content,
-  ion-card.speaker ion-card-content .list ion-item-content, {
-    padding: 0px;
+  ion-card.sportmancard ion-card-header,
+  ion-card.sportmancard ion-card-content,
+  ion-card.sportmancard ion-card-content ion-list ion-item, {
+    padding: 0;
   }
-  
+
+}
+
+.actionbar {
+	background-color: #D8D8D8;
+	border-color: #0000ff;
+	padding: 0;
+}
+
+.level {
+	color: #3ADF00;
+}
+
+.ranking {
+	color: darkblue;
 }

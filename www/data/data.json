@@ -9,9 +9,9 @@
               "id":"1",
               "sportNames":["Running"],
               "name": "Salida grupal Running",
-              "location": "Cerro Chena, San Bernardo",              
+              "location": "Cerro Chena, San Bernardo",
               "description": "Salida grupal por los senderos del cerro, máximo 14 personas",
-              "speakerNames": ["Brandy Carney","Tim Lancina"],              
+              "speakerNames": ["Brandy Carney","Tim Lancina"],
               "timeStart": "08:00 am",
               "timeEnd": "14:00 am",
               "tracks": ["Grupales"],
@@ -27,7 +27,7 @@
               "public":true,
               "status":"Open",
               "min":5,
-              "max":14             
+              "max":14
             }
           ]
         },
@@ -36,7 +36,7 @@
           "sessions": [
             {
               "id":"2",
-              "sportNames":["Mountainbike"],              
+              "sportNames":["Mountainbike"],
               "name": "Salida grupal Mountainbike",
               "location": "Cerro La Parva, Las Condes",
               "description": "Salida grupal nocturna, máximo 8 personas",
@@ -56,10 +56,10 @@
               "public":true,
               "status":"Open",
               "min":5,
-              "max":20      
+              "max":20
             }
            ]
-        } 
+        }
   ]
  },
     {
@@ -70,11 +70,11 @@
           "sessions": [
             {
               "id":"3",
-              "sportNames":["Tennis"],                  
+              "sportNames":["Tennis"],
               "name": "Encuentro de Tennis dobles",
               "location": "Cancha 4",
               "description": "Partido dobles de tenis amistoso",
-              "speakerNames": ["Brandy Carney","Tim Lancina"],              
+              "speakerNames": ["Brandy Carney","Tim Lancina"],
               "timeStart": "8:00 am",
               "timeEnd": "9:00 am",
               "tracks": ["Amistosos"],
@@ -82,13 +82,13 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Brandy Carney","Tim Lancina","Mike Hartington","Eric Bobbitt"],
-              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"yes"}],              
+              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"yes"}],
               "hostNames" : ["Brandy Carney","Tim Lancina"],
               "winnerNames":["Brandy Carney"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false,
-              "status":"Open"                 
+              "status":"Open"
             }
           ]
         },
@@ -97,7 +97,7 @@
           "sessions": [
             {
               "id":"4",
-              "sportNames":["Raquetball"],   
+              "sportNames":["Raquetball"],
               "name": "Encuentro de Raquetball",
               "location": "Cancha 1",
               "description": "Encuentro Amistoso",
@@ -109,17 +109,17 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Tim Lancina","Mike Hartington"],
-              "rsvps":[{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"yes"}],              
+              "rsvps":[{"name":"Tim Lancina","response":"yes"},{"name":"Mike Hartington","response":"yes"}],
               "hostNames" : ["Tim Lancina"],
               "winnerNames":["Mike Hartington"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false,
-              "status":"Closed" 
+              "status":"Closed"
             },
             {
               "id":"5",
-              "sportNames":["Soccer"],                
+              "sportNames":["Soccer"],
               "name": "Partido de futbolito",
               "location": "Cancha 1",
               "description": "Encuentro Amistoso",
@@ -131,7 +131,7 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Tim Lancina","Mike Hartington","Max Lynch","Adam Bradley","Ben Sperry","Eric Bobbitt"],
-              "rsvps":[{"name":"Tim Lancina","response":"maybe"},{"name":"Mike Hartington","response":"yes"},{"name":"Eric Bobbitt","response":"no"}],              
+              "rsvps":[{"name":"Tim Lancina","response":"maybe"},{"name":"Mike Hartington","response":"yes"},{"name":"Eric Bobbitt","response":"no"}],
               "hostNames" : ["Max Lynch","Ben Sperry"],
               "winnerNames":["Max Lynch"],
               "resultname":"Goles",
@@ -139,11 +139,11 @@
               "public":false,
               "status":"Open",
               "min":6,
-              "max": 7              
+              "max": 7
             },
             {
               "id":"6",
-              "sportNames":["Trekking"],                 
+              "sportNames":["Trekking"],
               "name": "Salida grupal Trekking",
               "location": "Alto jahuel",
               "description": "Salida entre amigos visita parques y senderos",
@@ -163,7 +163,7 @@
               "public":false,
               "status":"Open",
               "min":4,
-              "max": 12                               
+              "max": 12
             }
           ]
         },
@@ -172,7 +172,7 @@
           "sessions": [
             {
               "id":"7",
-              "sportNames":["Biking"],                
+              "sportNames":["Biking"],
               "name": "Salida grupal Biking",
               "location": "Cerro San Cristobal",
               "description": "Salida grupal colegio las Encinas",
@@ -184,7 +184,7 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
-              "rsvps":[{"name":"Max Lynch","response":"no"},{"name":"Adam Bradley","response":"no"},{"name":"Mike Hartington","response":"yes"}],              
+              "rsvps":[{"name":"Max Lynch","response":"no"},{"name":"Adam Bradley","response":"no"},{"name":"Mike Hartington","response":"yes"}],
               "hostNames" : ["Adam Bradley", "Mike Hartington"],
               "winnerNames":[],
               "resultname":"Tiempos",
@@ -192,11 +192,11 @@
               "public":true  ,
               "status":"Open",
               "min":6,
-              "max": 15               
+              "max": 15
             },
             {
               "id":"8",
-              "sportNames":["Babyfútbol"],               
+              "sportNames":["Babyfútbol"],
               "name": "Partido de Babyfútbol",
               "location": "Cancha 3, Club los Pinares",
               "description": "Partido amistoso empresa.",
@@ -208,7 +208,7 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
-              "rsvps":[{"name":"Max Lynch","response":"no"},{"name":"Adam Bradley","response":"no"},{"name":"Mike Hartington","response":"yes"}],                 
+              "rsvps":[{"name":"Max Lynch","response":"no"},{"name":"Adam Bradley","response":"no"},{"name":"Mike Hartington","response":"yes"}],
               "hostNames" : ["Ben Sperry", "Max Lynch"],
               "winnerNames":["Ben Sperry"],
               "resultname":"Goles",
@@ -216,11 +216,11 @@
               "public":false ,
               "status":"Open",
               "min":5,
-              "max": 6           
+              "max": 6
             },
             {
               "id":"9",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Encuentro de Tennis",
               "location": "Cancha 4, Club providencia",
               "description": "Partido por puntos",
@@ -232,13 +232,13 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Eric Bobbitt","Tim Lancina"],
-              "rsvps":[{"name":"Eric Bobbitt","response":"yes"},{"name":"Tim Lancina","response":"yes"}],              
+              "rsvps":[{"name":"Eric Bobbitt","response":"yes"},{"name":"Tim Lancina","response":"yes"}],
               "hostNames" : ["Eric Bobbitt"],
               "winnerNames":["Eric Bobbitt"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false,
-              "status":"Open"               
+              "status":"Open"
             }
           ]
         },
@@ -247,7 +247,7 @@
           "sessions": [
             {
               "id":"10",
-              "sportNames":["Raquetball"],               
+              "sportNames":["Raquetball"],
               "name": "Encuentro de Raquetball",
               "location": "Cancha 2",
               "description": " Partido por puntos",
@@ -259,17 +259,17 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Perry Govier","Tim Lancina"],
-              "rsvps":[{"name":"Perry Govier","response":"yes"},{"name":"Tim Lancina","response":"yes"}],              
+              "rsvps":[{"name":"Perry Govier","response":"yes"},{"name":"Tim Lancina","response":"yes"}],
               "hostNames" : ["Tim Lancina"],
               "winnerNames":["Perry Govier"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false,
-              "status":"Open"              
+              "status":"Open"
             },
             {
               "id":"11",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Encuentro de Tennis",
               "location": "Cancha 4",
               "description": "Partido por puntos",
@@ -281,17 +281,17 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Katie Ginder-Vogel","Mike Hartington"],
-              "rsvps":[{"name":"Katie Ginder-Vogel","response":"yes"},{"name":"Mike Hartington","response":"yes"}],              
+              "rsvps":[{"name":"Katie Ginder-Vogel","response":"yes"},{"name":"Mike Hartington","response":"yes"}],
               "hostNames" : ["Katie Ginder-Vogel"],
               "winnerNames":["Katie Ginder-Vogel"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false,
-              "status":"Open"              
+              "status":"Open"
             },
             {
               "id":"12",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Encuentro de Tennis",
               "location": "Cancha 3",
               "description": "Partido por puntos",
@@ -303,13 +303,13 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Tim Lancina", "Adam Bradley"],
-              "rsvps":[{"name":"Tim Lancina","response":"yes"},{"name":"Adam Bradley","response":"yes"}],              
+              "rsvps":[{"name":"Tim Lancina","response":"yes"},{"name":"Adam Bradley","response":"yes"}],
               "hostNames" : ["Adam Bradley"],
               "winnerNames":["Tim Lancina"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false,
-              "status":"Open"               
+              "status":"Open"
             }
           ]
         },
@@ -318,11 +318,11 @@
           "sessions": [
             {
               "id":"13",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Premiación torneo de maestros",
               "location": "Auditorium",
               "description": "Entrega de premios torneo de maestros",
-              "speakerNames": ["Max Lynch", "Ben Sperry"],              
+              "speakerNames": ["Max Lynch", "Ben Sperry"],
               "timeStart": "12:00 pm",
               "timeEnd": "1:00 pm",
               "tracks": ["Eventos"],
@@ -330,13 +330,13 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt","Tim Lancina"],
-              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Adam Bradley","response":"no"},{"name":"Ben Sperry","response":"yes"}],                 
+              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Adam Bradley","response":"no"},{"name":"Ben Sperry","response":"yes"}],
               "hostNames" : ["Adam Bradley"],
               "winnerNames":[],
               "resultname":"",
               "results":[] ,
               "public":true,
-              "status":"Open"              
+              "status":"Open"
             }
           ]
         },
@@ -345,7 +345,7 @@
           "sessions": [
             {
               "id":"14",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Torneo de Tenis dobles",
               "location": "Cancha 4",
               "description": "Torneo de Tennis aficionados interempresas",
@@ -357,17 +357,17 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Brandy Carney","Brody Kidd","Dan Imhoff","Eric Bobbitt"],
-              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Brody Kidd","response":"yes"},{"name":"Dan Imhoff","response":"yes"}],              
+              "rsvps":[{"name":"Brandy Carney","response":"yes"},{"name":"Brody Kidd","response":"yes"},{"name":"Dan Imhoff","response":"yes"}],
               "hostNames" : ["Brody Kidd","Dan Imhoff"],
               "winnerNames":["Brody Kidd"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false,
-               "status":"Open"              
+               "status":"Open"
             },
             {
               "id":"15",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Torneo de tenis",
               "location": "Cancha 4",
               "description": "Campeonato tennis, interempresas, Partido por puntos",
@@ -379,17 +379,17 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Katie Ginder-Vogel","Dan Imhoff"],
-              "rsvps":[{"name":"Katie Ginder-Vogel","response":"yes"},{"name":"Dan Imhoff","response":"yes"}],              
+              "rsvps":[{"name":"Katie Ginder-Vogel","response":"yes"},{"name":"Dan Imhoff","response":"yes"}],
               "hostNames" : ["Katie Ginder-Vogel","Dan Imhoff"],
               "winnerNames":["Katie Ginder-Vogel"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"] ,
               "public":false,
-               "status":"Open"              
+               "status":"Open"
             },
             {
               "id":"16",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Torneo de tennis",
               "location": "Cancha 4",
               "description": "Partido por puntos",
@@ -401,13 +401,13 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Dan Imhoff", "Rudy Pelrine"],
-              "rsvps":[{"name":"Dan Imhoff","response":"yes"},{"name":"Rudy Pelrine","response":"yes"}],              
+              "rsvps":[{"name":"Dan Imhoff","response":"yes"},{"name":"Rudy Pelrine","response":"yes"}],
               "hostNames" : ["Rudy Pelrine"],
               "winnerNames":["Dan Imhoff"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false ,
-              "status":"Closed"             
+              "status":"Closed"
             }
           ]
         },
@@ -416,7 +416,7 @@
           "sessions": [
             {
               "id":"17",
-              "sportNames":["Mountainbike"],               
+              "sportNames":["Mountainbike"],
               "name": "Torneo de Mountainbike",
               "location": "Termas de Flaco, San Fernando",
               "description": "Partido por puntos",
@@ -428,7 +428,7 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Rudy Pelrine","Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
-              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Rudy Pelrine","response":"no"},{"name":"Ben Sperry","response":"yes"}],                 
+              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Rudy Pelrine","response":"no"},{"name":"Ben Sperry","response":"yes"}],
               "hostNames" : ["Rudy Pelrine","Tim Lancina"],
               "winnerNames":["Rudy Pelrine"],
               "resultname":"Tiempos",
@@ -436,11 +436,11 @@
               "public":true ,
               "status":"Closed",
               "min":4,
-              "max":20            
+              "max":20
             },
             {
               "id":"18",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Torneo de Tennis",
               "location": "Cancha 1",
               "description": "Competencia de tennis, Partido por puntos",
@@ -452,17 +452,17 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Drew Rygh","Max Lynch"],
-              "rsvps":[{"name":"Drew Rygh","response":"yes"},{"name":"Max Lynch","response":"yes"}],              
+              "rsvps":[{"name":"Drew Rygh","response":"yes"},{"name":"Max Lynch","response":"yes"}],
               "hostNames" : ["Drew Rygh"],
               "winnerNames":["Drew Rygh"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false ,
-              "status":"Open"  
+              "status":"Open"
             },
             {
               "id":"19",
-              "sportNames":["Tennis"],               
+              "sportNames":["Tennis"],
               "name": "Torneo de Tenis",
               "location": "Cancha 1",
               "description": "Partido por puntos",
@@ -474,13 +474,13 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Ben Sperry", "Brandy Carney"],
-              "rsvps":[{"name":"Ben Sperry","response":"yes"},{"name":"Brandy Carney","response":"yes"}],              
+              "rsvps":[{"name":"Ben Sperry","response":"yes"},{"name":"Brandy Carney","response":"yes"}],
               "hostNames" : ["Brandy Carney"],
               "winnerNames":["Ben Sperry"],
               "resultname":"Set",
               "results":["6/2","5/6","6/3"],
               "public":false,
-              "status":"Closed"   
+              "status":"Closed"
             }
           ]
         },
@@ -489,7 +489,7 @@
           "sessions": [
             {
               "id":"20",
-              "sportNames":["Trekking","Biking","Running"],               
+              "sportNames":["Trekking","Biking","Running"],
               "name": "Exposición deportiva",
               "location": "Mall Las condes",
               "description": "Exposición de ropa deportiva",
@@ -501,7 +501,7 @@
               "lat": -33.4345254,
               "lng": -70.5808188,
               "invitedNames":["Max Lynch","Brandy Carney","Rudy Pelrine","Eric Bobbitt","Max Lynch","Adam Bradley","Mike Hartington","Ben Sperry","Eric Bobbitt"],
-              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Rudy Pelrine","response":"no"},{"name":"Ben Sperry","response":"yes"}],               
+              "rsvps":[{"name":"Max Lynch","response":"yes"},{"name":"Rudy Pelrine","response":"no"},{"name":"Ben Sperry","response":"yes"}],
               "hostNames" : ["Brandy Carney","Max Lynch"],
               "winnerNames":[],
               "resultname":"",
@@ -509,11 +509,11 @@
               "public":true,
               "status":"Open",
               "min":2,
-              "max" :10               
+              "max" :10
             },
             {
               "id":"21",
-              "sportNames":["Biking"],               
+              "sportNames":["Biking"],
               "name": "Evento ciclista",
               "location": "Parque bustamante",
               "description": "Exposición bicicletas, indumentaria y artículos deportivos varios.",
@@ -533,7 +533,7 @@
               "public":true,
               "status":"Open",
               "min" :4,
-              "max" :20             
+              "max" :20
             }
           ]
         }
@@ -554,15 +554,40 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Providencia","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Blocked","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"20:00"},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Basic", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+       "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"18:00","to":"20:00"},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"09:00","to":"15:00"}
+          ]
+        }
+      ],
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars3.githubusercontent.com/u/19638?v=3",
       "twitter": "ericbobbitt",
-      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos gustos.",
+      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos intereses.",
       "location": "Santiago, Chile"
     },
     {
@@ -576,15 +601,40 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Providencia","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Active","from":"19:30","to":"21:00"},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"18:00","to":"20:00"},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Blocked","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Advance", "ranking": 7,
-        "statistics": {"points": 4, "games": 5, "won": 2, "lost": 3, 
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Active","from":"10:00","to":"15:00"}
+          ]
+        }
+      ],
+        "statistics": {"points": 4, "games": 5, "won": 2, "lost": 3,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars2.githubusercontent.com/u/452425?v=3",
       "twitter": "adamdbradley",
-      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos gustos.",
+      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos intereses.",
       "location": "Santiago, Chile"
     },
     {
@@ -598,15 +648,40 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Las Condes","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Intermediate", "ranking": 9,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars0.githubusercontent.com/u/6577830?v=3",
       "twitter": "brandyscarney",
-      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos gustos.",
+      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos intereses.",
       "location": "Santiago, Chile"
     },
     {
@@ -620,18 +695,30 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Huechuraba","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Advance", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }},
         {"sportName": "Biking", "level": "Advance", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
-        "drawn": 0 }}        
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
+        "drawn": 0 }}
         ],
       "profilePic": "https://avatars2.githubusercontent.com/u/8117985?v=3",
       "twitter": "katiegv",
-      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos gustos.",
+      "about": "Me gustan los deportes al aire libre y especialmente aquellos en los que pueda conocer personas y compartir los mismos intereses.",
       "location": "Santiago, Chile"
     },
     {
@@ -645,10 +732,22 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Recoleta","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Basic", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars1.githubusercontent.com/u/571056?v=3",
@@ -667,16 +766,28 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Santiago","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Advance", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }},
         {"sportName": "Babyfútbol", "level": "Expert", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }},
         {"sportName": "Soccer", "level": "Advance", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars0.githubusercontent.com/u/2835826?v=3",
@@ -695,10 +806,22 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Rancagua","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Expert", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://pbs.twimg.com/profile_images/627907755743952896/TEEur1pK.jpg",
@@ -717,10 +840,22 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Valparaíso","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Hiking", "level": "Expert", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars0.githubusercontent.com/u/5280265?v=3",
@@ -739,10 +874,22 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Viña del Mar","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Basic", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars2.githubusercontent.com/u/804331?v=3",
@@ -761,10 +908,22 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "La Serena","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Intermediate", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars3.githubusercontent.com/u/11214?v=3",
@@ -783,10 +942,22 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Viña del Mar","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Beginner", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars0.githubusercontent.com/u/1584992?v=3",
@@ -805,10 +976,22 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Providencia","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Basic", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars2.githubusercontent.com/u/2018508?v=3",
@@ -827,13 +1010,25 @@
       "receivenotification":true,
       "publishcalendar":true,
       "zones":[{"sector": "", "loc": "", "city": "Las Condes","country": "Chile", "lat": 0, "lng": 0 }],
-      "calendar":{},
+      "calendar":[
+        {"name":"available",
+          "weekdays":[
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Inactive","from":"","to":""},
+            {"status":"Active","from":"19:00","to":"21:00"},
+            {"status":"Active","from":"09:00","to":"12:00"},
+            {"status":"Inactive","from":"","to":""}
+          ]
+        }
+      ],
       "profiles":[
         {"sportName": "Tennis", "level": "Advance", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }},
         {"sportName": "Biking", "level": "Expert", "ranking": 3,
-        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2, 
+        "statistics": {"points": 6, "games": 5, "won": 3, "lost": 2,
         "drawn": 0 }}
         ],
       "profilePic": "https://avatars1.githubusercontent.com/u/519526?v=3",

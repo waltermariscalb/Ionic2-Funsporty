@@ -46,9 +46,11 @@ export class ConferenceData {
       });
     });
 
-    data.speakers.forEach(sp => {
-      sp.profiles.forEach(p => {
-        p.sport = data.sports.find(s => p.sportName === s.name); // find sport and assign to sport profile
+    data.speakers.forEach(user => {
+      user.profiles.forEach(profile => {
+        profile.sport = data.sports.find(s => profile.sportName === s.name); // find sport and assign to sport profile
+		//if (profile.calendar) {alert('existe');} else {alert('no existe');}
+		profile.calendar = profile.calendar || user.calendar;
       });
     });
 

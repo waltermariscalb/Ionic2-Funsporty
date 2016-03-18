@@ -25,37 +25,42 @@
   </ion-searchbar>
 
   <ion-list [hidden]="counter === 0">
-  
-  <ion-card *ngFor="#sportman of sportmen" class="speaker" [hidden]="sportman.hide">
+
+  <ion-card *ngFor="#sportman of sportmen" class="sportmancard" [hidden]="sportman.hide">
 
      <ion-list>
-        <button ion-item (click)="goToSportmanDetail(sportman)">            
+        <button ion-item (click)="goToSportmanDetail(sportman)">
             <ion-avatar  item-left>
                 <img [src]="sportman.profilePic">
             </ion-avatar >
             <h2>{{sportman.name}}</h2>
             <h3>{{sportman.zones[0].city}} , {{sportman.zones[0].country}}</h3>
             <p> Reputación <ion-badge >{{sportman.reputation}}</ion-badge> </p>
-        </button>        
+        </button>
      </ion-list>
-  
+
 
     <ion-card-content class="outer-content">
       <ion-list>
         <button ion-item *ngFor="#profile of sportman.profiles" (click)="goToProfileDetail(profile,sportman)">
-         <ion-icon [name]="profile.sport.images.mobileicon" item-left></ion-icon>
-        <div text-center>
-          <h3>
-          {{profile.sport.name}}
-          - {{profile.level}}
-          - {{profile.ranking}}
-          </h3>
-        </div>
+         	<ion-icon [name]="profile.sport.images.mobileicon" item-left></ion-icon>
+			<div text-center>
+				<h3>
+					{{profile.sport.name}}
+					<span class="level">
+						{{profile.level}}
+					</span>
+					&mdash;
+					<span class="ranking">
+						{{profile.ranking}}
+					</span>
+				</h3>
+			</div>
         </button>
       </ion-list>
     </ion-card-content>
 
-    <ion-item>
+    <ion-item class="actionbar">
       <button (click)="goToSportmanTwitter(sportman)" clear item-left>
         <ion-icon name="logo-twitter"></ion-icon>
         Tweet

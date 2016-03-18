@@ -6,10 +6,10 @@
 <ion-content padding>
   <ion-list>
     <ion-list-header>
-    
+
         <p>{{session.name}}</p>
         <p>id : {{session.id}}</p>
-      
+
     </ion-list-header>
 
     <ion-item>
@@ -26,7 +26,7 @@
       <h3>Descripción </h3>
       <p>{{session.description}}</p>
     </ion-item>
- 
+
     <ion-item>
       <h3>Cuándo</h3>
       <p>{{session.date}} de {{session.timeStart}} a {{session.timeEnd}}</p>
@@ -37,26 +37,26 @@
       <p>{{session.location}}</p>
     </ion-item>
   </ion-list>
-  
+
   <ion-list>
     <div *ngIf="session.status==='Open' && session.public">
         <button block>Participar</button>
     </div>
     <div *ngIf="!session.public && session.status==='Open' ">
         Está invitado a esta actividad.
-        <button block>Aceptar</button>
-        <button block>Rechazar</button>
-    </div>  
+        <button block secondary outline small>Aceptar</button>
+        <button block danger outline small>Rechazar</button>
+    </div>
   </ion-list>
-  
+
   <ion-list>
     <ion-list-header>
-     Anfitriones 
+     Anfitriones
     </ion-list-header>
     <ion-item *ngFor="#host of session.hosts">
       <ion-avatar item-left>
         <img [src]="host.profilePic" [alt]="host.name">
-      </ion-avatar>        
+      </ion-avatar>
       {{host.name}}
     </ion-item>
   </ion-list>
@@ -69,27 +69,27 @@
     <ion-item *ngFor="#speaker of session.invitedUsers">
       <ion-avatar item-left>
         <img [src]="speaker.user.profilePic" [alt]="speaker.user.name">
-      </ion-avatar>        
+      </ion-avatar>
       {{speaker.user.name}}
-      <p>{{speaker.response}}</p>
+      <p class="response">{{speaker.response}}</p>
     </ion-item>
   </ion-list>
 
   <div *ngIf = "session.winners && session.winners.length > 0 ">
     <ion-list>
       <ion-list-header>
-        Resultado 
+        Resultado
       </ion-list-header>
       <ion-item *ngFor="#w of session.winners">
           ganador: {{w}}
       </ion-item>
       <ion-item *ngIf="session.results && session.results.length > 0 " >
           <p *ngFor="#r of session.results">
-              {{session.resultname}} : {{r}} 
+              {{session.resultname}} : {{r}}
           </p>
       </ion-item>
     </ion-list>
   </div>
-  
+
 
 </ion-content>

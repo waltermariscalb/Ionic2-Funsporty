@@ -33,7 +33,7 @@ interface ISportman    {
       receivenotification: boolean;
       publiscalendar: boolean;
       zones: IZone[];
-      calendar: Object;
+      calendar: any;
       profiles: IProfile[];
       profilePic: string;
       twitter: string;

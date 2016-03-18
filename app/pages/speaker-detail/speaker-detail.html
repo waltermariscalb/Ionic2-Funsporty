@@ -16,34 +16,39 @@
 
   <p>{{speaker.about}}</p>
 
-  	<table>
-		  <thead>
-			  <tr>
-				<th>Mon</th>
-				<th>Tue</th>
-				<th>Wen</th>
-				<th>Thr</th>
-				<th>Fri</th>
-				<th>Sat</th>
-				<th>Sun</th>
-			  </tr>
-		  </thead>
-		  <tbody>
-			  <tr>
-				  <td>19:00 21:00</td>
-				  <td>19:00 21:00</td>
-				  <td>19:00 21:00</td>
-				  <td>19:00 21:00</td>
-				  <td>19:00 21:00</td>
-				  <td>19:00 21:00</td>
-				  <td>19:00 21:00</td>
-			  </tr>
-		  </tbody>
-	</table>
+<ion-list>
+   <ion-list-header>
+      Mi calendario
+   </ion-list-header>
+	<ion-item>
+		<table class="calendar">
+			<thead>
+				<tr>
+					<th>Lu</th>
+					<th>Ma</th>
+					<th>Mie</th>
+					<th>Ju</th>
+					<th>Vi</th>
+					<th>Sa</th>
+					<th>Do</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td *ngFor="#day of speaker.calendar[0].weekdays" [attr.status]="day.status | lowercase" >
+						<p *ngIf="day.status==='Active'" >
+							{{day.from}}
+						</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</ion-item>
+</ion-list>
 
       <ion-list>
         <ion-list-header>
-           Mis Deportes preferidos
+           Mis Deportes
         </ion-list-header>
         <button ion-item *ngFor="#profile of speaker.profiles" (click)="goToProfileDetail(profile,speaker)">
          <ion-icon [name]="profile.sport.images.mobileicon" item-left></ion-icon>
@@ -59,7 +64,7 @@
 
  <ion-list>
     <ion-list-header>
-       Mis Actividades
+       Mis próximas actividades
     </ion-list-header>
   <div *ngIf="speaker.sessions">
     <ion-item *ngFor="#session of speaker.sessions" (click)="goToSessionDetail(session)">
