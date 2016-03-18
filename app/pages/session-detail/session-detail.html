@@ -14,11 +14,11 @@
 
     <ion-item>
         <h3>Actividad</h3>
-        <p *ngIf="session.public">Pública</p>
+        <p *ngIf="session.public" [class.public] = "session.public">Pública</p>
         <p *ngIf="!session.public">Privada</p>
     </ion-item>
     <ion-item>
-        <h3>Estado</h3>
+        <h3 [class] = "session.status">Estado</h3>
         <p> {{session.status}} </p>
     </ion-item>
 

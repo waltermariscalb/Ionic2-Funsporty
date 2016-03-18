@@ -116,7 +116,8 @@ export class ConferenceData {
     }
   }
 
-  public getTimeline(dayIndex: number, queryText: string= "", excludeTracks: Array<string>= [], segment: string= "all", userName: string) {
+  public getTimeline(dayIndex: number, queryText: string= "", filterCriteria: Object, segment: string= "all", userName: string) {
+
     return this.load().then(data => {
 
       let day = data.schedule[dayIndex];
@@ -130,7 +131,7 @@ export class ConferenceData {
 
         group.sessions.forEach(session => {
           // check if this session should show or not
-         this.filterSession(session, queryWords, excludeTracks, segment, userName);
+         this.filterSession(session, queryWords, filterCriteria, segment, userName);
 
           if (!session.hide) {
             // if this session is not hidden then this group should show
@@ -151,9 +152,8 @@ export class ConferenceData {
       });
      }
 
-  public filterSession(session, queryWords: Array<string>, excludeTracks: Array<any>, segment: string, userName: string) {
-
-    let matchesQueryText: boolean = false;
+  public filterSession(session, queryWords: Array<string>, filterCriteria: Object, segment: string, userName: string) {
+	let matchesQueryText: boolean = false;
     if (queryWords.length) {
       // of any query word is in the session name than it passes the query test
       queryWords.forEach(queryWord => {
@@ -168,12 +168,16 @@ export class ConferenceData {
 
     // if any of the sessions tracks are not in the
     // exclude tracks then this session passes the track test
-    let matchesTracks: boolean = false;
+	let matchesTracks: boolean = false;
+	let matchesStatus: boolean = false;
+	let matchesSecurity: boolean = false;
+
     session.tracks.forEach(trackName => {
-      if (excludeTracks.indexOf(trackName) === -1) {
-        matchesTracks = true;
-      }
+      if (filterCriteria["excludedTracks"].indexOf(trackName) === -1) {matchesTracks = true; }
     });
+
+	if (filterCriteria["excludedStatus"].indexOf(session.status) === -1) {matchesStatus = true; }
+	if (filterCriteria["excludedSecurity"].indexOf(session.public ? "Public" : "Private") === -1) {matchesSecurity = true; }
 
     // if the segment is 'favorites', but session is not a user favorite
     // then this session does not pass the segment test
@@ -201,7 +205,7 @@ export class ConferenceData {
     });
 
     // all tests must be true if it should not be hidden
-    session.hide = !(matchesQueryText && matchesTracks && matchesSegment && (matchesUserName || matchesHosts || session.public));
+    session.hide = !(matchesQueryText && matchesTracks && matchesStatus && matchesSecurity && matchesSegment && (matchesUserName || matchesHosts || session.public));
   }
 
   public getTracks() {

@@ -10,13 +10,13 @@ import {SportmenFilterPage} from '../sportmen-filter/sportmen-filter';
 })
 export class SpeakerListPage {
   actionSheet: ActionSheet;
-  sportmen:Array<ISportman> =[];
+  sportmen: Array<ISportman> =[];
   queryText: string = '';
-  segment:string = 'all';
+  segment: string = 'all';
   excludedSports: Array<string>=[];
   excludedLevels: Array<string>=[];
   excludedAgeCategories: Array<string>=[];
-  excludedGenders:Array<string>=[];
+  excludedGenders: Array<string>=[];
 
   counter:number = 0;
 
@@ -25,21 +25,21 @@ export class SpeakerListPage {
      this.updateSportmen();
   }
 
-  goToProfileDetail(profile,sportman) {
-    let Fullprofile:any = {profile:profile,sportman:sportman}
+  goToProfileDetail(profile, sportman) {
+    let Fullprofile: any = {profile: profile, sportman: sportman}
     this.nav.push(ProfileDetailPage, Fullprofile);
   }
 
-  goToSportmanDetail(sportmanName:string) {
+  goToSportmanDetail(sportmanName: string) {
     this.nav.push(SpeakerDetailPage, sportmanName);
   }
 
-  goToSportmanTwitter(sportman:ISportman) {
+  goToSportmanTwitter(sportman: ISportman) {
     window.open(`https://twitter.com/${sportman.twitter}`);
   }
 
-  openSportmanShare(sportman:ISportman) {
-    let actionSheet:ActionSheet = ActionSheet.create({
+  openSportmanShare(sportman: ISportman) {
+    let actionSheet: ActionSheet = ActionSheet.create({
       title: 'Share ' + sportman.name,
       buttons: [
         {
@@ -71,23 +71,23 @@ export class SpeakerListPage {
   }
 
   updateSportmen() {
-    this.confData.getSportmen(this.queryText, this.excludedGenders, this.excludedLevels,this.excludedAgeCategories, this.excludedSports, this.segment).then(data => {
-      this.counter = data.filter(c=>!c.hide).length;
-      this.sportmen= data;
+    this.confData.getSportmen(this.queryText, this.excludedGenders, this.excludedLevels, this.excludedAgeCategories, this.excludedSports, this.segment).then(data => {
+      this.counter = data.filter(c => !c.hide).length;
+      this.sportmen = data;
     });
   }
 
   presentFilter() {
-    let FilterCriteria:Object = {excludedSports:this.excludedSports,excludedGenders:this.excludedGenders,excludedLevels:this.excludedLevels,excludedAgeCategories:this.excludedAgeCategories}
+    let FilterCriteria: Object = {excludedSports:this.excludedSports,excludedGenders:this.excludedGenders,excludedLevels:this.excludedLevels,excludedAgeCategories:this.excludedAgeCategories}
     let modal = Modal.create(SportmenFilterPage, FilterCriteria);
     this.nav.present(modal);
 
     modal.onDismiss(data => {
       if (data) {
         this.excludedSports = data.excludedSports;
-        this.excludedGenders= data.excludedGenders;
-        this.excludedLevels= data.excludedLevels;
-        this.excludedAgeCategories=data.excludedAgeCategories;
+        this.excludedGenders = data.excludedGenders;
+        this.excludedLevels = data.excludedLevels;
+        this.excludedAgeCategories = data.excludedAgeCategories;
 
         this.updateSportmen();
       }
@@ -95,7 +95,7 @@ export class SpeakerListPage {
 
   }
 
-  addFavorite(sportman:ISportman) {
+  addFavorite(sportman: ISportman) {
 
     if (this.user.hasFavorite('sportmen',sportman.name)) {
       // woops, they already favorited it! What shall we do!?

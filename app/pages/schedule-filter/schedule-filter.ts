@@ -2,8 +2,8 @@ import {Page, NavParams, ViewController} from 'ionic-angular';
 import {ConferenceData} from '../../providers/conference-data';
 
 interface FilterToggle {
-  name: string; 
-  isChecked: boolean
+  name: string;
+  isChecked: boolean;
 }
 
 @Page({
@@ -19,25 +19,25 @@ export class ScheduleFilterPage {
     let filterCriteria = this.navParams.data;
 
     this.confData.getTracks().then((trackNames: string[]) => {
-        this.fillToggles(trackNames, this.tracks, filterCriteria.excludeTracks);
+        this.fillToggles(trackNames, this.tracks, filterCriteria.excludedTracks);
     });
-    
-    this.fillToggles(["Public","Private"], this.security, filterCriteria.excludedSecurity);
-    this.fillToggles(["Open","Closed"], this.status, filterCriteria.excludedStatus);
+
+    this.fillToggles(["Public", "Private"], this.security, filterCriteria.excludedSecurity);
+    this.fillToggles(["Open", "Closed"], this.status, filterCriteria.excludedStatus);
   }
 
-  private fillToggles(dataArray: any[], toggleArray: Array<FilterToggle>,excludedItem:string[]) {
-      //fill a new array to toggle preference
+  private fillToggles(dataArray: any[], toggleArray: Array<FilterToggle>, excludedItem: string[]) {
+      // fill a new array to toggle preference
     dataArray.forEach(item => {
         let name = item;
-        if (name.name) {name = name.name};
+        if (name.name) {name = name.name;};
         toggleArray.push({
         name: name,
-        isChecked: (excludedItem.indexOf(name) === -1) //if it doesn't exist in the array is checked.
+        isChecked: (excludedItem.indexOf(name) === -1) // if it doesn't exist in the array is checked.
       });
       });
   }
-  
+
   selectAll() {
     // reset all of the toggles to be checked
     this.tracks.forEach(track => {
@@ -55,12 +55,12 @@ export class ScheduleFilterPage {
 
   applyFilters() {
     // Pass back a new array of track names to exclude
-    let data:any={};
-    
-    data.excludeTracks = this.tracks.filter(c => !c.isChecked).map(c => c.name);
+    let data: any = {};
+
+    data.excludedTracks = this.tracks.filter(c => !c.isChecked).map(c => c.name);
     data.excludedSecurity = this.security.filter(c => !c.isChecked).map(c => c.name);
     data.excludedStatus = this.status.filter(c => !c.isChecked).map(c => c.name);
-    
+
     this.dismiss(data);
   }
 

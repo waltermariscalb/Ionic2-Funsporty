@@ -8,16 +8,16 @@ import {ProfileDetailPage} from '../profile-detail/profile-detail';
 export class SpeakerDetailPage {
 	speaker: any;
 
-  constructor(private nav: NavController, private navParams: NavParams) {
-    this.speaker = this.navParams.data;
-  }
+	constructor(private nav: NavController, private navParams: NavParams) {
+		this.speaker = this.navParams.data;
+	}
 
-  goToSessionDetail(session) {
-    this.nav.push(SessionDetailPage, session);
-  }
+	goToSessionDetail(session) {
+		this.nav.push(SessionDetailPage, session);
+	}
 
-  goToProfileDetail(profile,sportman) {
-    let Fullprofile:any = {profile:profile,sportman:sportman}
-    this.nav.push(ProfileDetailPage, Fullprofile);
-  }
-}
+	goToProfileDetail(profile,sportman) {
+		let Fullprofile:any = {profile:profile,sportman:sportman}
+		this.nav.push(ProfileDetailPage, Fullprofile);
+	}
+	}

@@ -12,9 +12,11 @@ export class SchedulePage {
 dayIndex: number = 0;
 queryText: string = '';
 segment: string = 'all';
-excludeTracks: Array<any> = [];
+excludedTracks: Array<any> = [];
 excludedSecurity: Array<any> = [];
 excludedStatus: Array<any> = [];
+
+filterCriteria: Object={};
 
 shownSessions: number = 0;
 groups = [];
@@ -25,8 +27,10 @@ hasSessions: boolean = false;
 
 
   constructor(private app: IonicApp, private nav: NavController, private confData: ConferenceData, private user: UserData) {
+    this.filterCriteria = {excludedTracks: this.excludedTracks, excludedSecurity: this.excludedSecurity, excludedStatus: this.excludedStatus};
     this.updateSchedule();
   }
+
 
   onPageDidEnter() {
     this.app.setTitle('Schedule');
@@ -35,24 +39,25 @@ hasSessions: boolean = false;
   updateSchedule() {
     this.user.getUserName().then(username => {
 
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment, username).then(data => {
+    this.confData.getTimeline(this.dayIndex, this.queryText, this.filterCriteria, this.segment, username).then(data => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
-      this.date= data.date;
+      this.date = data.date;
     });
     });
   }
 
   presentFilter() {
-    let FilterCriteria: Object = {excludeTracks: this.excludeTracks, excludedSecurity: this.excludedSecurity,excludedStatus: this.excludedStatus}
-    let modal = Modal.create(ScheduleFilterPage, FilterCriteria);
+    let modal = Modal.create(ScheduleFilterPage, this.filterCriteria);
     this.nav.present(modal);
 
     modal.onDismiss(data => {
       if (data) {
-        this.excludeTracks = data.excludeTracks;
+        this.excludedTracks = data.excludedTracks;
         this.excludedSecurity = data.excludedSecurity;
         this.excludedStatus = data.excludedStatus;
+
+        this.filterCriteria = {excludedTracks: this.excludedTracks, excludedSecurity: this.excludedSecurity, excludedStatus: this.excludedStatus};
         this.updateSchedule();
       }
     });
@@ -86,7 +91,7 @@ hasSessions: boolean = false;
     if (this.user.hasFavorite('sessions',sessionData.name)) {
       // woops, they already favorited it! What shall we do!?
       // create an alert instance
-      let alert = Alert.create({
+        let alert = Alert.create({
         title: 'Favorite already added',
         message: 'Would you like to remove this session from your favorites?',
         buttons: [

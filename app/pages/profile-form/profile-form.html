@@ -20,16 +20,16 @@
 
   <ion-list radio-group [(ngModel)]="sportman.gender" required>
     <ion-header>
-      
+
     </ion-header>
 
     <ion-item>
-      <ion-label>Hombre</ion-label>    
+      <ion-label>Hombre</ion-label>
       <ion-radio  value="Male"></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>Mujer</ion-label>    
+      <ion-label>Mujer</ion-label>
       <ion-radio  value="Female"></ion-radio>
     </ion-item>
   </ion-list>
@@ -70,7 +70,38 @@
     ciudad is required
   </p>
 
+    <ion-list>
+    <ion-label>País</ion-label>
+    <ion-select [(ngModel)]="sportman">
+        <ion-option value="Chile">Chile</ion-option>
+        <ion-option value="USA">USA</ion-option>
+        <ion-option value="Germany">Alemania</ion-option>
+        <ion-option value="Argentina">Argentina</ion-option>
+        <ion-option value="Perú">Perú</ion-option>
+        <ion-option value="Otro">Otro</ion-option>
+    </ion-select>
+    </ion-list>
 
+    <ion-list radio-group>
+        <ion-list-header>
+            País
+        </ion-list-header>
+
+        <ion-item>
+        <ion-label>Chile</ion-label>
+            <ion-radio checked="true" value="Chile"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+        <ion-label>USA</ion-label>
+            <ion-radio value="USA"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+        <ion-label>Otro</ion-label>
+            <ion-radio value="Other" disabled="true"></ion-radio>
+        </ion-item>
+    </ion-list>
 
   <ion-item>
     <ion-label> Recibir notificaciones </ion-label>

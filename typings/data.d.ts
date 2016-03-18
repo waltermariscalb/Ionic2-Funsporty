@@ -1,3 +1,14 @@
+interface IWeekday {
+    status: string;
+    from: string;
+    to: string;
+}
+
+interface ICalendar {
+    name: string;
+    weekdays: Array<IWeekday>;
+}
+
 interface IStatistics {
     points: number;
     games: number;
@@ -19,6 +30,7 @@ interface IProfile {
    sportName: string;
    level: string;
    ranking: number;
+   calendar: Array<ICalendar>;
    statistics: IStatistics;
 }
 
@@ -33,11 +45,52 @@ interface ISportman    {
       receivenotification: boolean;
       publiscalendar: boolean;
       zones: IZone[];
-      calendar: any;
-      profiles: IProfile[];
+      calendar: Array<ICalendar>;
+      profiles?: IProfile[];
       profilePic: string;
       twitter: string;
       about: string;
       location: string;
       hide?: boolean;
 }
+
+interface IRsvps {
+    name: string;
+    response: string;
+}
+
+interface ISession {
+    id: number;
+    sportNames: Array<string>;
+    name: string;
+    location: string;
+    description: string;
+    speakerNames: Array<string>;
+    timeStart: string;
+    timeEnd: string;
+    tracks: Array<string>;
+    center: string;
+    lat: number;
+    lng: number;
+    invitedNames: Array<string>;
+    rsvps: Array<IRsvps>;
+    hostNames: Array<string>;
+    winnerNames: Array<string>;
+    resultName: string;
+    results: Array<string>;
+    public: boolean;
+    status: string;
+    min: number;
+    max: number;
+}
+
+interface TimeSchedule {
+    time: string;
+    sessions: Array<ISession>;
+}
+
+interface ISession {
+    date: string;
+    groups: Array<TimeSchedule>;
+}
+
