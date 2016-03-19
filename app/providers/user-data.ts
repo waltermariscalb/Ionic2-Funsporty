@@ -30,7 +30,7 @@ export class UserData {
   }
 
   public removeFavorite(topicName, Name) {
-    if (topicName == 'sportmen') {
+    if (topicName === "sportmen") {
       let index = this._sportmenFavorites.indexOf(Name)
       if (index > -1) {
         this._sportmenFavorites.splice(index, 1);
@@ -39,25 +39,25 @@ export class UserData {
       let index = this._sessionsFavorites.indexOf(Name)
       if (index > -1) {
         this._sessionsFavorites.splice(index, 1);
-      }      
+      }
     }
   }
 
-  public login(username?, password?) {
+  public login(user?: ISportman, password?) {
     this.storage.set(this.HAS_LOGGED_IN, true);
-    this.storage.set('username', username);
-    this.events.publish('user:login');
+    this.storage.set("username", user.name);
+    this.events.publish("user:login");
   }
 
-  public signup(username?, password?) {
+  public signup(user?: ISportman, password?) {
     this.storage.set(this.HAS_LOGGED_IN, true);
-    this.storage.set('username', username);
-    this.events.publish('user:signup');
+    this.storage.set("username", user.name);
+    this.events.publish("user:signup");
   }
 
   public logout() {
     this.storage.remove(this.HAS_LOGGED_IN);
-    this.events.publish('user:logout');
+    this.events.publish("user:logout");
   }
 
   // return a promise
@@ -66,10 +66,10 @@ export class UserData {
       return value;
     });
   }
-  
+
   public getUserName() {
-      return this.storage.get('username').then((value) => {
-    return value ? value:'Brandy Carney';
+      return this.storage.get("username").then((value) => {
+    return value ? value : "Brandy Carney";
     });
   }
 }

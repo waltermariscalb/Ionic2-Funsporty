@@ -30,8 +30,8 @@ interface IProfile {
    sportName: string;
    level: string;
    ranking: number;
-   calendar: Array<ICalendar>;
-   statistics: IStatistics;
+   calendar?: Array<ICalendar>;
+   statistics?: IStatistics;
 }
 
 interface ISportman    {
@@ -94,3 +94,27 @@ interface ISession {
     groups: Array<TimeSchedule>;
 }
 
+interface IAllocation {
+    single: boolean;
+    group: boolean;
+    collectivo: boolean;
+}
+
+interface IParticipants {
+    min: number;
+    max: number;
+}
+
+interface IImage {
+    mobileicon: string;
+    webicon: string;
+}
+
+interface ISport {
+    name: string;
+    type: string;
+    status: string;
+    images: IImage;
+    allocation: IAllocation;
+    participants: IParticipants;
+}

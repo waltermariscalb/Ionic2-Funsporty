@@ -71,36 +71,17 @@
   </p>
 
     <ion-list>
-    <ion-label>País</ion-label>
-    <ion-select [(ngModel)]="sportman">
-        <ion-option value="Chile">Chile</ion-option>
-        <ion-option value="USA">USA</ion-option>
-        <ion-option value="Germany">Alemania</ion-option>
-        <ion-option value="Argentina">Argentina</ion-option>
-        <ion-option value="Perú">Perú</ion-option>
-        <ion-option value="Otro">Otro</ion-option>
-    </ion-select>
-    </ion-list>
-
-    <ion-list radio-group>
-        <ion-list-header>
-            País
-        </ion-list-header>
-
-        <ion-item>
-        <ion-label>Chile</ion-label>
-            <ion-radio checked="true" value="Chile"></ion-radio>
-        </ion-item>
-
-        <ion-item>
-        <ion-label>USA</ion-label>
-            <ion-radio value="USA"></ion-radio>
-        </ion-item>
-
-        <ion-item>
-        <ion-label>Otro</ion-label>
-            <ion-radio value="Other" disabled="true"></ion-radio>
-        </ion-item>
+        <ion-item >
+        <ion-label>País</ion-label>
+        <ion-select [(ngModel)]="sportman.zones[0].country">
+            <ion-option value="Chile">Chile</ion-option>
+            <ion-option value="USA">USA</ion-option>
+            <ion-option value="Germany">Alemania</ion-option>
+            <ion-option value="Argentina">Argentina</ion-option>
+            <ion-option value="Perú">Perú</ion-option>
+            <ion-option value="Otro">Otro</ion-option>
+        </ion-select>
+        </ion-item >
     </ion-list>
 
   <ion-item>
@@ -113,11 +94,10 @@
     <ion-toggle checked="false"  [(ngModel)]="sportman.publiscalendar"> </ion-toggle>
   </ion-item>
 
-  <button ion-item>
+  <button ion-item (click)="goToSportList(sportman)">
     <icon cart item-left></icon>
       Mis deportes
   </button>
-
 
 </form>
 </ion-list>

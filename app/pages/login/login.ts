@@ -9,7 +9,7 @@ import {UserData} from '../../providers/user-data';
 })
 export class LoginPage {
   login: { username?: string, password?: string } = {};
-  submitted=false;
+  submitted= false;
 
   constructor(public nav: NavController, public userData: UserData) {}
 

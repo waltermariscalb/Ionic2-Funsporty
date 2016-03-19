@@ -10,9 +10,9 @@ interface FilterToggle {
   templateUrl: 'build/pages/schedule-filter/schedule-filter.html'
 })
 export class ScheduleFilterPage {
-  tracks: Array<{ name: string, isChecked: boolean }> = [];
-  status: Array<{ name: string, isChecked: boolean }> = [];
-  security: Array<{ name: string, isChecked: boolean }> = [];
+  tracks: Array<FilterToggle> = [];
+  status: Array<FilterToggle> = [];
+  security: Array<FilterToggle> = [];
 
   constructor(private confData: ConferenceData, private navParams: NavParams, private viewCtrl: ViewController) {
      // passed in array of tracks that should be excluded (unchecked)

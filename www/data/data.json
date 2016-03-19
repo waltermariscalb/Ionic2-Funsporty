@@ -615,7 +615,7 @@
         }
       ],
       "profiles":[
-        {"sportName": "Tennis", "level": "Advance", "ranking": 7,
+        {"sportName": "Tennis", "level": "Advance", "ranking": 5,
       "calendar":[
         {"name":"available",
           "weekdays":[
