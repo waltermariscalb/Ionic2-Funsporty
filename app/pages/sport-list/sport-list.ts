@@ -4,6 +4,7 @@ import {UserData} from "../../providers/user-data";
 
 interface SportToggle extends ISport  {
     isChecked?: boolean;
+    hide?: boolean;
 }
 
 @Page({
@@ -13,10 +14,7 @@ interface SportToggle extends ISport  {
 export class SportList {
     sportman: ISportman;
     sports: Array<SportToggle>;
-    sportsToggle: Array<SportToggle>;
-    selectedSportNames: Array<string>= [];
-    filterType: string;
-
+    filterType: string= "All";
     searchQuery: string = "";
 
     constructor(private nav: NavController, private navParams: NavParams, private confData: ConferenceData, private user: UserData) {
@@ -28,43 +26,46 @@ export class SportList {
         this.confData.getSports().then((sports: SportToggle[]) => {
             if (this.sportman.profiles) {
             sports.forEach(
-                e => {e.isChecked = this.sportman.profiles.findIndex(
-                    v => v.sportName === e.name) > -1 ; });
+                e => {e.isChecked = this.sportman.profiles.findIndex( // check if the sport is in profile
+                    v => v.sportName === e.name) > -1 ; e.hide = false; });
             }
-
-            this.sports = sports;
-            this.sportsToggle = sports;
-
+            this.sports = sports.slice();
         });
+
     }
 
-    getItems(searchbar) {
+    selectedSports(): Array<SportToggle> {
+        return this.sports.filter(v => v.isChecked === true);
+    }
+
+    isHidden(sport: any, searchCriteria: string): boolean {
+            return  !(sport.name.toLowerCase().indexOf(searchCriteria.toLowerCase()) > -1) ;
+    }
+
+    updateList() {
         // Reset items back to all of the items
-       // this.initializeItems();
+        // this.initializeItems();
 
         // set q to the value of the searchbar
-        let q: string = searchbar.value;
-
-        this.sportsToggle.forEach(r => {
-            if (r.isChecked && this.selectedSportNames.indexOf(r.name) === -1) {
-                this.selectedSportNames.push(r.name); }
-            else if (!r.isChecked && this.selectedSportNames.indexOf(r.name) > -1) {
-                this.selectedSportNames.splice(this.selectedSportNames.indexOf(r.name)); };
-             });
+        let q: string = this.searchQuery;
 
         // if the value is an empty string don't filter the items
-        if (q.trim() === "") {
-            this.sportsToggle = this.sports;
-        } else {
-            this.sportsToggle = this.sports.filter(v => {
-                if (v.name.toLowerCase().indexOf(q.toLowerCase()) > -1) {return true; }
-                return false;
-                });
-        }
-
-        this.sportsToggle.forEach(
-             e => {e.isChecked = (this.selectedSportNames.indexOf(e.name) > -1); });
-
-    }
-
-}
+        switch (this.filterType) {
+            case "All":
+                if (!(q.trim() === "")) {
+                    this.sports.forEach((v: SportToggle) => {
+                        v.hide = this.isHidden(v, q);
+                        });
+                } else {
+                    this.sports.forEach((v: SportToggle) => {
+                    v.hide = false;
+                    });
+                }
+                break;
+            case "Mine":
+                this.sports.forEach((v: SportToggle) => {
+                v.hide = !v.isChecked; });
+                break;
+            }
+        };
+ }

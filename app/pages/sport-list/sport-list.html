@@ -4,7 +4,7 @@
 
 <ion-content padding>
 
-    <ion-segment [(ngModel)]="filterType">
+    <ion-segment [(ngModel)]="filterType" (change)="updateList()">
         <ion-segment-button value="All">
         Todos
         </ion-segment-button>
@@ -13,12 +13,12 @@
         </ion-segment-button>
     </ion-segment>
 
-    <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
+    <ion-searchbar #search *ngIf="filterType==='All'" [(ngModel)]="searchQuery" (input)="updateList()"></ion-searchbar>
     <ion-list>
         <ion-list-header>
             Deportes Disponibles
         </ion-list-header>
-        <ion-item *ngFor="#sport of sportsToggle">
+        <ion-item [hidden]="sport.hide" *ngFor="#sport of sports">
             <ion-label>{{sport.name}}</ion-label>
             <ion-checkbox dark [(ngModel)]="sport.isChecked"></ion-checkbox>
         </ion-item>

@@ -1,7 +1,44 @@
+
 .response {
-	color:blue;
+
+    &[response=yes] {
+        color: map-get($colors, secondary);
+        border-color: map-get($colors, secondary);
+    }
+    &[response=no] {
+       color: map-get($colors, danger);
+       border-color: map-get($colors, danger);
+    }
+    &[response=maybe] {
+         color:blueviolet;
+         border-color: blueviolet;
+    }
+    &[response="no response"] {
+         color:coral;
+         border-color: coral;
+    }
 }
 
-.public {
-	color:green;
+.security {
+    background-color:cornsilk;
+    color:blueviolet;
+    &.public {
+         color: map-get($colors, secondary);
+    }
+}
+
+.status {
+
+    &[status=open] {
+        color: map-get($colors, secondary);
+        border-color: map-get($colors, secondary);
+    }
+    &[status=closed] {
+       color: map-get($colors, danger);
+       border-color: map-get($colors, danger);
+    }
+    &[status=other] {
+         color:blueviolet;
+         border-color: blueviolet;
+    }
 }

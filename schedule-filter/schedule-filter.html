@@ -1,0 +1,58 @@
+
+<ion-toolbar>
+  <ion-buttons start>
+    <button (click)="dismiss()">Cancelar</button>
+  </ion-buttons>
+
+  <ion-title>
+    Actividades
+  </ion-title>
+
+  <ion-buttons end>
+    <button (click)="applyFilters()">Hecho</button>
+  </ion-buttons>
+</ion-toolbar>
+
+
+<ion-content class="outer-content">
+
+  <ion-list>
+     <ion-list-header>Seguridad</ion-list-header>
+
+    <ion-item *ngFor="#secure of security" [attr.track]="secure.name | lowercase">
+      <span item-left class="dot"></span>
+      <ion-label>{{secure.name}}</ion-label> 
+      <ion-toggle  [(ngModel)]="secure.isChecked" [(checked)]="secure.isChecked" secondary> </ion-toggle>
+    </ion-item>  
+ 
+     <ion-list-header>Estado</ion-list-header>
+
+    <ion-item *ngFor="#stat of status" [attr.track]="stat.name | lowercase">
+      <span item-left class="dot"></span>
+      <ion-label>{{stat.name}}</ion-label> 
+      <ion-toggle  [(ngModel)]="stat.isChecked" [(checked)]="stat.isChecked" secondary> </ion-toggle>
+    </ion-item>       
+      
+      
+    <ion-list-header>Actividad</ion-list-header>
+
+    <ion-item *ngFor="#track of tracks" [attr.track]="track.name | lowercase">
+      <span item-left class="dot"></span>
+      <ion-label>{{track.name}}</ion-label> 
+      <ion-toggle  [(ngModel)]="track.isChecked" [(checked)]="track.isChecked" secondary> </ion-toggle>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <button ion-item (click)="selectAll()" danger detail-none class="reset-filters">
+      Seleccionar Todos
+    </button>
+
+  
+    <button ion-item (click)="deselectAll()" danger detail-none class="reset-filters">
+      Deshabilitar Todos
+    </button>
+  </ion-list>
+
+</ion-content>

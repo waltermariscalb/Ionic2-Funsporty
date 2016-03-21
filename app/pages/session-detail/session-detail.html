@@ -6,20 +6,17 @@
 <ion-content padding>
   <ion-list>
     <ion-list-header>
-
         <p>{{session.name}}</p>
         <p>id : {{session.id}}</p>
-
     </ion-list-header>
 
     <ion-item>
         <h3>Actividad</h3>
-        <p *ngIf="session.public" [class.public] = "session.public">Pública</p>
-        <p *ngIf="!session.public">Privada</p>
+        <p [ngClass] = "{'security':true,'public':session.public}">{{session.public ? "Pública":"Privada"}}</p>
     </ion-item>
     <ion-item>
-        <h3 [class] = "session.status">Estado</h3>
-        <p> {{session.status}} </p>
+        <h3 >Estado</h3>
+        <p class="status" [attr.status] = "session.status | lowercase"> {{session.status}} </p>
     </ion-item>
 
     <ion-item>
@@ -43,7 +40,7 @@
         <button block>Participar</button>
     </div>
     <div *ngIf="!session.public && session.status==='Open' ">
-        Está invitado a esta actividad.
+        <p primary> Está invitado a esta actividad.</p>
         <button block secondary outline small>Aceptar</button>
         <button block danger outline small>Rechazar</button>
     </div>
@@ -71,7 +68,7 @@
         <img [src]="speaker.user.profilePic" [alt]="speaker.user.name">
       </ion-avatar>
       {{speaker.user.name}}
-      <p class="response">{{speaker.response}}</p>
+      <p class="response" [attr.response] ="speaker.response | lowercase">{{speaker.response}}</p>
     </ion-item>
   </ion-list>
 
