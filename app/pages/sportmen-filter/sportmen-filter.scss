@@ -3,6 +3,10 @@
   color: map-get($colors, danger);
 }
 
+ion-toolbar button {
+    background-color: blue;
+}
+
 @each $track, $value in auxiliary-categories() {
 
   ion-toggle[track=#{$track}] .dot {
@@ -15,3 +19,5 @@
   }
 
 }
+
+

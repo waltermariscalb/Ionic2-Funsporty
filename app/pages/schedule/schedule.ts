@@ -10,8 +10,8 @@ import {SessionDetailPage} from '../session-detail/session-detail';
 })
 export class SchedulePage {
 dayIndex: number = 0;
-queryText: string = '';
-segment: string = 'all';
+queryText: string = "";
+segment: string = "all";
 excludedTracks: Array<any> = [];
 excludedSecurity: Array<any> = [];
 excludedStatus: Array<any> = [];
@@ -70,20 +70,28 @@ hasSessions: boolean = false;
     this.nav.push(SessionDetailPage, sessionData);
   }
 
-  back(){
-    this.date = '';
-    this.groups = [];
-    this.shownSessions = 0;
-    if (this.dayIndex > 0) {this.dayIndex--};
-    this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})
+  back() {
+    if (this.dayIndex > 0) {;
+        this.confData.hasSession(this.dayIndex - 1).then(v => {if (v) {
+                this.date = "";
+                this.groups = [];
+                this.shownSessions = 0;
+                this.dayIndex--;
+                this.updateSchedule(); }
+            });
+    }
   }
 
-  next(){
-    this.date = '';
-    this.groups = [];
-    this.shownSessions = 0;
-    this.dayIndex++;
-    this.confData.hasSession(this.dayIndex).then(v => {if (v) {this.updateSchedule()}})
+  next() {
+    if (this.dayIndex < this.shownSessions) {;
+        this.confData.hasSession(this.dayIndex + 1).then(v => {if (v) {
+                this.date = "";
+                this.groups = [];
+                this.shownSessions = 0;
+                this.dayIndex++;
+                this.updateSchedule(); }
+            });
+    }
     }
 
   addFavorite(slidingItem: ItemSliding, sessionData) {

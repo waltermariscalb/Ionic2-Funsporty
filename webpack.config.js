@@ -21,7 +21,7 @@ module.exports = {
         query: {
           doTypeCheck: true,
           resolveGlobs: false,
-          externals: ["typings/browser.d.ts","typings/data.d.ts"]
+          externals: ["typings/browser.d.ts"]
         },
         include: path.resolve('app'),
         exclude: /node_modules/
