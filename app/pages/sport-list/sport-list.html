@@ -14,14 +14,14 @@
 </ion-toolbar>
 
 <ion-content padding>
-    <ion-list>
-        <ion-list-header>
-            Deportes Disponibles
-        </ion-list-header>
+    <ion-list no-lines>
         <ion-item [hidden]="sport.hide" *ngFor="#sport of sports">
-            <ion-icon primary [name]="sport.images.mobileicon" item-left isActive=false></ion-icon>
-            <ion-label item-left>{{sport.name}}</ion-label>
-            <ion-checkbox item-right dark [(ngModel)]="sport.isChecked"></ion-checkbox>
+            <ion-icon primary [name]="sport.images.mobileicon" item-left isActive=true></ion-icon>
+            <ion-label>
+                {{sport.name}}
+            </ion-label>
+            <ion-toggle  [(ngModel)]="sport.isChecked" [(checked)]="sport.isChecked"  secondary>
+            </ion-toggle>
         </ion-item>
     </ion-list>
 </ion-content>

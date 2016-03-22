@@ -21,7 +21,7 @@
 
     <ion-item *ngFor="#secure of security" [attr.track]="secure.name | lowercase">
       <span item-left class="dot"></span>
-      <ion-icon class="security" primary [name]="secure.icon | lowercase " item-left isActive=false></ion-icon>
+      <ion-icon class="security" primary [name]="secure.icon | lowercase " item-left isActive=true></ion-icon>
       <ion-label>{{secure.name}}</ion-label>
       <ion-toggle  [(ngModel)]="secure.isChecked" [(checked)]="secure.isChecked" secondary> </ion-toggle>
     </ion-item>
@@ -30,7 +30,7 @@
 
     <ion-item *ngFor="#stat of status" [attr.track]="stat.name | lowercase">
       <span item-left class="dot"></span>
-      <ion-icon class="status" primary [name]="stat.icon | lowercase " item-left isActive=false></ion-icon>
+      <ion-icon class="status" primary [name]="stat.icon | lowercase " item-left isActive=true></ion-icon>
       <ion-label>{{stat.name}}</ion-label>
       <ion-toggle  [(ngModel)]="stat.isChecked" [(checked)]="stat.isChecked" secondary> </ion-toggle>
     </ion-item>

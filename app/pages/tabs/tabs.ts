@@ -3,7 +3,7 @@ import {SchedulePage} from '../schedule/schedule';
 import {SpeakerListPage} from '../speaker-list/speaker-list';
 import {MapPage} from '../map/map';
 import {ProfileForm} from '../profile-form/profile-form';
-import {CenterList} from '../center-list/center-list';
+import {EventList} from '../event-list/event-list';
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
@@ -13,14 +13,14 @@ import {Type} from 'angular2/core';
 })
 export class TabsPage {
 	 // set the root pages for each tab
-    tab1Root:any = SpeakerListPage;
-    tab2Root:any = SchedulePage;
-    tab3Root:any = MapPage;
-    tab4Root:any = ProfileForm;
-    tab5Root:any = CenterList;
-	mySelectedIndex: number;
+    tab1Root: any = SpeakerListPage;
+    tab2Root: any = SchedulePage;
+    tab3Root: any = MapPage;
+    tab4Root: any = EventList;
+    tab5Root: any = ProfileForm;
+    mySelectedIndex: number;
 
   constructor(navParams: NavParams) {
-   	this.mySelectedIndex = navParams.data.tabIndex || 0;
+    this.mySelectedIndex = navParams.data.tabIndex || 0;
   }
 }

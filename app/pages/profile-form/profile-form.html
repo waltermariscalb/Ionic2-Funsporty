@@ -14,104 +14,105 @@
 </ion-navbar>
 
 <ion-content >
-
-<ion-list>
 <form #loginForm="ngForm" novalidate>
 
+    <ion-list>
+        <ion-list-header>
+                Información Personal
+        </ion-list-header>
+        <ion-item>
+            <ion-label primary>Nombre</ion-label>
+            <ion-input [(ngModel)]="sportman.name" ngControl="name" type="text" #name="ngForm" required>
+            </ion-input>
+            <p [hidden]="name.valid || submitted == false" danger padding-left>
+            Username is required
+            </p>
+        </ion-item>
 
-  <ion-item>
-    <ion-label primary>Nombre</ion-label>
-    <ion-input [(ngModel)]="sportman.name" ngControl="name" type="text" #name="ngForm" required>
-    </ion-input>
-      <p [hidden]="name.valid || submitted == false" danger padding-left>
-    Username is required
-  </p>
+        <ion-item>
+            <ion-icon item-left name="at" primary isActive=false></ion-icon>
+            <ion-label fixed primary>Correo</ion-label>
+            <ion-input [(ngModel)]="sportman.email" ngControl="email" type="mail" #email="ngForm">
+            </ion-input>
+        </ion-item>
 
-  </ion-item>
+        <p [hidden]="email.valid || submitted == false" danger padding-left>
+            mail is required
+        </p>
 
+        <ion-item >
+                <ion-icon item-left name="transgender" primary isActive=false></ion-icon>
+                <ion-label primary>Género</ion-label>
+                <ion-select [(ngModel)]="sportman.gender" ngControl="gender">
+                    <ion-option value="Male">Hombre</ion-option>
+                    <ion-option value="Female">Mujer</ion-option>
+                </ion-select>
+        </ion-item>
 
-  <ion-item>
-    <ion-icon item-left name="at" primary isActive=false></ion-icon>
-    <ion-label fixed primary>Correo</ion-label>
-    <ion-input [(ngModel)]="sportman.email" ngControl="email" type="mail" #email="ngForm">
-    </ion-input>
-  </ion-item>
-  <p [hidden]="email.valid || submitted == false" danger padding-left>
-    mail is required
-  </p>
+        <ion-item>
+            <ion-label primary>Nacimiento</ion-label>
+            <ion-input [(ngModel)]="sportman.birthdate" ngControl="birthdate" type="date" #birthdate="ngForm">
+            </ion-input>
+        </ion-item>
+        <p [hidden]="birthdate.valid || submitted == false" danger padding-left>
+            fecha de nacimiento is required
+        </p>
+    </ion-list>
 
-   <ion-item >
-        <ion-icon item-left name="man" primary isActive=false></ion-icon>
-        <ion-icon item-left name="woman" primary isActive=false></ion-icon>
-        <ion-label primary>Género</ion-label>
-        <ion-select [(ngModel)]="sportman.gender" ngControl="gender">
-            <ion-option value="Male">Hombre</ion-option>
-            <ion-option value="Female">Mujer</ion-option>
-        </ion-select>
-  </ion-item>
+    <ion-list>
+        <ion-list-header>
+                Ubicación
+        </ion-list-header>
+        <ion-item>
+            <ion-label fixed primary>Ciudad</ion-label>
+            <ion-input [(ngModel)]="sportman.zones[0].city" ngControl="city" type="text" #city="ngForm">
+            </ion-input>
+        </ion-item>
+        <p [hidden]="city.valid || submitted == false" danger padding-left>
+            ciudad is required
+        </p>
+        <ion-item>
+                <ion-label primary>País</ion-label>
+                <ion-select [(ngModel)]="sportman.zones[0].country">
+                    <ion-option value="Chile">Chile</ion-option>
+                    <ion-option value="USA">USA</ion-option>
+                    <ion-option value="Germany">Alemania</ion-option>
+                    <ion-option value="Argentina">Argentina</ion-option>
+                    <ion-option value="Perú">Perú</ion-option>
+                    <ion-option value="Otro">Otro</ion-option>
+                </ion-select>
+        </ion-item>
+    </ion-list>
 
-  <ion-item>
-    <ion-label primary>Nacimiento</ion-label>
-    <ion-input [(ngModel)]="sportman.birthdate" ngControl="birthdate" type="date" #birthdate="ngForm">
-    </ion-input>
-  </ion-item>
-  <p [hidden]="birthdate.valid || submitted == false" danger padding-left>
-    fecha de nacimiento is required
-  </p>
+    <ion-list>
+        <ion-list-header>
+                Opciones
+        </ion-list-header>
+        <ion-item>
+            <ion-label> Recibir notificaciones </ion-label>
+            <ion-toggle checked="true"  [(ngModel)]="sportman.receivenotification" secondary> </ion-toggle>
+        </ion-item>
 
-<ion-item-divider>
+        <ion-item>
+            <ion-label>  Publicar calendario </ion-label>
+            <ion-toggle checked="false"  [(ngModel)]="sportman.publiscalendar" secondary> </ion-toggle>
+        </ion-item>
+    </ion-list>
 
-</ion-item-divider>
-
-  <ion-item>
-    <ion-label fixed primary>Ciudad</ion-label>
-    <ion-input [(ngModel)]="sportman.zones[0].city" ngControl="city" type="text" #city="ngForm">
-    </ion-input>
-  </ion-item>
-  <p [hidden]="city.valid || submitted == false" danger padding-left>
-    ciudad is required
-  </p>
-
-  <ion-item>
-        <ion-label primary>País</ion-label>
-        <ion-select [(ngModel)]="sportman.zones[0].country">
-            <ion-option value="Chile">Chile</ion-option>
-            <ion-option value="USA">USA</ion-option>
-            <ion-option value="Germany">Alemania</ion-option>
-            <ion-option value="Argentina">Argentina</ion-option>
-            <ion-option value="Perú">Perú</ion-option>
-            <ion-option value="Otro">Otro</ion-option>
-        </ion-select>
-  </ion-item>
-
-<ion-item-divider sticky>
-
-</ion-item-divider>
-
-  <ion-item>
-    <ion-label> Recibir notificaciones </ion-label>
-    <ion-toggle checked="true"  [(ngModel)]="sportman.receivenotification"> </ion-toggle>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>  Publicar calendario </ion-label>
-    <ion-toggle checked="false"  [(ngModel)]="sportman.publiscalendar"> </ion-toggle>
-  </ion-item>
-  <ion-item-divider sticky>
-
-  </ion-item-divider>
-  <button ion-item (click)="goToSportList(sportman)">
-    <ion-icon item-left primary name="football" isActive=false></ion-icon>
-    <ion-icon item-left primary name="tennisball" isActive=false></ion-icon>
-      Mis deportes
-  </button>
-
-  <button ion-item (click)="goToSportList(sportman)">
-    <ion-icon item-left name="calendar" primary isActive=false></ion-icon>
-      Mi calendario
-  </button>
+    <ion-list>
+        <ion-list-header>
+                Preferencias
+        </ion-list-header>
+        <button ion-item (click)="goToSportList(sportman)">
+            <ion-icon item-left primary name="football" isActive=false></ion-icon>
+                Deportes
+        </button>
+        <button ion-item (click)="goToSportList(sportman)">
+        <ion-icon item-left name="calendar" primary isActive=false></ion-icon>
+            Calendario
+        </button>
+    </ion-list>
 
 </form>
-</ion-list>
 
 </ion-content>
