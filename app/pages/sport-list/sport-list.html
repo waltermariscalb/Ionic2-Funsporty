@@ -1,26 +1,27 @@
 <ion-navbar *navbar>
-    <ion-title>Deportes</ion-title>
-</ion-navbar>
-
-<ion-content padding>
-
     <ion-segment [(ngModel)]="filterType" (change)="updateList()">
         <ion-segment-button value="All">
-        Todos
+            Deportes
         </ion-segment-button>
         <ion-segment-button value="Mine">
-        Mis Deportes
+            Mis Deportes
         </ion-segment-button>
     </ion-segment>
+</ion-navbar>
 
-    <ion-searchbar #search *ngIf="filterType==='All'" [(ngModel)]="searchQuery" (input)="updateList()"></ion-searchbar>
+<ion-toolbar>
+  <ion-searchbar #search *ngIf="filterType==='All'" [(ngModel)]="searchQuery" (input)="updateList()"></ion-searchbar>
+</ion-toolbar>
+
+<ion-content padding>
     <ion-list>
         <ion-list-header>
             Deportes Disponibles
         </ion-list-header>
         <ion-item [hidden]="sport.hide" *ngFor="#sport of sports">
-            <ion-label>{{sport.name}}</ion-label>
-            <ion-checkbox dark [(ngModel)]="sport.isChecked"></ion-checkbox>
+            <ion-icon primary [name]="sport.images.mobileicon" item-left isActive=false></ion-icon>
+            <ion-label item-left>{{sport.name}}</ion-label>
+            <ion-checkbox item-right dark [(ngModel)]="sport.isChecked"></ion-checkbox>
         </ion-item>
     </ion-list>
 </ion-content>

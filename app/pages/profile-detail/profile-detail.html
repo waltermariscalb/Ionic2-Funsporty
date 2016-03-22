@@ -7,15 +7,30 @@
     <ion-card>
 
 		<ion-card-header>
-			<ion-item>
-				<ion-thumbnail item-left>
-					<img [src]="profilePic">
-				</ion-thumbnail>
-				<h2>{{name}}</h2>
-				<h2>{{profile.sport.name}} </h2>
-				<h3>Nivel: {{profile.level}}</h3>
-				<p>Puesto: {{profile.ranking}}</p>
-			</ion-item>
+            <ion-item >
+                <ion-thumbnail item-left>
+                    <div text-center>
+                        <img [src]="profilePic">
+                        <h2>{{name}}</h2>
+                    </div>
+                </ion-thumbnail>
+                <ion-list>
+                    <ion-item>
+                        <ion-icon item-left class="sport" primary [name]="profile.sport.images.mobileicon | lowercase " isActive=false></ion-icon>
+                        <p>{{profile.sport.name}} </p>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-icon item-left class="level" primary [name]="profile.icon | lowercase " isActive=false></ion-icon>
+                        <p>{{profile.level}}</p>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-icon item-left class="ranking" primary name="podium" isActive=false></ion-icon>
+                        <p>Puesto: {{profile.ranking}}</p>
+                    </ion-item>
+                </ion-list>
+            </ion-item>
 			<button secondary block> Invitar </button>
 		</ion-card-header>
 
@@ -54,6 +69,7 @@
 
 		<ion-list>
 			<ion-list-header>
+                <ion-icon item-left name="stats" primary isActive=false></ion-icon>
 				Estadística
 			</ion-list-header>
 			<div text-center>

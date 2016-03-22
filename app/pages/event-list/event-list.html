@@ -1,0 +1,21 @@
+
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+
+  <ion-title>
+    Eventos
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="page3">
+ <ion-list>
+   <ion-item *ngFor="#i of items"></ion-item>
+ </ion-list>
+
+ <ion-infinite-scroll (infinite)="doInfinite($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
+</ion-content>

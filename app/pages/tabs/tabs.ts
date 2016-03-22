@@ -3,6 +3,7 @@ import {SchedulePage} from '../schedule/schedule';
 import {SpeakerListPage} from '../speaker-list/speaker-list';
 import {MapPage} from '../map/map';
 import {ProfileForm} from '../profile-form/profile-form';
+import {CenterList} from '../center-list/center-list';
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
@@ -16,6 +17,7 @@ export class TabsPage {
     tab2Root:any = SchedulePage;
     tab3Root:any = MapPage;
     tab4Root:any = ProfileForm;
+    tab5Root:any = CenterList;
 	mySelectedIndex: number;
 
   constructor(navParams: NavParams) {

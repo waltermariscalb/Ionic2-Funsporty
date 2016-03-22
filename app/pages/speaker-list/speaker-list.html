@@ -43,19 +43,9 @@
     <ion-card-content class="outer-content">
       <ion-list>
         <button ion-item *ngFor="#profile of sportman.profiles" (click)="goToProfileDetail(profile,sportman)">
-         	<ion-icon [name]="profile.sport.images.mobileicon" item-left></ion-icon>
-			<div text-center>
-				<h3>
-					{{profile.sport.name}}
-					<span class="level">
-						{{profile.level}}
-					</span>
-					&mdash;
-					<span class="ranking">
-						{{profile.ranking}}
-					</span>
-				</h3>
-			</div>
+            <ion-icon [name]="profile.sport.images.mobileicon" item-left isActive=false> <p> {{profile.sport.name}} </p> </ion-icon>
+            <ion-icon class="level" [name]="profile.icon | lowercase " item-left isActive=false> <p> {{profile.level}} </p></ion-icon>
+            <ion-icon class="ranking" name="podium" item-left isActive=false> <p> {{profile.ranking}} </p></ion-icon>
         </button>
       </ion-list>
     </ion-card-content>

@@ -1,7 +1,7 @@
 import {NavController, Page, ActionSheet, Alert, Modal} from "ionic-angular";
 import {ConferenceData} from "../../providers/conference-data";
 import {UserData} from "../../providers/user-data";
-import {SportList} from "../sport-list/sport-list"
+import {SportList} from "../sport-list/sport-list";
 
 
 import {FORM_DIRECTIVES, FormBuilder, Control, ControlGroup, Validators} from "angular2/common";

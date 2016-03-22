@@ -1,14 +1,15 @@
-import {Page, NavParams, ViewController} from 'ionic-angular';
-import {ConferenceData} from '../../providers/conference-data';
+import {Page, NavParams, ViewController} from "ionic-angular";
+import {ConferenceData} from "../../providers/conference-data";
 
 interface FilterToggle {
-  name: string; 
-  isChecked: boolean
+  name: string;
+  icon?: string;
+  isChecked: boolean;
 }
 
 
 @Page({
-  templateUrl: 'build/pages/sportmen-filter/sportmen-filter.html'
+  templateUrl: "build/pages/sportmen-filter/sportmen-filter.html"
 })
 export class SportmenFilterPage {
   sports: Array<FilterToggle> = [];
@@ -24,27 +25,31 @@ export class SportmenFilterPage {
     this.confData.getSports().then((sports: any[]) => {
         this.fillToggles(sports, this.sports, filterCriteria.excludedSports);
         });
-        
-    this.confData.getGenders().then((genders: {name:string} []) => {
+
+    this.confData.getGenders().then((genders: any []) => {
         this.fillToggles(genders, this.genders, filterCriteria.excludedGenders);
         });
-        
-    this.confData.getLevels().then((levels: {name:string} []) => {
+
+    this.confData.getLevels().then((levels: any []) => {
         this.fillToggles(levels, this.levels, filterCriteria.excludedLevels);
         });
-                         
-    this.confData.getAgeCategories().then((ageCategories: {name:string} []) => {
+
+    this.confData.getAgeCategories().then((ageCategories: any []) => {
         this.fillToggles(ageCategories, this.ageCategories, filterCriteria.excludedAgeCategories);
-        });           
+        });
   }
 
-  private fillToggles(dataArray: any[], toggleArray: Array<FilterToggle>,excludedItem:string[]) {
-      //fill a new array to toggle preference
+  private fillToggles(dataArray: any[], toggleArray: Array<FilterToggle>, excludedItem: string[]) {
+      // fill a new array to toggle preference
     dataArray.forEach(item => {
         let name = item.name;
+        let icon = "";
+        if (item.images) {icon = item.images.mobileicon; };
+
         toggleArray.push({
         name: name,
-        isChecked: (excludedItem.indexOf(name) === -1) //if it doesn't exist in the array is checked.
+        icon: icon,
+        isChecked: (excludedItem.indexOf(name) === -1) // if it doesn't exist in the array is checked.
       });
       });
   }
@@ -63,15 +68,15 @@ export class SportmenFilterPage {
     });
   }
 
-  applyFilters(toggleOn:boolean=false) {
+  applyFilters(toggleOn: boolean= false) {
     // Pass back a new array of names toggled on or off
-    let data:any={};
-    
-    data.excludedSports = this.sports.filter(c => toggleOn ? c.isChecked:!c.isChecked).map(c => c.name);
-    data.excludedGenders = this.genders.filter(c => toggleOn ? c.isChecked:!c.isChecked).map(c => c.name);
-    data.excludedLevels = this.levels.filter(c => toggleOn ? c.isChecked:!c.isChecked).map(c => c.name);
-    data.excludedAgeCategories = this.ageCategories.filter(c => toggleOn ? c.isChecked:!c.isChecked).map(c => c.name);
-    
+    let data: any = {};
+
+    data.excludedSports = this.sports.filter(c => toggleOn ? c.isChecked : !c.isChecked).map(c => c.name);
+    data.excludedGenders = this.genders.filter(c => toggleOn ? c.isChecked : !c.isChecked).map(c => c.name);
+    data.excludedLevels = this.levels.filter(c => toggleOn ? c.isChecked : !c.isChecked).map(c => c.name);
+    data.excludedAgeCategories = this.ageCategories.filter(c => toggleOn ? c.isChecked : !c.isChecked).map(c => c.name);
+
     this.dismiss(data);
   }
 

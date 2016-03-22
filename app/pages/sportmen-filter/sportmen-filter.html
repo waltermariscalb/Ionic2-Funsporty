@@ -1,4 +1,3 @@
-
 <ion-toolbar>
   <ion-buttons start>
     <button (click)="dismiss()">Cancelar</button>
@@ -13,58 +12,56 @@
   </ion-buttons>
 </ion-toolbar>
 
-
 <ion-content class="outer-content">
-  
   <ion-list>
     <ion-list-header>Género</ion-list-header>
     <ion-item *ngFor="#gender of genders" [attr.track]="gender.name | lowercase">
       <span class="dot"></span>
+      <ion-icon class="gender" primary [name]="gender.icon | lowercase " item-left isActive=false></ion-icon>
       <ion-label>
          {{gender.name}}
-       </ion-label> 
+       </ion-label>
       <ion-toggle  [(ngModel)]="gender.isChecked" [(checked)]="gender.isChecked"  secondary>
       </ion-toggle>
     </ion-item>
-
   </ion-list>
   <ion-list>
     <ion-list-header>Categoría</ion-list-header>
-    <ion-item *ngFor="#ageCategory of ageCategories" [attr.track]="ageCategory.name | lowercase">
+      <ion-item *ngFor="#ageCategory of ageCategories" [attr.track]="ageCategory.name | lowercase">
       <span class="dot"></span>
+      <ion-icon class="ageCategory" primary [name]="ageCategory.icon | lowercase " item-left isActive=false></ion-icon>
       <ion-label>
          {{ageCategory.name}}
-       </ion-label> 
+       </ion-label>
       <ion-toggle  [(ngModel)]="ageCategory.isChecked" [(checked)]="ageCategory.isChecked"  secondary>
       </ion-toggle>
     </ion-item>
-
   </ion-list>
 
   <ion-list>
     <ion-list-header>Nivel</ion-list-header>
     <ion-item *ngFor="#level of levels" [attr.track]="level.name | lowercase">
       <span class="dot"></span>
+      <ion-icon class="level" primary [name]="level.icon | lowercase " item-left isActive=false></ion-icon>
       <ion-label>
          {{level.name}}
-       </ion-label> 
+       </ion-label>
       <ion-toggle  [(ngModel)]="level.isChecked" [(checked)]="level.isChecked"  secondary>
       </ion-toggle>
     </ion-item>
-
   </ion-list>
 
   <ion-list>
     <ion-list-header>Deportes</ion-list-header>
     <ion-item *ngFor="#sport of sports" [attr.track]="sport.name | lowercase">
       <span class="dot"></span>
+      <ion-icon class="level" primary [name]="sport.icon | lowercase " item-left isActive=false></ion-icon>
       <ion-label>
          {{sport.name}}
-       </ion-label> 
+       </ion-label>
       <ion-toggle  [(ngModel)]="sport.isChecked" [(checked)]="sport.isChecked"  secondary>
       </ion-toggle>
     </ion-item>
-
   </ion-list>
 
   <ion-list>
@@ -72,7 +69,6 @@
       Seleccionar Todos
     </button>
 
-  
     <button ion-item (click)="deselectAll()" danger detail-none class="reset-filters">
       Deshabilitar Todos
     </button>

@@ -20,7 +20,6 @@
 }
 
 .security {
-    background-color:cornsilk;
     color:blueviolet;
     &.public {
          color: map-get($colors, secondary);

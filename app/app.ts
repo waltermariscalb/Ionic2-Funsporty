@@ -7,6 +7,9 @@ import {LoginPage} from './pages/login/login';
 import {SignupPage} from './pages/signup/signup';
 import {TutorialPage} from './pages/tutorial/tutorial';
 import {AboutPage} from './pages/about/about';
+import {CenterList} from './pages/center-list/center-list';
+import {RankingList} from './pages/ranking-list/ranking-list';
+import {EventList} from './pages/event-list/event-list';
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
@@ -32,7 +35,7 @@ interface PageObj {
    }
 })
 class ConferenceApp {
-  rootPage: Type = TabsPage; //TutorialPage;
+  rootPage: Type = TabsPage; // TutorialPage;
   loggedIn = false;
 
   appPages: PageObj[];
@@ -45,20 +48,21 @@ class ConferenceApp {
     confData.load();
 
     // We plan to add auth to only show the login page if not logged in
-    
+
     // create an list of pages that can be navigated to from the left menu
     // the left menu only works after login
     // the login page disables the left menu
     this.appPages = [
-      { title: 'HOME',name:'Schedules',component: TabsPage, icon: 'home' },
-      { title: 'Ranking', name: 'Ranking', component: TabsPage, index:1,icon: 'podium' },
-      { title: 'Establecimientos', name: 'Centers', component: TabsPage, index:2, icon: 'home'},     
-      { title: 'Acerca de', name:'About', component: AboutPage, index:3,icon: 'information-circle' }
+      { title: 'HOME',name:'Schedules', component: TabsPage, icon: 'home' },
+      { title: 'Ranking', name: 'Ranking', component: RankingList, index: 1, icon: 'podium' },
+      { title: 'Establecimientos', name: 'Centers', component: CenterList, index: 2, icon: 'home'},
+      { title: 'Eventos', name: 'Events', component: EventList, index: 3, icon: 'notifications'},
+      { title: 'Acerca de', name:'About', component: AboutPage, index: 4, icon: 'information-circle' }
     ];
 
-    this.loggedInPages=[{ title: 'Cerrar sesión', name: 'Logout', component: LoginPage, icon: 'log-out' }];
+    this.loggedInPages = [{ title: 'Cerrar sesión', name: 'Logout', component: LoginPage, icon: 'log-out' }];
 
-    this.loggedOutPages=[{ title: 'Iniciar', name:'Login', component: LoginPage, icon: 'log-in' },
+    this.loggedOutPages = [{ title: 'Iniciar', name:'Login', component: LoginPage, icon: 'log-in' },
       { title: 'Registrarse', name:'Signup', component: SignupPage, icon: 'person-add'}];
 
     platform.ready().then(() => {
@@ -82,7 +86,7 @@ class ConferenceApp {
     // reset the nav to remove previous pages and only have this page
     // we wouldn't want the back button to show in this scenario
     let nav = this.app.getComponent('nav');
-    
+
 
     if (page.index) {
       nav.setRoot(page.component, {tabIndex: page.index});

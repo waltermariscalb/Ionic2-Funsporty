@@ -1077,13 +1077,15 @@
 
     { "name": "Tennis", "type": "Faceoff", "status": "Active", "images": { "mobileicon": "tennisball", "webicon": "tennis17.png" }, "allocation": { "single": true, "group": true, "collective": false }, "participants": { "min": 1, "max": 2 } },
     { "name": "Soccer", "type": "Faceoff", "status": "Active", "images": { "mobileicon": "football", "webicon": "football118.png" }, "allocation": { "single": false, "group": true, "collective": true }, "participants": { "min": 11, "max": 11 } },
-    { "name": "Babyfútbol", "type": "Faceoff", "status": "Active", "images": { "mobileicon": "tennisball", "webicon": "tennis17.png" }, "allocation": { "single": true, "group": true, "collective": false }, "participants": { "min": 1, "max": 2 } },
+    { "name": "Babyfútbol", "type": "Faceoff", "status": "Active", "images": { "mobileicon": "football", "webicon": "football118.png" }, "allocation": { "single": true, "group": true, "collective": false }, "participants": { "min": 1, "max": 2 } },
     { "name": "Basketball", "type": "Faceoff", "status": "Active", "images": { "mobileicon": "basketball", "webicon": "basket4.png" }, "allocation": { "single": false, "group": true, "collective": true }, "participants": { "min": 6, "max": 6 } },
     { "name": "Hiking", "type": "Share", "status": "Active", "images": { "mobileicon": "walk", "webicon": "mountain1.png" }, "allocation": { "single": true, "group": true, "collective": true }, "participants": { "min": 1, "max": 99 } },
     { "name": "Running", "type": "Share", "status": "Active", "images": { "mobileicon": "walk", "webicon": "sprint.png" }, "allocation": { "single": true, "group": true, "collective": true }, "participants": { "min": 1, "max": 99 } },
     { "name": "Biking", "type": "Share", "status": "Active", "images": { "mobileicon": "bicycle", "webicon": "transport198.png" }, "allocation": { "single": true, "group": true, "collective": true }, "participants": { "min": 1, "max": 99 } },
     { "name": "Trekking", "type": "Share", "status": "Active", "images": { "mobileicon": "walk", "webicon": "walk12.png" }, "allocation": { "single": true, "group": true, "collective": true }, "participants": { "min": 1, "max": 99 } },
-    { "name": "Mountainbike", "type": "Share", "status": "Active", "images": { "mobileicon": "walk", "webicon": "walk12.png" }, "allocation": { "single": true, "group": true, "collective": true }, "participants": { "min": 1, "max": 99 } }
+    { "name": "Mountainbike", "type": "Share", "status": "Active", "images": { "mobileicon": "bicycle", "webicon": "bicycle.png" }, "allocation": { "single": true, "group": true, "collective": true }, "participants": { "min": 1, "max": 99 } },
+    { "name": "Rugby", "type": "Share", "status": "Active", "images": { "mobileicon": "american-football", "webicon": "american-football" }, "allocation": { "single": false, "group": true, "collective": true }, "participants": { "min": 7, "max": 99 } },
+    { "name": "Baseball", "type": "Share", "status": "Active", "images": { "mobileicon": "baseball", "webicon": "baseball" }, "allocation": { "single": false, "group": true, "collective": true }, "participants": { "min": 7, "max": 99 } }
     ]
 
 }

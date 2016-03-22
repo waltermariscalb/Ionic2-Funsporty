@@ -46,13 +46,19 @@ export class ConferenceData {
       });
     });
 
-    data.speakers.forEach(user => {
-      user.profiles.forEach(profile => {
-        profile.sport = data.sports.find(s => profile.sportName === s.name); // find sport and assign to sport profile
-		// if (profile.calendar) {alert('existe');} else {alert('no existe');}
-        profile.calendar = profile.calendar || user.calendar;
-      });
-    });
+
+    this.getLevels().then((levels: any[]) => {
+        let levelsArray: any[];
+        levelsArray = levels;
+
+        data.speakers.forEach(user => {
+            user.profiles.forEach(profile => {
+                profile.sport = data.sports.find(s => profile.sportName === s.name); // find sport and assign to sport profile
+                profile.calendar = profile.calendar || user.calendar;
+                profile.icon = levelsArray.find(level => level.name === profile.level).images.mobileicon;
+            });
+         });
+     });
 
     return data;
   }
@@ -299,14 +305,38 @@ export class ConferenceData {
   }
 
     public getLevels() {
-        return new Promise(resolve => resolve([{name: "Beginner"}, {name: "Basic"}, {name: "Intermediate"}, {name: "Advance"}, {name: "Expert"}]));
+        return new Promise(resolve => resolve([
+        {name: "Beginner", images: {mobileicon: "school", webicon: "school" }},
+        {name: "Basic", images: {mobileicon: "watch", webicon: "watch" }},
+        {name: "Intermediate", images: {mobileicon: "thermometer", webicon: "thermometer"}},
+        {name: "Advance", images: {mobileicon: "ribbon", webicon: "ribbon" }},
+        {name: "Expert", images: {mobileicon: "medal", webicon: "medal" }}
+        ]));
     }
 
     public getAgeCategories() {
-       return new Promise(resolve => resolve([{name: "Child"}, {name: "Adult"}]));
+       return new Promise(resolve => resolve([
+           {name: "Child", images: {mobileicon: "happy", webicon: "happy" }},
+           {name: "Adult", images: {mobileicon: "body", webicon: "man" }}
+           ]));
     }
 
     public getGenders() {
-        return new Promise(resolve => resolve([{name: "Male"}, {name: "Female"}]));
+        return new Promise(resolve => resolve([
+            {name: "Male", images: {mobileicon: "male", webicon: "male" }},
+            {name: "Female", images: {mobileicon: "female", webicon: "female"}}
+            ]));
+    }
+    public getStatus() {
+        return new Promise(resolve => resolve([
+            {name: "Open", images: {mobileicon: "open", webicon: "open" }},
+            {name: "Closed", images: {mobileicon: "close", webicon: "close" }}
+            ]));
+    }
+    public getSecurities() {
+        return new Promise(resolve => resolve([
+            {name: "Public", images: {mobileicon: "unlock", webicon: "unlock" }},
+            {name: "Private", images: {mobileicon: "lock", webicon: "lock" }}
+            ]));
     }
 }

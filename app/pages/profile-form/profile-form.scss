@@ -1,0 +1,6 @@
+ion-input.ng-valid[required] {
+  color: #42A948; /* green */
+}
+ion-input.ng-invalid {
+  border: 1px solid #a94442; /* red */
+}

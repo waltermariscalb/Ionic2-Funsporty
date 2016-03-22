@@ -3,6 +3,7 @@ import {ConferenceData} from '../../providers/conference-data';
 
 interface FilterToggle {
   name: string;
+  icon?: string;
   isChecked: boolean;
 }
 
@@ -22,17 +23,25 @@ export class ScheduleFilterPage {
         this.fillToggles(trackNames, this.tracks, filterCriteria.excludedTracks);
     });
 
-    this.fillToggles(["Public", "Private"], this.security, filterCriteria.excludedSecurity);
-    this.fillToggles(["Open", "Closed"], this.status, filterCriteria.excludedStatus);
+    this.confData.getSecurities().then((securities: any[]) => {
+        this.fillToggles(securities, this.security, filterCriteria.excludedSecurity);
+    });
+
+    this.confData.getStatus().then((status: any[]) => {
+        this.fillToggles(status, this.status, filterCriteria.excludedStatus);
+    });
+
   }
 
   private fillToggles(dataArray: any[], toggleArray: Array<FilterToggle>, excludedItem: string[]) {
       // fill a new array to toggle preference
     dataArray.forEach(item => {
         let name = item;
-        if (name.name) {name = name.name;};
+        if (name.name) {name = name.name; };
+        let icon = "";
+        if (item.images) {icon = item.images.mobileicon; };
         toggleArray.push({
-        name: name,
+        name: name, icon: icon,
         isChecked: (excludedItem.indexOf(name) === -1) // if it doesn't exist in the array is checked.
       });
       });
