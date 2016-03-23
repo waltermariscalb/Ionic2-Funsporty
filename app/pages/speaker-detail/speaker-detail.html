@@ -3,49 +3,49 @@
   <ion-title>{{speaker.name}}</ion-title>
 </ion-navbar>
 
-<ion-content padding class="speaker-detail">
+<ion-content padding>
+    <div class="speaker-detail">
+        <div text-center>
 
-    <div text-center>
+            <img [src]="speaker.profilePic" [alt]="speaker.name"><br>
+            <button clear small twitter><ion-icon name="logo-twitter"></ion-icon></button>
+            <button clear small github><ion-icon name="logo-github"></ion-icon></button>
+            <button clear small instagram><ion-icon name="logo-instagram"></ion-icon></button>
 
-        <img [src]="speaker.profilePic" [alt]="speaker.name"><br>
-        <button clear small twitter><ion-icon name="logo-twitter"></ion-icon></button>
-        <button clear small github><ion-icon name="logo-github"></ion-icon></button>
-        <button clear small instagram><ion-icon name="logo-instagram"></ion-icon></button>
+        </div>
 
+        <p>{{speaker.about}}</p>
+
+        <ion-list>
+        <ion-list-header>
+            Mi calendario
+        </ion-list-header>
+            <ion-item>
+                <table class="calendar">
+                    <thead>
+                        <tr>
+                            <th>Lu</th>
+                            <th>Ma</th>
+                            <th>Mie</th>
+                            <th>Ju</th>
+                            <th>Vi</th>
+                            <th>Sa</th>
+                            <th>Do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td *ngFor="#day of speaker.calendar[0].weekdays" [attr.status]="day.status | lowercase" >
+                                <p *ngIf="day.status==='Active'" >
+                                    {{day.from}}
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ion-item>
+        </ion-list>
     </div>
-
-    <p>{{speaker.about}}</p>
-
-    <ion-list>
-    <ion-list-header>
-        Mi calendario
-    </ion-list-header>
-        <ion-item>
-            <table class="calendar">
-                <thead>
-                    <tr>
-                        <th>Lu</th>
-                        <th>Ma</th>
-                        <th>Mie</th>
-                        <th>Ju</th>
-                        <th>Vi</th>
-                        <th>Sa</th>
-                        <th>Do</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td *ngFor="#day of speaker.calendar[0].weekdays" [attr.status]="day.status | lowercase" >
-                            <p *ngIf="day.status==='Active'" >
-                                {{day.from}}
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </ion-item>
-    </ion-list>
-
     <ion-list-header>
         Mis Deportes
     </ion-list-header>
@@ -58,7 +58,6 @@
              </div>
         </button>
     </ion-list>
-
     <ion-list>
         <ion-list-header>
             Mis próximas actividades
@@ -66,12 +65,13 @@
         <div *ngIf="speaker.sessions">
             <ion-item *ngFor="#session of speaker.sessions" (click)="goToSessionDetail(session)">
                     <ion-thumbnail item-left>
-                        <img src="img/thumbnail-totoro.png">
+                        <img [src]="session.img">
                     </ion-thumbnail>
-                    <h5><a href="#" >{{session.name}}</a></h5>
+                    <h5><a href="#{{session.url}}" >{{session.name}}</a></h5>
                     <p>{{session.description}}</p>
             </ion-item>
         </div>
     </ion-list>
-
 </ion-content>
+
+

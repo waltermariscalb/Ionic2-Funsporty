@@ -27,7 +27,9 @@
               "public":true,
               "status":"Open",
               "min":5,
-              "max":14
+              "max":14,
+              "url":"http://www.atacamaxtreme.com/",
+              "img":"http://www.atacamaxtreme.com/uploads/2/4/4/1/24419880/6187676_orig.jpg"
             }
           ]
         },
@@ -56,7 +58,9 @@
               "public":true,
               "status":"Open",
               "min":5,
-              "max":20
+              "max":20,
+              "url":"http://mountainbike.cl/wp/blog/categoria-open-principiante/",
+              "img":"http://www.fetech.cl/sitio/wp-content/uploads/2015/06/menoresdes.jpg"
             }
            ]
         }
@@ -385,7 +389,9 @@
               "resultname":"Set",
               "results":["6/2","5/6","6/3"] ,
               "public":false,
-               "status":"Open"
+               "status":"Open",
+              "url":"http://www.fetech.cl/2016/03/22/nomina-jugadores-round-robin-clasificatorios-a-sudamericanos-14-y-16-anos/",
+              "img":"http://www.fetech.cl/sitio/wp-content/uploads/2015/06/menoresdes.jpg"
             },
             {
               "id":"16",

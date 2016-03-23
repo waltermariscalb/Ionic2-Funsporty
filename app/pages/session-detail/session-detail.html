@@ -5,12 +5,13 @@
 
 <ion-content padding>
     <h1>{{session.name | uppercase}}</h1>
-
     <p [ngClass] = "{'security':true,'public':session.public}"> <span>id : {{session.id}}</span>
         {{session.public ? "Pública":"Privada"}}
         <span class="status" [attr.status] = "session.status | lowercase"> {{session.status}} </span>
     </p>
-
+    <div text-center>
+        <img [src]="session.img" [alt]="session.name"><br>
+    </div>
     <p>{{session.description}}</p>
 
     <ion-list>

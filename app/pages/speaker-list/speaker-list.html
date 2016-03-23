@@ -79,11 +79,11 @@
         <ion-icon name="bookmark"></ion-icon>
         Favoritos
       </button>
-      <button (click)="openSportmanShare(sportman)" clear item-right>
+      <button (click)="openSportmanShare(sportman)" clear >
         <ion-icon name="share"></ion-icon>
         Enviar
       </button>
-      <button  (click)="showDetail(sportman)" *ngIf="segment === 'all'" clear >
+      <button  (click)="showDetail(sportman)" *ngIf="segment === 'all'" clear item-right>
         <ion-icon [name]="!sportman.showdetail ? 'more':'arrow-dropup' "></ion-icon>
         {{!sportman.showdetail ? 'más':''}}
       </button>
