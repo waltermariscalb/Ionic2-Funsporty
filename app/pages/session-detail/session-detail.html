@@ -4,38 +4,27 @@
 </ion-navbar>
 
 <ion-content padding>
-  <ion-list>
-    <ion-list-header>
-        <p>{{session.name}}</p>
-        <p>id : {{session.id}}</p>
-    </ion-list-header>
+    <h1>{{session.name | uppercase}}</h1>
 
-    <ion-item>
-        <h3>Actividad</h3>
-        <p [ngClass] = "{'security':true,'public':session.public}">{{session.public ? "Pública":"Privada"}}</p>
-    </ion-item>
-    <ion-item>
-        <h3 >Estado</h3>
-        <p class="status" [attr.status] = "session.status | lowercase"> {{session.status}} </p>
-    </ion-item>
+    <p [ngClass] = "{'security':true,'public':session.public}"> <span>id : {{session.id}}</span>
+        {{session.public ? "Pública":"Privada"}}
+        <span class="status" [attr.status] = "session.status | lowercase"> {{session.status}} </span>
+    </p>
 
-    <ion-item>
-      <h3>Descripción </h3>
-      <p>{{session.description}}</p>
-    </ion-item>
+    <p>{{session.description}}</p>
 
-    <ion-item>
-      <h3>Cuándo</h3>
-      <p>{{session.date}} de {{session.timeStart}} a {{session.timeEnd}}</p>
-    </ion-item>
-    <ion-item>
-      <h3>Dónde</h3>
-      <p>{{session.center}}</p>
-      <p>{{session.location}}</p>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+        <ion-item>
+        <h3>Cuándo</h3>
+        <p>{{session.date}} de {{session.timeStart}} a {{session.timeEnd}}</p>
+        </ion-item>
+        <ion-item>
+        <h3>Dónde</h3>
+        <p>{{session.center}}</p>
+        <p>{{session.location}}</p>
+        </ion-item>
+    </ion-list>
 
-  <ion-list>
     <div *ngIf="session.status==='Open' && session.public">
         <button block>Participar</button>
     </div>
@@ -44,7 +33,6 @@
         <button block secondary outline small>Aceptar</button>
         <button block danger outline small>Rechazar</button>
     </div>
-  </ion-list>
 
   <ion-list>
     <ion-list-header>

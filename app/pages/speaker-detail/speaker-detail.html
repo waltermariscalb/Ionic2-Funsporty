@@ -65,6 +65,9 @@
         </ion-list-header>
         <div *ngIf="speaker.sessions">
             <ion-item *ngFor="#session of speaker.sessions" (click)="goToSessionDetail(session)">
+                    <ion-thumbnail item-left>
+                        <img src="img/thumbnail-totoro.png">
+                    </ion-thumbnail>
                     <h5><a href="#" >{{session.name}}</a></h5>
                     <p>{{session.description}}</p>
             </ion-item>

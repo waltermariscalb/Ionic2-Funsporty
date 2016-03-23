@@ -12,6 +12,9 @@
     </ion-segment>
     <ion-buttons end>
         <button (click)="presentFilter()">
+            <ion-icon name="options"></ion-icon>
+        </button>
+        <button (click)="presentFilter()">
             <ion-icon ios="ios-funnel-outline" md="md-funnel"></ion-icon>
         </button>
     </ion-buttons>
@@ -25,22 +28,38 @@
   </ion-searchbar>
 
   <ion-list [hidden]="counter === 0">
-
   <ion-card *ngFor="#sportman of sportmen" class="sportmancard" [hidden]="sportman.hide">
 
      <ion-list>
-        <button ion-item (click)="goToSportmanDetail(sportman)">
-            <ion-avatar  item-left>
-                <img [src]="sportman.profilePic">
-            </ion-avatar >
-            <h2>{{sportman.name}}</h2>
-            <h3>{{sportman.zones[0].city}} , {{sportman.zones[0].country}}</h3>
-            <p> Reputación <ion-badge >{{sportman.reputation}}</ion-badge> </p>
-        </button>
+        <ion-item-sliding>
+            <ion-item (click)="goToSportmanDetail(sportman)">
+                <ion-avatar  item-left>
+                    <img [src]="sportman.profilePic">
+                </ion-avatar >
+                <div item-left>
+                    <h2 >{{sportman.name}}</h2>
+                    <h3 >{{sportman.zones[0].city}} , {{sportman.zones[0].country}}</h3>
+                    <p > Reputación <ion-badge >{{sportman.reputation}}</ion-badge> </p>
+                </div>
+                <ion-icon item-left [name]="sportman.profiles[0].sport.images.mobileicon"  isActive=false> <p> {{sportman.profiles[0].sport.name}} </p> </ion-icon>
+                <ion-icon item-left class="level" [name]="sportman.profiles[0].icon | lowercase "  isActive=false> <p> {{sportman.profiles[0].level}} </p></ion-icon>
+                <ion-icon item-left class="ranking" name="podium"  isActive=false> <p> {{sportman.profiles[0].ranking}} </p></ion-icon>
+            </ion-item>
+            <ion-item-options>
+                <button primary>
+                    <ion-icon name="text"></ion-icon>
+                    Text
+                </button>
+                <button secondary>
+                    <ion-icon name="call"></ion-icon>
+                    Call
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
      </ion-list>
 
 
-    <ion-card-content class="outer-content">
+    <ion-card-content class="outer-content" [hidden]="!sportman.showdetail">
       <ion-list>
         <button ion-item *ngFor="#profile of sportman.profiles" (click)="goToProfileDetail(profile,sportman)">
             <ion-icon [name]="profile.sport.images.mobileicon" item-left isActive=false> <p> {{profile.sport.name}} </p> </ion-icon>
@@ -60,10 +79,13 @@
         <ion-icon name="bookmark"></ion-icon>
         Favoritos
       </button>
-
       <button (click)="openSportmanShare(sportman)" clear item-right>
         <ion-icon name="share"></ion-icon>
         Enviar
+      </button>
+      <button  (click)="showDetail(sportman)" *ngIf="segment === 'all'" clear >
+        <ion-icon [name]="!sportman.showdetail ? 'more':'arrow-dropup' "></ion-icon>
+        {{!sportman.showdetail ? 'más':''}}
       </button>
     </ion-item>
 

@@ -73,6 +73,7 @@ export class SpeakerListPage {
   updateSportmen() {
     this.confData.getSportmen(this.queryText, this.excludedGenders, this.excludedLevels, this.excludedAgeCategories, this.excludedSports, this.segment).then(data => {
       this.counter = data.filter(c => !c.hide).length;
+      data.forEach(c => {c["more"] = false; c["showdetail"] = false; });
       this.sportmen = data;
     });
   }
@@ -93,6 +94,9 @@ export class SpeakerListPage {
       }
     });
 
+  }
+  showDetail(sportman: ISportman) {
+      sportman["showdetail"] = !sportman["showdetail"];
   }
 
   addFavorite(sportman: ISportman) {
